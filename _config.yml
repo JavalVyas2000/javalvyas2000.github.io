@@ -85,9 +85,9 @@ author:
   bio              : "Garduate Researcher at Carnegie Mellon UNiveristy"
   location         : "Pittsburgh, PA"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : "achulawa@andrew.cmu.edu / aman.chulawala@gmail.com"
+  pubmed           : 
+  googlescholar    : "https://scholar.google.com/citations?view_op=list_works&hl=en&user=ukeVsfYAAAAJ"
+  email            : "achulawa@andrew.cmu.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/amanchulawala/"
+  linkedin         : "amanchulawala"
   orcid            : 
   pinterest        :
   soundcloud       :
@@ -176,7 +176,7 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
@@ -185,7 +185,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
