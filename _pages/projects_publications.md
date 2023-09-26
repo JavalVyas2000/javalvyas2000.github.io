@@ -7,7 +7,7 @@ author_profile: true
 
 ### Project Title 1
 
-![Project Image 1](/portfolio/images/profile.png)
+![Project Image 1](/images/profile.png)
 
 Short description of the project. This is where you can briefly describe what the project is about.
 
@@ -17,7 +17,7 @@ Short description of the project. This is where you can briefly describe what th
 
 ### Project Title 2
 
-![Project Image 2](/portfolio/images/profile.png)
+![Project Image 2](/images/profile.png)
 
 Short description of the project. This is where you can briefly describe what the project is about.
 
