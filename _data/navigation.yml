@@ -1,10 +1,10 @@
 # main links links
 main:    
   - title: "Projects and Publications"
-    url: /projects_publications/
+    url: projects_publications/
 
   - title: "Coursework"
-    url: /coursework/      
+    url: coursework/      
     
   - title: "Resume"
-    url: /resume/
+    url: resume/
