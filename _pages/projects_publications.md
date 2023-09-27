@@ -10,7 +10,7 @@ author_profile: true
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <div style="width: 1500px; height: 1500px; border-radius: 50%; overflow: hidden;">
+      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
         <img src="/portfolio/images/profile.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
