@@ -8,7 +8,7 @@ author_profile: true
 ### Project Title 1
 
 <div style="display:flex; align-items:center;">
-    <img src="images/profile.png" alt="Project Image 1" style="width:200px; height:auto; margin-right:20px;">
+    <img src="/images/profile.png" alt="Project Image 1" style="width:200px; height:auto; margin-right:20px;">
     <div>
         Short description of the project. This is where you can briefly describe what the project is about.
 
@@ -21,7 +21,7 @@ author_profile: true
 ### Project Title 2
 
 <div style="display:flex; align-items:center;">
-    <img src="images/profile.png" alt="Project Image 2" style="width:200px; height:auto; margin-right:20px;">
+    <img src="/images/profile.png" alt="Project Image 2" style="width:200px; height:auto; margin-right:20px;">
     <div>
         Short description of the project. This is where you can briefly describe what the project is about.
 
