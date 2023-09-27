@@ -10,10 +10,10 @@ author_profile: true
 <table style="border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <img src="/images/profile.png" alt="Project Image 2" style="width:200px; height:auto;">
+      <img src="/portfolio/images/profile.png" style="width:200px; height:auto;">
     </td>
     <td style="padding: 10px; border: none; vertical-align: top;">
-      Short description of the project. This is where you can briefly describe what the project is about.
+      Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. Short description of the project. This is where you can briefly describe what the project is about. blah. 
       [Link to Project 2](https://example.com/project2)
     </td>
   </tr>
