@@ -44,7 +44,7 @@ author_profile: true
 
 ---
 
-### Project Title 3
+### Panel Gap Identification for Automobiles
 
 <table style="border: none; border-collapse: collapse;">
   <tr>
@@ -54,16 +54,16 @@ author_profile: true
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
-      Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph. 
+      Panel gaps in automobiles refer to the spaces or misalignments between adjacent body panels. They are important to address because they affect the vehicle's aesthetics, structural integrity, and aerodynamics. Well-aligned panels also contribute to better water and dust resistance, reduce noise, and enhance resale value. Automobile manufacturers spend millions each fiscal year on recalling and repairing cars with panel gap errors. To address this problem, a novel solution which identified and classified panel gap defects using a stereo depth camera on the shop floor was prototyped. Our team of three successfully demonstrated our prototypes and defended our work against a panel of our peers and intructors. (Part of the Computer Vision Capstone)
       <br>
       <br>
-      <a href="https://example.com/project2">Link to Project 2</a>
+      <a href="https://github.com/FarStryke21/Panel_Gap_Detection">GitHub</a>
     </td>
   </tr>
 </table>
 ---
 
-### Project Title 4
+### Visual Odometry through RNNs
 
 <table style="border: none; border-collapse: collapse;">
   <tr>
@@ -73,16 +73,16 @@ author_profile: true
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
-      Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph. 
+      The standard pipeline for performing visual odometry includes feature extraction, camera calibration,local optimisation etc. Thus some prior knowledge of system is required to recover absolute trajectory. However,a RNN+CNN model can be used to infer poses directly without this prior knowledge. This report presents comparison between the conventional method (geometry-based odometry) used for monocular visual odometry with an end-to-end trained RNN+CNN model for trajectory estimation and verifies the viability of the end-to-end model over traditional visual odometry systems. (Capstone for Machine Learning and Artificial Intelligence)
       <br>
       <br>
-      <a href="https://example.com/project2">Link to Project 2</a>
+      <a href="https://farstryke21.github.io/portfolio/files/Visual_Odometry.pdf">Link to Project 2</a>
     </td>
   </tr>
 </table>
 ---
 
-### Project Title 5
+### Buggy Racing : A proud CMU tradition
 
 <table style="border: none; border-collapse: collapse;">
   <tr>
