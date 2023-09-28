@@ -18,7 +18,7 @@ author_profile: true
       Developed as a part of the semester long mechatronics capstone projects, the BlackFlag utility robot was an innovative solution to operational support for large marine vessels. The problem statement defined the requirement of a system which could carry on routine inspections and perform complex operations on board cargo vessels, while being immune to this rugged environment. The blackflag robot featured a 5 DOF revolute arm on a mobile base, coupled with a custom perception package. This project was developed as a five member team, where I was responsible for the Perception and Sensing Subsystem for the robot, and was incharge of the overall software integration and final deployment of the functional system. The link below specifies more details for the BlackFlag robot, and the repository holds the software package deployed on the microprocessor
       <br>
       <br>
-      <a src = "https://sites.google.com/andrew.cmu.edu/shipbot-by-black-flag/home?authuser=2">Article</a> | <a href="https://github.com/FarStryke21/blackflag">GitHub</a> 
+      <a src = "https://sites.google.com/andrew.cmu.edu/shipbot-by-black-flag/home?authuser=2">Webpage</a> | <a href="https://github.com/FarStryke21/blackflag">GitHub</a> 
     </td>
   </tr>
 </table>
