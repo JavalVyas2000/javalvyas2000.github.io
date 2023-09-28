@@ -76,7 +76,7 @@ author_profile: true
       The standard pipeline for performing visual odometry includes feature extraction, camera calibration,local optimisation etc. Thus some prior knowledge of system is required to recover absolute trajectory. However,a RNN+CNN model can be used to infer poses directly without this prior knowledge. This report presents comparison between the conventional method (geometry-based odometry) used for monocular visual odometry with an end-to-end trained RNN+CNN model for trajectory estimation and verifies the viability of the end-to-end model over traditional visual odometry systems. (Capstone for Machine Learning and Artificial Intelligence)
       <br>
       <br>
-      <a href="https://farstryke21.github.io/portfolio/files/Visual_Odometry.pdf">Link to Project 2</a>
+      <a href="https://farstryke21.github.io/portfolio/files/Visual_Odometry.pdf">Article</a>
     </td>
   </tr>
 </table>
