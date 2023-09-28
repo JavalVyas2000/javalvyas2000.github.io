@@ -18,7 +18,7 @@ author_profile: true
       Developed as a part of the semester long mechatronics capstone projects, the BlackFlag utility robot was an innovative solution to operational support for large marine vessels. The problem statement defined the requirement of a system which could carry on routine inspections and perform complex operations on board cargo vessels, while being immune to this rugged environment. The blackflag robot featured a 5 DOF revolute arm on a mobile base, coupled with a custom perception package. This project was developed as a five member team, where I was responsible for the Perception and Sensing Subsystem for the robot, and was incharge of the overall software integration and final deployment of the functional system. The link below specifies more details for the BlackFlag robot, and the repository holds the software package deployed on the microprocessor
       <br>
       <br>
-      <a src = "https://sites.google.com/andrew.cmu.edu/shipbot-by-black-flag/home?authuser=2">Webpage</a> | <a href="https://github.com/FarStryke21/blackflag">GitHub</a> 
+      <a href = "https://sites.google.com/andrew.cmu.edu/shipbot-by-black-flag/home?authuser=2">Webpage</a> | <a href="https://github.com/FarStryke21/blackflag">GitHub</a> 
     </td>
   </tr>
 </table>
@@ -37,7 +37,7 @@ author_profile: true
       High-performance racing has always been an exciting and challenging field, where the goal is to achieve the fastest possible lap time around the track. In Formula One (F1) racing, drivers and engineers continuously search for ways to optimize the performance of their cars and outpace their competitors. One approach to improving lap times is to use optimal control strategies, which aim to find the most efficient path a racing car can take around the track. In this paper, we explore the use of optimal control strategies to model the most efficient path for a racing car to optimize its lap time around F1 circuits. Specifically, we focus on one of the iconic circuits: Monza in Italy. (Part of Optimal Control and Reinforcement Learning Capstone)
       <br>
       <br>
-      <a href="[https://example.com/project2](https://github.com/FarStryke21/portfolio/blob/master/files/16745_tyagi_gite_kokil_chulawala.pdf)">Article</a>
+      <a href="https://github.com/FarStryke21/portfolio/blob/master/files/16745_tyagi_gite_kokil_chulawala.pdf">Article</a>
     </td>
   </tr>
 </table>
