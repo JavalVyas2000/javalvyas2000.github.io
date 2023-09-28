@@ -37,7 +37,7 @@ author_profile: true
       High-performance racing has always been an exciting and challenging field, where the goal is to achieve the fastest possible lap time around the track. In Formula One (F1) racing, drivers and engineers continuously search for ways to optimize the performance of their cars and outpace their competitors. One approach to improving lap times is to use optimal control strategies, which aim to find the most efficient path a racing car can take around the track. In this paper, we explore the use of optimal control strategies to model the most efficient path for a racing car to optimize its lap time around F1 circuits. Specifically, we focus on one of the iconic circuits: Monza in Italy. (Part of Optimal Control and Reinforcement Learning Capstone)
       <br>
       <br>
-      <a href="https://github.com/FarStryke21/portfolio/blob/master/files/16745_tyagi_gite_kokil_chulawala.pdf">Article</a>
+      <a href="https://farstryke21.github.io/portfolio/files/16745_tyagi_gite_kokil_chulawala.pdf">Article</a>
     </td>
   </tr>
 </table>
