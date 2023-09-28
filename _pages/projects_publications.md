@@ -24,7 +24,7 @@ author_profile: true
 </table>
 ---
 
-### Project Title 2
+### Lap time optimization for Formula Style Cars
 
 <table style="border: none; border-collapse: collapse;">
   <tr>
@@ -34,10 +34,10 @@ author_profile: true
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
-      Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph. 
+      High-performance racing has always been an exciting and challenging field, where the goal is to achieve the fastest possible lap time around the track. In Formula One (F1) racing, drivers and engineers continuously search for ways to optimize the performance of their cars and outpace their competitors. One approach to improving lap times is to use optimal control strategies, which aim to find the most efficient path a racing car can take around the track. In this paper, we explore the use of optimal control strategies to model the most efficient path for a racing car to optimize its lap time around F1 circuits. Specifically, we focus on one of the iconic circuits: Monza in Italy. (Part of Optimal Control and Reinforcement Learning Capstone)
       <br>
       <br>
-      <a href="https://example.com/project2">Link to Project 2</a>
+      <a href="https://example.com/project2">Article</a>
     </td>
   </tr>
 </table>
