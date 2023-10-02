@@ -10,7 +10,7 @@ redirect_from:
 
 Greetings and welcome to my portfolio! Here, you'll find a curated collection of my creative endeavors, reflective of a journey fueled by passion, dedication, and a relentless pursuit of excellence. I believe that every project is a canvas, an opportunity to tell a story, evoke emotion, or solve a problem. With a foundation in Mechanical Engineering, I've embarked on a quest to blend artistry with functionality, crafting experiences that resonate with their intended audience.
 
-As you peruse through these pages, I invite you to explore the narrative woven into each project. Behind every design, every line of code, and every stroke of the brush, lies a story waiting to be discovered. From building robots that can work independently on ships, to creating algorithms to mimic the efficacy of our eyes, each piece encapsulates a part of my creative journey.
+As you peruse through these pages, I invite you to explore the narrative woven into each project. Behind every design, every line of code, lies a story waiting to be discovered. From building robots that can work independently on ships, to creating algorithms to mimic the efficacy of our eyes, each piece encapsulates a part of my creative journey.
 
 I'm excited to share these experiences with you and eager to hear how they resonate with you. Whether you're seeking a collaborator for your next project or simply intrigued by the stories behind the work, I'm here to connect and explore new possibilities. If you have any specific details you'd like to include or if there's a particular aspect you'd like to emphasize, please let me know!
 
