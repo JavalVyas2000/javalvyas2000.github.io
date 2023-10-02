@@ -8,41 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-Embark on a journey through my portfolio, where creativity meets expertise. With a profound passion for [specific field or interest], I've cultivated a skill set in [mention key skills or areas of expertise]. Each project within this collection is a testament to my dedication to [mention your overarching goal or mission]. From [briefly mention early experiences or milestones] to [highlight recent achievements or areas of specialization], I've sought to push boundaries and deliver impactful results. Feel free to delve into these endeavors and discover how my unique perspective and expertise can add value to your next project."
+Greetings and welcome to my portfolio! Here, you'll find a curated collection of my creative endeavors, reflective of a journey fueled by passion, dedication, and a relentless pursuit of excellence. I believe that every project is a canvas, an opportunity to tell a story, evoke emotion, or solve a problem. With a foundation in Mechanical Engineering, I've embarked on a quest to blend artistry with functionality, crafting experiences that resonate with their intended audience.
 
-If you have any specific details you'd like to include or if there's a particular aspect you'd like to emphasize, please let me know!
+As you peruse through these pages, I invite you to explore the narrative woven into each project. Behind every design, every line of code, and every stroke of the brush, lies a story waiting to be discovered. From building robots that can work independently on ships, to creating algorithms to mimic the efficacy of our eyes, each piece encapsulates a part of my creative journey.
 
-
-
-
-User
-Too cheesy
-ChatGPT
-I understand. Let's try a more straightforward and professional approach:
-
-"Welcome to my portfolio. Here, you'll find a curated selection of my work in [specific field or interest]. With a focus on [mention key skills or areas of expertise], I aim to [mention your overarching goal or mission]. Each project showcases a commitment to quality, innovation, and [add any additional value or principle you uphold]. Feel free to explore, and if you have any questions or opportunities for collaboration, please don't hesitate to reach out."
-
-I hope this strikes a more professional tone. If you have any specific preferences or details you'd like to include, please let me know!
-
-
-
-
-User
-Talk more about stuff rather than just my project
-ChatGPT
-Certainly! Here's a more detailed introduction that focuses on your experiences, expertise, and interests:
-
-"Hello, and welcome to my portfolio. I'm a [mention your profession or field], driven by a passion for [specific interests or industries]. Over the years, I've had the privilege of delving into a diverse range of projects and initiatives, each contributing to my growth and proficiency in [mention key skills or areas of expertise].
-
-From [mention significant experiences or milestones], I've gained valuable insights into [mention what you've learned or achieved]. This journey has honed my abilities in [specific skills or competencies], enabling me to [mention how your skills contribute to your field or industry].
-
-In addition to my professional endeavors, I'm deeply fascinated by [mention additional interests or hobbies relevant to your field]. This passion not only fuels my creativity but also allows me to approach projects with a fresh perspective.
-
-I believe that [mention any guiding principles or beliefs that inform your work]. Whether it's [mention specific types of projects or challenges you enjoy], I'm dedicated to [mention your overarching goal or mission].
-
-Feel free to explore my portfolio, where you'll find a collection of projects that exemplify my dedication to excellence and innovation. If you'd like to discuss potential collaborations, share insights, or simply connect, I'd be delighted to hear from you.
+I'm excited to share these experiences with you and eager to hear how they resonate with you. Whether you're seeking a collaborator for your next project or simply intrigued by the stories behind the work, I'm here to connect and explore new possibilities. If you have any specific details you'd like to include or if there's a particular aspect you'd like to emphasize, please let me know!
 
 Research Interest
 ======
-Talk about research
+My research centers on the dynamic interplay between robotics and computer science. This intersection holds the promise of creating intelligent, adaptable machines that interact seamlessly with the physical world. I focus on developing cutting-edge algorithms and computational models, from machine learning for adaptive behavior to computer vision for robust perception. Beyond technical prowess, I'm keenly interested in the ethical and societal implications of this technology. Through a multidisciplinary approach, I aim to advance control algorithms for dynamic locomotion and explore human-robot interaction paradigms. Ultimately, I seek to not only contribute to academic discourse but also to drive tangible applications that redefine industries and enhance everyday life.
+
+Collaboration with fellow researchers and innovators who share this passion for pushing boundaries is a prospect I eagerly anticipate. At present, I am a graduate researcher at the Computational Engineering and Robotics Lab (CERLAB) under the guidance of Professor Kenji Shimada at Carnegie Mellon University. My work here primarily focuses on metrology and inspection applications of manipulator robots. From solving the coverage path planning problem, to developing solutions for better pointcloud registration, my work here allows me to push beyond my limits, establising new targets for me on a daily basis. 
+
+
 
