@@ -30,7 +30,7 @@ author_profile: true
   <tr>
     <td style="padding: 10px; border: none;">
       <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-        <img src="/portfolio/images/profile.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="/portfolio/images/laptime.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
@@ -50,7 +50,7 @@ author_profile: true
   <tr>
     <td style="padding: 10px; border: none;">
       <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-        <img src="/portfolio/images/profile.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="/portfolio/images/panelgap.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
@@ -69,7 +69,7 @@ author_profile: true
   <tr>
     <td style="padding: 10px; border: none;">
       <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-        <img src="/portfolio/images/profile.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="/portfolio/images/odometry.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
@@ -88,7 +88,7 @@ author_profile: true
   <tr>
     <td style="padding: 10px; border: none;">
       <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-        <img src="/portfolio/images/profile.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="/portfolio/images/cmubuggy.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
