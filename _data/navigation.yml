@@ -3,8 +3,8 @@ main:
   - title: "Projects and Publications"
     url: projects_publications/
 
-  - title: "Coursework"
-    url: coursework/      
+  # - title: "Coursework"
+  #   url: coursework/      
     
-  - title: "Resume"
-    url: resume/
+  # - title: "Resume"
+  #   url: resume/
