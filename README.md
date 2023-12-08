@@ -1,8 +1,12 @@
 ### Navigation
 User UI -> _config.yml
+
 Intro Page Update -> _pages/about.md -> Add required data
+
 Available Pages -> _data/navigation.yml -> Update the file with relevant headers
+
 Update Projects -> _pages/projects_and_publications.md -> Get template and add project data
+
 Resume Update -> files/Resume_Aman.pdf -> Update the file in the folder with the same name
 
 
