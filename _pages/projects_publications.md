@@ -7,7 +7,7 @@ author_profile: true
 
 <details>
 <summary>
-### Marine Vessel Operational Support Robot (BlackFlag)
+<head> Marine Vessel Operational Support Robot (BlackFlag) </head>
 </summary>
 <table style="border: none; border-collapse: collapse;">
   <tr>
