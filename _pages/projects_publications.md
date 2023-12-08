@@ -5,8 +5,10 @@ permalink: projects_publications/
 author_profile: true
 ---
 
+<details>
+<summary>
 ### Marine Vessel Operational Support Robot (BlackFlag)
-
+</summary>
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
@@ -22,6 +24,8 @@ author_profile: true
     </td>
   </tr>
 </table>
+
+</details>
 ---
 
 ### Lap time optimization for Formula Style Cars
