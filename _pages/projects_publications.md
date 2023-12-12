@@ -95,18 +95,3 @@ author_profile: true
 </details>
 ---
 
-
-<script>
-  function handleDetails(details) 
-  {
-    // Close all other details elements
-    document.querySelectorAll('details').forEach(function (otherDetails) 
-    {
-      if (otherDetails !== details) 
-      {
-        otherDetails.removeAttribute('open');
-      }
-    }
-    );
-  }
-</script>
