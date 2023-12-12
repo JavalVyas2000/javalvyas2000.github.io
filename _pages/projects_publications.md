@@ -5,12 +5,14 @@ permalink: projects_publications/
 author_profile: true
 ---
 
-### Marine Vessel Operational Support Robot (BlackFlag)
-
+<details>
+<summary>
+<b> Marine Vessel Operational Support Robot (BlackFlag) </b>
+</summary>
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
         <img src="/portfolio/images/BlackFlag.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
@@ -22,14 +24,19 @@ author_profile: true
     </td>
   </tr>
 </table>
+
+</details>
 ---
 
-### Lap time optimization for Formula Style Cars
-
+<details>
+<summary>
+<b>Lap time optimization for Formula Style Cars</b>
+</summary>
+  
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
         <img src="/portfolio/images/laptime.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
@@ -42,14 +49,17 @@ author_profile: true
   </tr>
 </table>
 
+</details>
 ---
 
-### Panel Gap Identification for Automobiles
-
+<details>
+<summary>
+<b>Panel Gap Identification for Automobiles</b>
+</summary>
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
         <img src="/portfolio/images/panelgap.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
@@ -61,14 +71,16 @@ author_profile: true
     </td>
   </tr>
 </table>
+</details>
 ---
-
-### Visual Odometry through RNNs
-
+<details>
+<summary>
+<b>Visual Odometry through RNNs</b>
+</summary>
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
         <img src="/portfolio/images/odometry.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </td>
@@ -80,4 +92,6 @@ author_profile: true
     </td>
   </tr>
 </table>
+</details>
 ---
+
