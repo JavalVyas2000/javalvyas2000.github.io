@@ -36,7 +36,7 @@ author_profile: true
   <tr>
     <td style="padding: 10px; border: none;">
       <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
-        <img src="/portfolio/images/16831_project.png" alt="Project Image 2" style="width: 120%; height: 120%; object-fit: cover;">
+        <img src="/portfolio/images/16831_project.png" alt="Project Image 2" style="width: 90%; height: 90%; object-fit: cover;">
       </div>
     </td>
     <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
