@@ -43,7 +43,7 @@ author_profile: true
       Our work introduces a centralized Multi-Agent Reinforcement Learning (MARL) environment for Multi-Agent Path Finding (MAPF). Built on the gymnasium-minigrid framework, our environment provides a standardized platform for benchmarking and collaborative research in the MARL community. Notable features include an efficient simulation setup for generating MAPF scenarios and a rich observation space that captures essential details like egocentric views, goal positions, agent orientations, and edge weights. Additionally, we employ a continuous action space, allowing agents to make probabilistic decisions.
       <br>
       <br>
-      <a href = "https://github.com/FarStryke21/16831-Project">Webpage</a> | <a href="https://farstryke21.github.io/portfolio/files/16_831_project.pdf">Article</a> 
+      <a href = "https://github.com/FarStryke21/16831-Project">GitHub</a> | <a href="https://farstryke21.github.io/portfolio/files/16_831_project.pdf">Article</a> 
     </td>
   </tr>
 </table>
