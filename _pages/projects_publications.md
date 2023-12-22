@@ -7,6 +7,52 @@ author_profile: true
 
 <details>
 <summary>
+<b>  Augmented Conflict Based Search for Lifelong Agent Planning </b>
+</summary>
+<table style="border: none; border-collapse: collapse;">
+  <tr>
+    <td style="padding: 10px; border: none;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
+        <img src="/portfolio/images/16782_demo.gif" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </td>
+    <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
+     This project tackles the challenging Multi-Agent Pathfinding (MAPF) problem, focusing on oneshot MAPF and its dynamic counterpart, Lifelong MAPF (LMAPF). LMAPF involves agents continuously adapting to new goals, measuring performance through throughput in dynamic environments. The study also explores Conflict-Based Search Algorithm (CBS), a two-level approach addressing conflicts between agents with a Conflict Tree (CT). CBS, applied to small-scale scenarios inspired by the League of Robot Runners competition, outperforms traditional methods like A* by examining fewer states while ensuring optimality.      
+      <br>
+      <br>
+      <a href = "https://github.com/FarStryke21/MAPF">GitHub</a> | <a href="https://farstryke21.github.io/portfolio/files/planning_project.pdf">Article</a> 
+    </td>
+  </tr>
+</table>
+
+</details>
+---
+
+<details>
+<summary>
+<b> A centralised approach for Multi Agent Reinforcement Learning </b>
+</summary>
+<table style="border: none; border-collapse: collapse;">
+  <tr>
+    <td style="padding: 10px; border: none;">
+      <div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
+        <img src="/portfolio/images/BlackFlag.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </td>
+    <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
+      Our work introduces a centralized Multi-Agent Reinforcement Learning (MARL) environment for Multi-Agent Path Finding (MAPF). Built on the gymnasium-minigrid framework, our environment provides a standardized platform for benchmarking and collaborative research in the MARL community. Notable features include an efficient simulation setup for generating MAPF scenarios and a rich observation space that captures essential details like egocentric views, goal positions, agent orientations, and edge weights. Additionally, we employ a continuous action space, allowing agents to make probabilistic decisions.
+      <br>
+      <br>
+      <a href = "https://github.com/FarStryke21/16831-Project">GitHub</a> | <a href="https://farstryke21.github.io/portfolio/files/16_831_project.pdf">Article</a> 
+    </td>
+  </tr>
+</table>
+
+</details>
+---
+
+<details>
+<summary>
 <b> Marine Vessel Operational Support Robot (BlackFlag) </b>
 </summary>
 <table style="border: none; border-collapse: collapse;">
