@@ -16,20 +16,13 @@ I'm excited to share these experiences with you and eager to hear how they reson
 
 Research Interest
 ====== 
-<table style="border: none; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 10px; border: none;">
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-        <img src="/portfolio/images/CERLAB.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-    </td>
-    <td style="padding: 10px; border: none; vertical-align: top; font-size: 16px;">
+<div style="width: 400px; height: 300px; border-radius: 50px; overflow: hidden;">
+  <img src="/portfolio/images/CERLAB.png" alt="Project Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+    
 My research centers on the dynamic interplay between robotics and computer science. This intersection holds the promise of creating intelligent, adaptable machines that interact seamlessly with the physical world. I focus on developing cutting-edge algorithms and computational models, from machine learning for adaptive behavior to computer vision for robust perception. Beyond technical prowess, I'm keenly interested in the ethical and societal implications of this technology. Through a multidisciplinary approach, I aim to advance control algorithms for dynamic locomotion and explore human-robot interaction paradigms. Ultimately, I seek to not only contribute to academic discourse but also to drive tangible applications that redefine industries and enhance everyday life.
 
 Collaboration with fellow researchers and innovators who share this passion for pushing boundaries is a prospect I eagerly anticipate. At present, I am a graduate researcher at the Computational Engineering and Robotics Lab (CERLAB) under the guidance of Professor Kenji Shimada at Carnegie Mellon University. My work here primarily focuses on metrology and inspection applications of manipulator robots. From solving the coverage path planning problem, to developing solutions for better pointcloud registration, my work here allows me to push beyond my limits, establising new targets for me on a daily basis.
-    </td>
-  </tr>
-</table>
 
 
 
