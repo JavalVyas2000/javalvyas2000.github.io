@@ -19,8 +19,9 @@ author_profile: true
     </td>
   </tr>
 </table>
-
+<p style="font-size:16pt;">
 In recent strides, the advent of Neural Radiance Fields (NeRF) has revolutionized 3D scene reconstruction. NeRF stands out as a neural network-based technique that transcends traditional approaches by learning a volumetric representation of a scene through an implicit function. This groundbreaking methodology excels in capturing intricate details of both geometry and appearance, making it particularly adept at synthesizing high-fidelity 3D reconstructions from sparse and unstructured 2D views. NeRF's fusion of deep learning and implicit function representation proves to be a potent tool for rendering novel views of a scene and holds promise for elevating the precision and efficiency of 3D pose estimation across various domains.
+</p>
 
 ### Coverage Viewpoint Generation: How to look at something in its entirety?
 
