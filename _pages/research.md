@@ -7,6 +7,7 @@ author_profile: true
 
 ### Pose Estimation: Understanding what is where?
 
+Link to Poster for Mechanical Engineering Masters Research Symposium 2024 is here!
 <table style="border: none; border-collapse: collapse;">
   <tr>
     <td style="padding: 10px; border: none;">
