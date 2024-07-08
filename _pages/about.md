@@ -7,7 +7,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-{% include Introduction.html %}
 
 
 Welcome to my portfolio, where engineering meets creativity! Here, you'll find a collection of projects reflecting a journey driven by precision and innovation. With a background in Mechanical Engineering, I've focused on blending technical expertise with practical design, crafting solutions that are both functional and elegant.
