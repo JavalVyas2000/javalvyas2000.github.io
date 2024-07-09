@@ -21,11 +21,9 @@ This webpage houses details on my work. I have kept the details fairly easy to r
 ## Education
 
 | May 2024    | Master of Science in Mechanical Engineering (Research) - Robotics and Controls     | Carnegie Mellon University|
-|----------|----------|----------|
 | May 2022    | Bachelor of Engineering in Mechanical Engineering    | University of Mumbai|
 
 ## Work Experience
 |Carnegie Mellon University| Researcher at CERLAB | June 2024 - Present |
-|--------------|-----------|-------------------|
-|Carnegie Mellon University| Graduate Researhcer at CERLAB | Oct 2022 - May 2024 |
-|Neocis|Robotics System Integration Engineer| May 2023 - Aug 2023|
+| Carnegie Mellon University | Graduate Researhcer at CERLAB | Oct 2022 - May 2024 |
+| Neocis | Robotics System Integration Engineer | May 2023 - Aug 2023 |
