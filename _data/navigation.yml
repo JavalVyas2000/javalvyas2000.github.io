@@ -9,6 +9,9 @@ main:
   - title: "Research"
     url: research/
 
-  # - title: "Coursework"
-  #   url: coursework/      
+  - title: "Coursework"
+    url: coursework/
+
+  - title: "Formula Student"
+    url: formula_student/
 
