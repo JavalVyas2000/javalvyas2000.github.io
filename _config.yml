@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Aman Chulawala"
 title_separator          : "-"
 name                     : &name "Aman Chulawala"
-description              : &description "Graduate Student Researcher at Carnegie Mellon University"
+description              : &description "Researcher at Carnegie Mellon University"
 url                      : https://farstryke21.github.io/portfolio/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "portfolio"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Aman Chulawala"
   avatar           : "my_image.png"
-  bio              : "Graduate Researcher at Carnegie Mellon University"
+  bio              : "Researcher at Carnegie Mellon University"
   location         : "Pittsburgh, PA"
   employer         :
   pubmed           : 
@@ -122,6 +122,10 @@ include:
   - .htaccess
   - _pages
   - files
+  - _portfolio
+  - _projects
+  - _research
+  - _certificates
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -187,6 +191,15 @@ collections:
   talks:
     output: false
     permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+  certificates:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -231,6 +244,33 @@ defaults:
   - scope:
       path: ""
       type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _certificates
+  - scope:
+      path: ""
+      type: certificates
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _research
+  - scope:
+      path: ""
+      type: research
     values:
       layout: single
       author_profile: true
@@ -309,3 +349,4 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+  

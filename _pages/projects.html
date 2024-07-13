@@ -1,0 +1,53 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+
+<div class="filter-buttons">
+  <button onclick="filterCards('all')">All <span class="count">{{ site.projects.size }}</span></button>
+  {% include tags.html %}
+  {% for tag in unique_tags %}
+  {% capture tag_count %}0{% endcapture %}
+  {% for item in tag_counts %}
+  {% assign parts = item | split: ":" %}
+  {% if parts[0] == tag %}
+  {% capture tag_count %}{{ parts[1] }}{% endcapture %}
+  {% endif %}
+  {% endfor %}
+  <button onclick="filterCards('{{ tag }}')">{{ tag }} <span class="count">{{ tag_count }}</span></button>
+  {% endfor %}
+</div>
+
+
+<div class="card-container">
+  {% for project in site.projects %}
+  <div class="card" data-tags="{{ project.tags | join: '_' }}" onclick="location.href='{{ project.url | relative_url }}';" style="background-color: {{ project.background }};">
+      <div class="card-image">
+          <img src="{{ project.image }}" alt="{{ project.title }} Image">
+      </div>
+      <div class="card-content">
+          <h3 class="card-title">{{ project.title }}</h3>
+          <!-- Additional project details if needed -->
+      </div>
+  </div>
+  {% endfor %}
+</div>
+  
+  <script>
+    function filterCards(tag) {
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            var tags = card.getAttribute('data-tags').split('_');
+            if (tag === 'all' || tags.includes(tag)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>

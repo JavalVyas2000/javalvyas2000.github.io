@@ -1,17 +1,20 @@
-# main links links
+# main links 
 main:    
-  - title: "Projects and Publications"
-    url: projects_publications/
+  - title: "Projects"
+    url: /projects/
 
   - title: "Resume"
-    url: files/Resume_Aman.pdf
+    url: /resume/
 
-  - title: "Research"
-    url: research/
+  # - title: "Research"
+  #   url: /research/
 
   - title: "Coursework"
-    url: coursework/
+    url: /coursework/
 
   - title: "Formula Student"
-    url: formula_student/
+    url: /formula_student/
+  
+  # - title: "Certifications"
+  #   url: /certifications/
 
