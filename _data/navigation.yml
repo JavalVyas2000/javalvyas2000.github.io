@@ -1,19 +1,19 @@
 # main links 
 main:    
   - title: "Projects"
-    url: /projects/
+    url: projects/
 
   - title: "Resume"
-    url: /resume/
+    url: resume/
 
   # - title: "Research"
   #   url: /research/
 
   - title: "Coursework"
-    url: /coursework/
+    url: coursework/
 
   - title: "Formula Student"
-    url: /formula_student/
+    url: formula_student/
   
   # - title: "Certifications"
   #   url: /certifications/
