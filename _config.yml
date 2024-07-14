@@ -12,8 +12,8 @@ title_separator          : "-"
 name                     : &name "Aman Chulawala"
 description              : &description "Researcher at Carnegie Mellon University"
 url                      : https://farstryke21.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/portfolio" # the subpath of your site, e.g. "/blog"
-repository               : "portfolio"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "farstryke21.github.io" # for the edit link on each page
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
