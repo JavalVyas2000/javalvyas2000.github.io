@@ -12,6 +12,7 @@
         "reprojected",
         "reprojections",
         "Servoing",
-        "Stachniss"
+        "Stachniss",
+        "teleoperation"
     ]
 }
