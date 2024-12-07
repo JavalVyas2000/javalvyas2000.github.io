@@ -41,8 +41,52 @@ background: "#A95C68"
         font-style: italic;
         margin: 10px 0;
     }
+
+    .button-group {
+        display: flex;
+        gap: 10px; /* Space between buttons */
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .github-button:hover i {
+        color: white;
+    }
 </style>
 
+<div class="button-group">
+    <button type="button" class="icon-button github-button">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+    </button>
+</div>
+<script>
+// Add click event to make the button link to a specific URL
+document.querySelector('.github-button').addEventListener('click', function() {
+    window.location.href = 'https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4';
+});
+</script>
 
 <h2>Introduction to Diffusion Models</h2>
 <p>Diffusion models are a class of generative models that have gained significant attention in recent years, particularly in the field of 3D vision. These models are designed to generate data similar to the data on which they are trained, making them powerful tools for tasks such as 3D reconstruction, object generation, and scene understanding.</p>
