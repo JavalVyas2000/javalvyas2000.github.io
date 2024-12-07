@@ -42,9 +42,16 @@ background: "#A95C68"
         margin: 10px 0;
     }
 
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
     .button-group {
         display: flex;
-        gap: 10px; /* Space between buttons */
+        gap: 15px; /* Space between buttons */
+        align-items: center;
     }
 
     .icon-button {
@@ -58,6 +65,7 @@ background: "#A95C68"
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease;
+        text-decoration: none !important;
     }
 
     .icon-button i {
@@ -69,24 +77,14 @@ background: "#A95C68"
         background-color: black;
         color: white;
     }
-
-    .github-button:hover i {
-        color: white;
-    }
 </style>
 
-<div class="button-group">
-    <button type="button" class="icon-button github-button">
+<div class="button-container">
+    <a href="https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4" class="icon-button github-button">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
-    </button>
+    </a>
 </div>
-<script>
-// Add click event to make the button link to a specific URL
-document.querySelector('.github-button').addEventListener('click', function() {
-    window.location.href = 'https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4';
-});
-</script>
 
 <h2>Introduction to Diffusion Models</h2>
 <p>Diffusion models are a class of generative models that have gained significant attention in recent years, particularly in the field of 3D vision. These models are designed to generate data similar to the data on which they are trained, making them powerful tools for tasks such as 3D reconstruction, object generation, and scene understanding.</p>
