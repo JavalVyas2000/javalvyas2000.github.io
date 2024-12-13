@@ -24,8 +24,55 @@ background: "#E6E6FA"
         font-size: 16px;
         color: #555;
     }
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
 </style>
 
+<div class="button-container">
+    <div class="button-group">
+        <a href="https://github.com/FarStryke21/DeepVO" class="icon-button github-button">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="/files/Visual_Odometry.pdf" class="icon-button github-button">
+            <i class="fas fa-file-alt"></i>
+            <span>Article</span>
+        </a>
+    </div>
+</div>
 ## Problem Statement
 Precise localization of mobile robots is crucial for autonomous navigation, motion tracking, and obstacle avoidance. Traditional localization methods like GPS, INS, and wheel odometry suffer from significant errors or high costs. Visual odometry (VO) presents a more accurate and cost-effective alternative. Our project aims to compare the effectiveness of traditional geometry-based VO with an end-to-end RNN+CNN model for trajectory estimation.
 

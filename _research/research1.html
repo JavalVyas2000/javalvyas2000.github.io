@@ -13,7 +13,52 @@ image: /images/research/pose_estimate/baseline.png
     .responsive-image {
       height: auto; /* Maintain aspect ratio */
     }
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
 </style>
+
+<div class="button-container">
+    <div class="button-group">
+        <a href="/files/Poster_finaldraft.pdf"
+         class="icon-button github-button">
+            <i class="fas fa-file-alt"></i>
+            <span>Poster</span>
+        </a>
+    </div>
+</div>
 
 <p>
 Pose estimation refers to the process of determining the position and orientation of objects in a given scene. It involves calculating the spatial relationship between the camera and the object, often represented as a 6-DoF (six degrees of freedom) pose consisting of three translational and three rotational parameters.

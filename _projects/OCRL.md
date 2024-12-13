@@ -18,7 +18,56 @@ background: "#CCCCFF"
     .responsive-image {
       height: auto; /* Maintain aspect ratio */
     }
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
 </style>
+
+<div class="button-container">
+    <div class="button-group">
+        <a href="https://github.com/FarStryke21/OCRL_Project_Spring2023" class="icon-button github-button">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="/files/16745_tyagi_gite_kokil_chulawala.pdf" class="icon-button github-button">
+            <i class="fas fa-file-alt"></i>
+            <span>Article</span>
+        </a>
+    </div>
+</div>
+
 --------
 # Problem
 High-performance racing has always been an exciting and challenging field, where the goal is to achieve the fastest possible lap time around the track. In Formula One (F1) racing, drivers and engineers continuously search for ways to optimize the performance of their cars and outpace their competitors. One approach to improving lap times is to use optimal control strategies, which aim to find the most efficient path a racing car can take around the track.

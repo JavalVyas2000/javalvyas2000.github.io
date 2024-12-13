@@ -42,7 +42,52 @@ background: "#A95C68"
         font-style: italic;
         margin: 10px 0;
     }
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
 </style>
+
+<div class="button-container">
+    <div class="button-group">
+        <a href="https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4"
+         class="icon-button github-button">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+    </div>
+</div>
 
 
 <h2>Overview</h2>
@@ -113,7 +158,3 @@ background: "#A95C68"
 
 <h2>Conclusion</h2>
 <p>This project demonstrates the implementation and application of 3D Gaussian Splatting for representing and rendering 3D scenes. We build a simplified 3D Gaussian rasterizer, render pre-trained 3D Gaussians, and optimize 3D Gaussians to represent custom scenes. We also explore extensions such as rendering with spherical harmonics and training on harder scenes.</p>
-
-<h2>Link to the Project Repository</h2>
-<p>The complete code and resources for this project can be found at:</p>
-<a href="https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4">https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4</a>
