@@ -1,11 +1,11 @@
 ---
 collection: projects
-title: "Building a Diffusion Model"
-image: /images/projects/diffusion_models/diffusion_models.gif
+title: "LLM Agents - Temperature Control"
+image: /images/projects/llm_control/agent_framework.png
 tags: 
-- Deep Learning
-- Machine Learning 
-- Computer Vision
+- LLM
+- Agentic framework 
+- Process Control
 background: "#A95C68" 
 ---
 
@@ -80,13 +80,13 @@ background: "#A95C68"
 </style>
 
 <div class="button-container">
-    <a href="https://github.com/FarStryke21/LearningFor3D_16825/tree/main/assignment4" class="icon-button github-button">
+    <a href="https://github.com/JavalVyas2000/LLM_controls" class="icon-button arxiv-button">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
     </a>
 </div>
 
-<h2>Introduction to Diffusion Models</h2>
+<h2>LLM Agents - Temperature control</h2>
 <p>Diffusion models are a class of generative models that have gained significant attention in recent years, particularly in the field of 3D vision. These models are designed to generate data similar to the data on which they are trained, making them powerful tools for tasks such as 3D reconstruction, object generation, and scene understanding.</p>
 
 <h3>Key Concepts</h3>
@@ -132,7 +132,7 @@ background: "#A95C68"
 <p>GSD is a diffusion model approach based on Gaussian Splatting (GS) representation for 3D object reconstruction from a single view. It utilizes an unconditional diffusion model to generate 3D objects represented by sets of GS ellipsoids, achieving high-quality 3D structure and texture.</p>
 
 <div class="image-container">
-    <img src="/images/projects/diffusion_models/results.png" alt="Description of the image">
+    <img src="images\projects\llm_control\agent_framework.png" alt="Description of the image">
     <div class="image-caption">Output from my diffusion model. The prompts for the images are given in the first column</div>
 </div>
 

@@ -1,0 +1,108 @@
+---
+layout: archive
+permalink: /open_source/
+author_profile: true
+redirect_from:
+  - /open_source
+---
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    img {
+        max-width: 1fr;
+        border-radius: 8px;
+        margin: 20px auto;
+    }
+
+    .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1fr;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+        }
+
+    .container img {
+        max-width: 400px;
+        margin-right: 20px;
+        border-radius: 8px;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-wrapper {
+            flex: 1; /* Take up 50% of the container */
+            margin-right: 20px; /* Space between video and text */
+        }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 300px; /* Adjust height as needed */
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-wrapper {
+        flex: 1; /* Take up 50% of the container */
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+    }
+
+    .full-width-image {
+        width: 100vw; /* Image spans the entire viewport width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below image */
+    }
+</style>
+
+
+<div class="container" onclick="window.location.href='https://github.com/JavalVyas2000/rtn_scheduling/tree/main';">
+    <img src="/images/formula_student/gantt_chart.jpg" alt="gantt_chart">
+    <div>
+        <h1>RTN Scheduling</h1>
+        <p>The rtn_scheduling package is a tool developed for batch scheduling using the Resource Task Network (RTN) formulation with the Pyomo modeling language. It offers features like optimal schedule visualization through Gantt charts, network topology insights, resource level tracking, and an intuitive input format, aimed at improving the efficiency of scheduling tasks.</p>
+    </div>
+</div>
+
+<div class="container" onclick="window.location.href='https://www.sciencedirect.com/science/article/abs/pii/B9780443288241502490'">
+    <img src="/images/formula_student/supply_chain.png" alt="supply_chain">
+    <div class="text-wrapper">
+        <h1>Feasibility Analysis using Linear Model Decision Trees</h1>
+        <p>This paper presents an innovative approach to integrate plant scheduling with supply chain management under disruptions, leveraging machine learning surrogates to enhance decision-making.</p> 
+        <p> By using a reactive supply chain model and linear decision tree surrogates, the method effectively addresses time-scale differences and ensures feasible scheduling solutions. A case study demonstrates its ability to maintain profitability while guaranteeing operational feasibility within reasonable computational times.</p>
+    </div>
+</div>
+
+<div class="container" onclick="window.location.href='https://www.osti.gov/servlets/purl/2434317'">
+    <img src="/images/formula_student/pareto.png" alt="pareto">
+    <div>
+        <h1>Using Machine Learning Surrogates for Produced Water Networks</h1>
+        <p>This paper explores the integration of data-driven approaches for optimizing energy systems, focusing on using machine learning and predictive analytics for better performance and efficiency.</p> 
+        <p>The proposed methodologies aim to enhance the management of energy production and consumption, leveraging real-time data to improve decision-making processes and reduce energy waste. The approach combines advanced modeling with practical applications, highlighting its effectiveness through case studies and experimental validation.</p>
+    </div>
+</div>
+
+<div class="container">
+    <img src="/images/formula_student/ucp.png" alt="ucp">
+    <div>
+        <h1>Optimization model and algorithms for the Unit Commitment problem</h1>
+        <p>This paper presents a solution to the unit commitment problem by employing a decomposition method combined with the tight model from EGRET software, addressing its combinatorial complexity. Benchmark tests against four case studies demonstrate significant computational speedups without compromising solution quality. (Under review at ESCAPE-35)</p> 
+    </div>
+</div>

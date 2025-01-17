@@ -12,9 +12,11 @@ main:
   - title: "Coursework"
     url: /coursework/
 
-  - title: "Formula Student"
-    url: /formula_student/
+  - title: "Publications"
+    url: /publications/
   
+  - title: "Softwares"
+    url: /open_source/ 
   # - title: "Certifications"
   #   url: /certifications/
 

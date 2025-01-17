@@ -1,0 +1,142 @@
+---
+layout: archive
+permalink: /publications/
+author_profile: true
+redirect_from:
+  - /publications
+---
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    img {
+        max-width: 1fr;
+        border-radius: 8px;
+        margin: 20px auto;
+    }
+
+    .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1fr;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+        }
+
+    .container img {
+        max-width: 400px;
+        margin-right: 20px;
+        border-radius: 8px;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-wrapper {
+            flex: 1; /* Take up 50% of the container */
+            margin-right: 20px; /* Space between video and text */
+        }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 300px; /* Adjust height as needed */
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-wrapper {
+        flex: 1; /* Take up 50% of the container */
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+    }
+
+    .full-width-image {
+        width: 100vw; /* Image spans the entire viewport width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below image */
+    }
+</style>
+
+
+<div class="container" onclick="window.location.href='https://arxiv.org/pdf/2411.05904';">
+    <img src="/images/formula_student/tclab.jpg" alt="tclab">
+    <div>
+        <h1>LLM based Control Agent</h1>
+        <p>This paper explores the use of large language models (LLMs) as autonomous control agents within an agentic framework for industrial automation. Through a case study on temperature regulation using CrewAI, the paper demonstrates the effectiveness of LLMs in controlling physical systems.</p>
+        <p>The proposed reprompting architecture improves agent performance, showcasing its potential for autonomous decision-making in industrial applications.</p>
+    </div>
+</div>
+
+<div class="container" onclick="window.location.href='https://www.sciencedirect.com/science/article/abs/pii/B9780443288241502490'">
+    <img src="/images/formula_student/supply_chain.png" alt="supply_chain">
+    <div class="text-wrapper">
+        <h1>Feasibility Analysis using Linear Model Decision Trees</h1>
+        <p>This paper presents an innovative approach to integrate plant scheduling with supply chain management under disruptions, leveraging machine learning surrogates to enhance decision-making.</p> 
+        <p> By using a reactive supply chain model and linear decision tree surrogates, the method effectively addresses time-scale differences and ensures feasible scheduling solutions. A case study demonstrates its ability to maintain profitability while guaranteeing operational feasibility within reasonable computational times.</p>
+    </div>
+</div>
+
+<div class="container" onclick="window.location.href='https://www.osti.gov/servlets/purl/2434317'">
+    <img src="/images/formula_student/pareto.png" alt="pareto">
+    <div>
+        <h1>Using Machine Learning Surrogates for Produced Water Networks</h1>
+        <p>This paper explores the integration of data-driven approaches for optimizing energy systems, focusing on using machine learning and predictive analytics for better performance and efficiency.</p> 
+        <p>The proposed methodologies aim to enhance the management of energy production and consumption, leveraging real-time data to improve decision-making processes and reduce energy waste. The approach combines advanced modeling with practical applications, highlighting its effectiveness through case studies and experimental validation.</p>
+    </div>
+</div>
+
+<div class="container">
+    <img src="/images/formula_student/ucp.png" alt="ucp">
+    <div>
+        <h1>Optimization model and algorithms for the Unit Commitment problem</h1>
+        <p>This paper presents a solution to the unit commitment problem by employing a decomposition method combined with the tight model from EGRET software, addressing its combinatorial complexity. Benchmark tests against four case studies demonstrate significant computational speedups without compromising solution quality. (Under review at ESCAPE-35)</p> 
+    </div>
+</div>
+
+<!-- <img class="full-width-image" src="/images/formula_student/team.JPG" alt="DJS Racing">
+
+<div class="container">
+    <img src="/images/formula_student/chassis.JPG" alt="DJS Racing">
+    <div>
+        <h1>Structural Head</h1>
+        <p>I joined the team as a junior member of the chassis team and was later promoted to the position of Structural Head. In this capacity I oversaw the shift from a combustion vehicle to an electric design. I headed the production of two chassis for our cars and actively participated in the design and manufacture of our aerodynamic package.</p> 
+        <p>Under my leadership, DJS Racing successfully defended their cost budget and cost design for two years, securing a rank in the top five. I led the design and prototyping of a modular firewall and a carbon fibre impact attenuator, both of which have since been patented by our university. I also published a paper on efficient use of Carbon Fibre in my final year. </p>
+    </div>
+</div>
+
+<img class="full-width-image" src="/images/formula_student/E03.png" alt="DJS Racing">
+
+<div class="container">
+    <img src="/images/formula_student/awards.JPG" alt="DJS Racing">
+    <div>
+        <h1>Finance Lead</h1>
+        <p>I joined the B-team of the Business Plan group in my first year in the team. My skills in financial modelling and designing presentations allowed the B-Team to secure a national rank of fourth. In this event I developed and defended a solid financial model for our "firm", which garnered an honorable mention from the judges.</p> 
+        <p>Subsequently I was put in charge of the finances of the Business Plan team and served as co-lead for the event. During my stint as the head, we secured a national rank of 2, narrowly being beaten by IIT Bombay in that event. The financial templates I developed then are still in use by the team.</p>
+    </div>
+</div>
+
+<img class="full-width-image" src="/images/formula_student/DJSRC05.png" alt="DJS Racing">
+
+<div class="container">
+    <img src="/images/formula_student/driver.jpg" alt="DJS Racing">
+    <div>
+        <h1>Inspection and Test Driver</h1>
+        <p>Having been an active participant in the design and manufacturing of two cars, I was made the Inspection and Testing driver in my final year. I successfully demonstrated driver safety during Vehicle Inspection and gained approval for all track events.</p> 
+        <p>The entire Vehicle Inspection was cleared by the team in record time that year. In particular focus were our modular firewall that allowed easy disassembly for accessing the accumulator, and our in-house carbon fibre impact attenuator which protected the driver during frontal crashes.</p>
+    </div>
+</div> -->

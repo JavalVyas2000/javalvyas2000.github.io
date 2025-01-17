@@ -17,7 +17,9 @@ gem "webrick"
 
 # gem "jekyll"
 
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem 'wdm', '~> 0.2.0' if Gem.win_platform?
+gem 'tzinfo-data'
+gem 'csv'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

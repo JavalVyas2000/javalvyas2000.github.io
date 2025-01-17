@@ -5,7 +5,7 @@ permalink: projects_publications/
 author_profile: true
 ---
 
-<details>
+<!-- <details>
 <summary>
 <b>  Augmented Conflict Based Search for Lifelong Agent Planning </b>
 </summary>
@@ -25,8 +25,8 @@ author_profile: true
   </tr>
 </table>
 
-</details>
----
+</details> -->
+<!-- ---
 
 <details>
 <summary>
@@ -48,7 +48,7 @@ author_profile: true
   </tr>
 </table>
 
-</details>
+</details> -->
 ---
 
 <details>

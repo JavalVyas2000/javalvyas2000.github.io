@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Aman Chulawala"
+title                    : "Javal Vyas"
 title_separator          : "-"
-name                     : &name "Aman Chulawala"
-description              : &description "Researcher at Carnegie Mellon University"
-url                      : https://farstryke21.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Javal Vyas"
+description              : &description "Researcher at Imperial College London"
+# url                      : https://javalvyas.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "farstryke21.github.io" # for the edit link on each page
+repository               : "javalvyas.github.io" # for the edit link on each page
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -32,7 +32,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "gh-pages" #"master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Aman Chulawala"
+  name             : "Javal Vyas"
   avatar           : "my_image.png"
-  bio              : "Researcher at Carnegie Mellon University"
-  location         : "Pittsburgh, PA"
+  bio              : "Researcher at Imperial College London"
+  location         : "London, UK"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?view_op=list_works&hl=en&user=ukeVsfYAAAAJ"
-  email            : "aman.chulawala@gmail.com"
+  googlescholar    : "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en"
+  email            : "javalvyas2000@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "FarStryke21"
+  github           : "https://github.com/JavalVyas2000"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "amanchulawala"
+  linkedin         : "https://www.linkedin.com/in/javal-vyas-63677057/?trk=opento_sprofile_details"
   orcid            : 
   pinterest        :
   soundcloud       :

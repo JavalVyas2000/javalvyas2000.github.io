@@ -1,5 +1,5 @@
 # Personal Portfolio of Projects
-Hosted at [https://farstryke21.github.io/](https://farstryke21.github.io/)
+Hosted at [https://javalvyas.github.io/](https://javalvyas.github.io/)
 ### Navigation
 User UI -> _config.yml
 
@@ -9,7 +9,7 @@ Available Pages -> _data/navigation.yml -> Update the file with relevant headers
 
 Update Projects -> _pages/projects_and_publications.md -> Get template and add project data
 
-Resume Update -> files/Resume_Aman.pdf -> Update the file in the folder with the same name
+Resume Update -> files/Resume_Javal.pdf -> Update the file in the folder with the same name
 
 
 A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
