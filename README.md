@@ -1,5 +1,5 @@
 # Personal Portfolio of Projects
-Hosted at [https://javalvyas.github.io/](https://javalvyas.github.io/)
+Hosted at [https://javalvyas2000.github.io/](https://javalvyas2000.github.io/)
 ### Navigation
 User UI -> _config.yml
 
