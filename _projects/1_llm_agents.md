@@ -118,8 +118,8 @@ background: "#A95C68"
 
 
 <div class="image-container">
-    <img src="images\projects\llm_control\agent_framework.png" alt="Description of the image">
-    <div class="image-caption">Output from my diffusion model. The prompts for the images are given in the first column</div>
+    <img src="images\projects\llm_control\agent_framework.png" alt="agent_framework">
+    <div class="image-caption">Agent Framework for autonomous control</div>
 </div>
 
 <h2>Challenges and Future Directions</h2>
