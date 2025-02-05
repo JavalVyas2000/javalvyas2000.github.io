@@ -4,7 +4,6 @@ collection: research
 image: /images/research/ucp/ucp.png
 ---
 
-
 <style>
     .image-container {
         text-align: center;
@@ -12,7 +11,10 @@ image: /images/research/ucp/ucp.png
     }
     .image-container img {
         max-width: 80%;
-        height: auto;
+        height: auto; /* Maintains the aspect ratio */
+        object-fit: contain; /* Ensures the full image fits within the container */
+        display: block; /* Centers the image */
+        margin: 0 auto; /* Adds auto-margin for centering */
     }
     .image-caption {
         margin-top: 8px;
@@ -26,7 +28,7 @@ image: /images/research/ucp/ucp.png
     }
     .video-container video {
         max-width: 100%;
-        height: auto;
+        height: auto; /* Maintains the video's aspect ratio */
     }
     .video-caption {
         margin-top: 8px;
