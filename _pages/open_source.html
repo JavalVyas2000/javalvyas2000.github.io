@@ -1,4 +1,116 @@
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Contributions</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .tile {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+        .tile:hover {
+            transform: scale(1.05);
+        }
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .one-liner {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #555;
+        }
+        .description {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        .stats {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .stats i {
+            margin-right: 5px;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- rtn_scheduling -->
+        <div class="container" onclick="window.location.href='https://github.com/JavalVyas2000/rtn_scheduling/tree/main';">
+            <div class="title">rtn_scheduling</div>
+            <div class="one-liner">A pipeline tool for solving RTN scheduling problems with data visualization capabilities.</div>
+            <div class="description">
+                Developed to streamline RTN scheduling, this Python package allows users to input data intuitively and generate schedules efficiently. It also features a built-in visualization module, enhancing usability.
+            </div>
+            <div class="stats">
+                <i class="fas fa-star"></i> 8  
+                <i class="fas fa-code-branch"></i> 2
+            </div>
+        </div>
+        <!-- Estimation-of-RUL -->
+        <div class="container" onclick="window.location.href='https://github.com/JavalVyas2000/Estimation-of-RUL/tree/main';">
+            <div class="title">Estimation-of-RUL</div>
+            <div class="one-liner">Estimates residual useful life (RUL) using first-principle and data-driven models.</div>
+            <div class="description">
+                Combines first-principles approaches with time-series models like ARIMA, LSTM, and Fourier transforms to estimate RUL. It serves as a valuable resource for predictive maintenance and system reliability analysis.
+            </div>
+            <div class="stats">
+                <i class="fas fa-star"></i> 2
+            </div>
+        </div>
+        <!-- project-pareto -->
+        <div class="container" onclick="window.location.href='https://github.com/project-pareto/project-pareto';">
+            <div class="title">project-pareto</div>
+            <div class="one-liner">Optimized network scheduling for produced water systems.</div>
+            <div class="description">
+                Contributed to this NETL-owned package by improving computational efficiency using machine learning surrogates. Enhanced data integration, visualization, and infeasibility detection, making the tool more robust and scalable.
+            </div>
+            <div class="stats">
+                <i class="fas fa-star"></i> 19  
+                <i class="fas fa-code-branch"></i> 29
+            </div>
+        </div>
+        <!-- IDAES -->
+        <div class="container" onclick="window.location.href='https://github.com/IDAES';">
+            <div class="title">IDAES</div>
+            <div class="one-liner">An advanced modeling platform for process systems engineering.</div>
+            <div class="description">
+                Collaborated on the NETL-led IDAES project to update models, implement recent version calls, and create a tutorial on using machine learning surrogates. This contribution enhanced accessibility and functionality for users.
+            </div>
+            <div class="stats">
+                <strong>IDAES-PSE:</strong> 
+                <i class="fas fa-star"></i> 229  
+                <i class="fas fa-code-branch"></i> 243<br>
+                <strong>IDAES-Examples:</strong> 
+                <i class="fas fa-star"></i> 19  
+                <i class="fas fa-code-branch"></i> 36
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- ---
 layout: archive
 permalink: /open_source/
 author_profile: true
@@ -77,6 +189,7 @@ redirect_from:
     <img src="/images/formula_student/gantt_chart.jpg" alt="gantt_chart">
     <div>
         <h1>RTN Scheduling</h1>
+
         <p>The rtn_scheduling package is a tool developed for batch scheduling using the Resource Task Network (RTN) formulation with the Pyomo modeling language. It offers features like optimal schedule visualization through Gantt charts, network topology insights, resource level tracking, and an intuitive input format, aimed at improving the efficiency of scheduling tasks.</p>
     </div>
 </div>
@@ -96,4 +209,4 @@ redirect_from:
         <h1>Optimization model and algorithms for the Unit Commitment problem</h1>
         <p>This paper presents a solution to the unit commitment problem by employing a decomposition method combined with the tight model from EGRET software, addressing its combinatorial complexity. Benchmark tests against four case studies demonstrate significant computational speedups without compromising solution quality. (Under review at ESCAPE-35)</p> 
     </div>
-</div>
+</div> -->
