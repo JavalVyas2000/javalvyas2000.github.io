@@ -1,7 +1,7 @@
 ---
 collection: projects
 title: "LSTMs-for-Flow-simulation"
-image: /images/formula_student/lstm.png
+image: /images/formula_student/lstm_cell.png
 tags: 
 - Deep Learning
 - Time Series
