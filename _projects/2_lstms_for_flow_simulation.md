@@ -1,10 +1,10 @@
 ---
 collection: projects
 title: "LSTMs-for-Flow-simulation"
-image: /images/projects/unit_commitment/ucp.png
+image: /images/formula_student/lstm.png
 tags: 
-- Scheduling Problems
-- Mathematical Optimization
+- Deep Learning
+- Time Series
 background: "#A95C68" 
 ---
 <style>
