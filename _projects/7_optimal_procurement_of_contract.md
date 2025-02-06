@@ -1,6 +1,6 @@
 ---
 collection: projects
-title: "Traveling Salesman Problem (TSP) with Q-Learning"
+title: "Optimal Procurement of Contract under Uncertainty"
 image: /images/projects/procurement_of_contract/network_topology.png
 tags: 
 - Stochastic Programming
