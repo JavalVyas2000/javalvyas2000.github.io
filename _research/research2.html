@@ -16,71 +16,21 @@ image: /images/research/quality_metric/banner.jpg
 </style>
 
 <p>
-Point cloud registration is a fundamental task in computer vision and robotics that involves aligning two or more point clouds to form a single cloud. It is a critical step in many applications, such as 3D reconstruction, object recognition, and robot localization. The quality of the registration is crucial for the success of these applications, as it directly affects the accuracy of the results drawn from cloud.
+    In this research, I focused on developing a framework to optimize supply chain recovery from disruptions, specifically addressing the timescale mismatch between plant-level operations and the larger supply chain network. Plants typically operate on hourly or 15-minute intervals, while the broader supply chain network functions on a daily basis. This discrepancy leads to challenges in verifying the feasibility of orders produced by plants at the plant level, which is crucial for maintaining the integrity of the entire supply chain.
+</p>
+
+<h2>Research Contributions:</h2>
+<ul>
+    <li><strong>Supply Chain Disruption Recovery:</strong>The main objective of this research was to develop a system that enables the supply chain to recover from disruptions optimally, despite the timescale mismatch. This problem arises because the orders produced at the plant level are not checked for feasibility before being integrated into the larger supply chain network.</li>
+    <li><stong>Integration of Machine Learning Surrogates:</stong>To address the feasibility analysis challenge, I integrated a linear model decision tree surrogate into the larger supply chain network. The surrogate was used to predict the feasibility of orders at the plant level without needing to directly model each plant for every node and time step, which would have led to an explosive increase in model complexity.</li>
+    <li><strong>Sampling Method for Surrogate Training:</strong>A novel sampling method was developed based on insights from the data, which helped generate training data for the surrogates. This method reduced the need for coding the supply chain model at each node for each time step, avoiding the explosion of computational complexity that would have otherwise occurred.</li>
+    <li><strong>Efficient Integration into MILP Framework:</strong>The surrogate model was designed to not significantly increase the problem size. It was seamlessly integrated into an existing Mixed-Integer Linear Programming (MILP) framework, preserving the efficiency and scalability of the model. The approach enabled the optimization of the recovery process without introducing prohibitive computational costs.</li>
+</ul>
+<h2>Impact and Contributions:</h2>
+<p>
+    This work introduces an efficient method for incorporating machine learning surrogates into supply chain optimization, addressing the challenge of timescale mismatches in a realistic manner. By using the surrogate model, the framework can predict the feasibility of plant-level orders while maintaining the integrity of the larger supply chain, allowing for an optimized recovery from disruptions. The approach is computationally efficient and integrates well within an existing MILP framework, ensuring scalability for larger, more complex supply chain systems.
 </p>
 
 <p>
-Because of this, it is essential to quantify the registration quality to evaluate the performance of the registration algorithm and compare different methods. Most approaches either use a sum of squared point-to-point distances or point-to-plane measures after alignment.
-</p>
-
-<p>
-The purpose of our research is to expand on the idea of re-projection metrics for alignment quality introduced by Igor Bogoslavskyi and Cyrill Stachniss.
-</p>
-
-<h2>Getting some context</h2>
-<p>
-When we think of registration, one of the most successful algorithm is the Iterative Closest Point (ICP) algorithm. The ICP algorithm iteratively aligns two point clouds by minimizing the distance between the corresponding points. The quality of the registration is often evaluated by measuring the distance between the aligned points, which is known as the re-projection error.
-</p>
-<div class="image-container">
-    <img src="/images/research/quality_metric/car_cloud.png" alt="Centered Image" class="responsive-image" style="width: 650px">
-</div>
-<p>
-Take an example of the car point clouds seen above. On the left we have an example of a good alignment, and on the right we can see a bad alignment. The alignment quality is often depended on factors like point cloud density, tunable parameters, and noise seen in the cloud.
-</p>
-
-<p>
-Most existing metrics like the Mahalanobis distance, the Hausdorff distance, and the Chamfer distance are used to evaluate the quality of the registration. However, these metrics are not always suitable for evaluating the quality of the registration, as they fail to be compatible across point clouds with different densities and noise levels.
-</p>
-
-<h2>Our Approach</h2>
-
-<p>
-Our approach is completely agnostic to the used alignment method as long as it computes the 3D transformation between the sensor poses at scanning time. Unlike the work of Bogoslavskyi et al, we focus on developing the algorithm specifically for static environments and dense point clouds.
-</p>
-<div class="image-container">
-    <img src="/images/research/quality_metric/projection.png" alt="Centered Image" class="responsive-image" style="width: 400px">
-</div>
-<p>
-When checking the alignment of two point clouds, each point cloud is projected on an image plane defined at the point cloud coordinate frame. Two point clouds and their two coordinate frames result in four reprojected images as shown in the image below. This leads to four projected depth images I11, I12, I21, and I22, where Ici refers to the projection of the cloud Cc into the first or second image plane (index i). Each pixel in Ici stores the distance between the 3D point in Cc and the origin Oi. 
-</p>
-
-<div class="image-container">
-    <img src="/images/research/quality_metric/image_planes.png" alt="Centered Image" class="responsive-image" style="width: 650px">
-</div>
-
-<p>
-The analysis relies on comparing the depth images I11 to I21 and I12 to I22. We estimate the probability of points in the two images being reprojections of the same point in the clouds. This results in an array of votes provided by all eligible points. Opinion pooling gives us an average value lying between 0 and 1, which describes how good the alignment is. Higher the value, better the alignment. In most physical cases, we see 0.8 as a good alignment.
-</p>
-
-<div class="image-container">
-    <img src="/images/research/quality_metric/results.png" alt="Centered Image" class="responsive-image" style="width: 650px">
-</div>
-<p>
-The final alignment quality is highly sensitive to misalignment. To benchmark the performance, we introduced unit translation and rotation errors to an alignment set created using ICP. Even the slightest misalignment sees an immediate drop in the metric.
-</p>
-
-<div class="image-container">
-    <img src="/images/research/quality_metric/sensitivity.png" alt="Centered Image" class="responsive-image" style="width: 650px">
-</div>
-<h2>Implementation</h2>
-
-<p>
-The current version of the pose estimation pipeline is implemented in Python using the Open3D library along with our in-house ROS bindings for point cloud data. The current implementation takes on average 3.3 seconds to capture the rough scan for the quality module, and the quality assignment engine provides a result in under 5 seconds. The entire pipeline can provide a pose estimate in under 8 seconds, and is currently available as a ROS Node for use in ROS based systems.
-</p>
-
-<div class="image-container">
-    <img src="/images/research/quality_metric/example_result.png" alt="Centered Image" class="responsive-image" style="width: 650px">
-</div>
-<p>
-Future work includes improving the performance by leveraging the Point Cloud Library (PCL) for feature extraction and aligning. The feature extraction process make it an ideal candidate for GPU processing. The final objective is to have a pose estimate rate of 1 Hz or more for realtime quality analysis in dynamic environments.
+    The research culminated in a paper published in ESCAPE-34, where the full details of the approach and its applications are discussed. You can find the paper <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443288241502490"> for more details.
 </p>
