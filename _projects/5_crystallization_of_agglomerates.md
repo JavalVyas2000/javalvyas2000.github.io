@@ -3,7 +3,7 @@ collection: projects
 title: "Estimation of Ozone in Atmosphere"
 image: /images/projects/crystallization_of_agglomerates/classification.png
 tags: 
-- Machine Learning
+- Computer Vision
 background: "#A95C68" 
 ---
 <style>
