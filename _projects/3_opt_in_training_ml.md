@@ -1,6 +1,6 @@
 ---
 collection: projects
-title: "Optimization techniques for training machine learning models"
+title: "Second Order training methods for ML"
 image: /images/projects/optimization_in_training_ml/second_order_methods.png
 tags: 
 - Machine Learning
