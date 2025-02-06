@@ -1,7 +1,7 @@
 ---
 collection: projects
 title: "Traveling Salesman Problem (TSP) with Q-Learning"
-image: /images/projects/tsp_with_rl/Agent_Progress_size_10.mp4
+image: /images/projects/tsp_with_rl/agent_framework.png
 tags: 
 - RL
 - Mathematical Optimization 
