@@ -1,69 +1,89 @@
 ---
-title: "Unit Commitment Problem"
+title: "LLM for control actions"
 collection: research
-image: /images/research/ucp/ucp.png
+image: /images/research/llm_control/agent_framework.png
 ---
+
 
 <style>
     .image-container {
-        text-align: center;
-        margin: 20px;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .image-container img {
-        max-width: 80%;
-        height: auto; /* Maintains the aspect ratio */
-        object-fit: contain; /* Ensures the full image fits within the container */
-        display: block; /* Centers the image */
-        margin: 0 auto; /* Adds auto-margin for centering */
+    .responsive-image {
+      height: auto; /* Maintain aspect ratio */
     }
-    .image-caption {
-        margin-top: 8px;
-        font-size: 16px;
-        color: #555;
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
     }
 
-    .video-container {
-        text-align: center;
-        margin: 20px;
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
     }
-    .video-container video {
-        max-width: 100%;
-        height: auto; /* Maintains the video's aspect ratio */
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
     }
-    .video-caption {
-        margin-top: 8px;
-        font-size: 16px;
-        color: #555;
-        text-align: center;
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
     }
 </style>
 
-<p>
-    .</p>
+<div class="button-container">
+    <div class="button-group">
+        <a href="https://github.com/AISL-at-Imperial-College-London/llm_agents"
+         class="icon-button github-button">
+            <i class="fas fa-file-alt"></i>
+            <span>GitHub</span>
+        </a>
+    </div>
+</div>
 
 <p>
-    In my work on the Unit Commitment (UC) problem, I tackled one of the most critical challenges in power systems operations: scheduling the optimal combination of power generation units to meet electricity demand while minimizing operational costs and ensuring reliability. The UC problem is inherently complex due to its combinatorial nature, requiring advanced mathematical modeling and computational techniques.
+    In this work, I investigate the use of Large Language Models (LLMs) for fault handling in control systems. Leveraging the reasoning abilities of LLMs, the proposed framework aims to enhance the adaptability and decision-making process in dynamic control environments. The primary goal is to design a system that can detect, address, and resolve faults effectively, ensuring system stability and performance.
 </p>
 
+<h2>Research Contributions:</h2>
+<ul>
+    <li><strong>Fault Handling with LLM Reasoning:</strong>The core innovation of this research is the use of LLMs for fault detection and handling. By integrating the reasoning abilities of LLMs, the system can intelligently identify faults in real-time, make decisions based on system states, and respond with appropriate corrective actions.</li>
+    <li><strong>Feedback Loop for LLM Agents:</strong>The framework is built around a feedback loop involving four key agents:
+        <ul>
+            <li><strong>Monitoring Agent:</strong> This agent, which can function as a controller, oversees the normal system operations and is coupled with a fault detection algorithm. Upon detecting a fault, it communicates the current system state to the next agent.</li>
+            <li><strong>Action Agent:</strong> Once a fault is detected, the Action Agent is notified and tasked with understanding what actions are required based on the current system state. It then sends these actions to the digital twin of the system.</li>
+            <li><strong>Digital Twin:</strong> This virtual model of the system performs the proposed actions and outputs the next system state.</li>
+            <li><strong>Validation Agent:</strong> The future system state is passed to the Validation Agent, which checks for safety and constraint violations. If any issues are found, the system enters the Reprompting Phase.</li>
+            <li><strong>Reprompting Agent:</strong> In this phase, the Reprompting Agent generates new strategies to resolve errors and guide the system back to its desired state.</li>
+        </ul>
+    </li>
+    <li><strong>Practical Application in Heater Control:</strong>The proposed method was tested using a TCLab (Thermoelectric Control Lab) to control a heater in both physical and simulation environments. The experiments involved two primary tasks:
+        <ul>
+            <li><strong>Relay Switch Logic:</strong>A simple control mechanism for switching the heater on and off.</li>
+            <li><strong>Collaborative Control Task:</strong>A more complex task where multiple action agents collaborate to maintain the system's average temperature at a setpoint. This task requires coordination and decision-making from multiple agents to ensure effective temperature control.</li>
+        </ul>
+    </li>
+    <li><strong>Challenges and Future Work:</strong>One of the significant challenges encountered was inference time inconsistency. This caused the system to frequently enter the Reprompting Phase, as the LLM agents struggled to make timely decisions. Overcoming these inconsistencies will be a key area for future improvement. Despite this, the framework demonstrated its ability to handle fault detection and resolution effectively across both simulated and physical environments.</li>
+</ul>
 <p>
-    My contributions centered around the development of a hybrid optimization framework that integrates a decomposition method with the tight model from the EGRET software suite. This approach effectively addresses the large-scale complexity of the UC problem by breaking it into smaller, computationally manageable subproblems without compromising much on the solution quality.
-</p>
-
-
-<p>
-    Key aspects of my work included:
-    <ul>
-        <li><strong>Modeling and Algorithm Design:</strong>  Leveraged advanced mixed-integer programming techniques to enhance the performance of traditional UC models, ensuring accurate representations of generator constraints and operational limits.</li>
-        <li><strong>Scalability and Computational Speedup:</strong> Achieved significant reductions in computational time across four benchmark case studies, demonstrating the efficiency and robustness of the proposed approach for real-world applications.</li>
-        <li><strong>System-Wide Impact:</strong> Ensured reliable power system operation by integrating constraints related to energy reserves, ramp rates, and renewable energy variability.</li>
-    </ul>
-    
-</p>
-
-<p>
-    This research directly contributes to improving decision-making processes in the energy sector by enabling more efficient and cost-effective scheduling of power generation units. It highlights the importance of advanced optimization techniques in addressing modern challenges such as the integration of renewable energy sources and the increasing demand for computational efficiency.
-</p>
-
-<p>
-    My work on this problem culminated in a comprehensive research paper that is currently under review for publication in the ESCAPE-35 proceedings. It demonstrates the potential of innovative optimization techniques to drive improvements in critical energy system operations.
+    For more detailed information and insights on the methodology and results, please refer to the full paper available on arXiv <a href="https://arxiv.org/pdf/2411.05904."></a>
 </p>
