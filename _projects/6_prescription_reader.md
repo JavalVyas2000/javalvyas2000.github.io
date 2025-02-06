@@ -68,7 +68,7 @@ background: "#A95C68"
 # Problem Statement
 
 <div class="button-container">
-    <a href="https://github.com/JavalVyas2000/Classification-of-Needle-like-crystals-using-Image-Analysis" class="icon-button arxiv-button">
+    <a href="https://github.com/JavalVyas2000/Prescription_reader" class="icon-button arxiv-button">
         <i class="fab fa-github"></i>
         <span>GitHub</span>
     </a>

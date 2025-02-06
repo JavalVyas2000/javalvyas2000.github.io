@@ -1,7 +1,7 @@
 ---
 collection: projects
 title: "Optimization techniques for training machine learning models"
-image: /images/projects/unit_commitment/ucp.png
+image: /images/projects/optimization_in_training_ml/second_order_methods.png
 tags: 
 - Machine Learning
 - Mathematical Optimization
