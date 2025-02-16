@@ -72,18 +72,19 @@ redirect_from:
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Space below image */
     }
+    .image-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .image-item {
+        text-align: center;
+    }
 </style>
 
-<div class="image-container">
-    <div class="image-item">
-        <h2>GitHub Activity</h2>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JavalVyas2000&theme=github" alt="GitHub Activity">
-    </div>
-    <div class="image-item">
-        <h2>GitHub Stats</h2>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JavalVyas2000&theme=github" alt="GitHub Stats">
-    </div>
-</div>
 <!-- rtn_scheduling -->
 <div class="container" onclick="window.location.href='https://github.com/JavalVyas2000/rtn_scheduling/tree/main';">
     <img src="/images/formula_student/gantt_chart.jpg" alt="gantt_chart">
@@ -140,6 +141,16 @@ redirect_from:
     </div>
 </div>
 
+<div class="image-container">
+    <div class="image-item">
+        <h2>GitHub Activity</h2>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JavalVyas2000&theme=github" alt="GitHub Activity">
+    </div>
+    <div class="image-item">
+        <h2>GitHub Stats</h2>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JavalVyas2000&theme=github" alt="GitHub Stats">
+    </div>
+</div>
 
 <!-- <div class="container" onclick="window.location.href='https://github.com/JavalVyas2000/rtn_scheduling/tree/main';">
     <img src="/images/formula_student/gantt_chart.jpg" alt="gantt_chart">
