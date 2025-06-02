@@ -1,0 +1,95 @@
+---
+title: "Autonomous Control and Fault Handling with LLMs"
+collection: research
+image: /images/research/operator/mixer.png
+---
+
+<style>
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.responsive-image {
+  height: auto;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+.button-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+.icon-button i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+.icon-button:hover {
+  background-color: black;
+  color: white;
+}
+</style>
+
+<div class="button-container">
+  <div class="button-group">
+    <a href="https://github.com/AISL-at-Imperial-College-London/llm_agents" class="icon-button github-button">
+      <i class="fas fa-file-alt"></i>
+      <span>GitHub</span>
+    </a>
+  </div>
+</div>
+
+<p>
+This project investigates the use of Large Language Models (LLMs) as autonomous agents capable of performing control tasks and handling faults in dynamic environments. Moving beyond static prompt-response roles, LLMs here are conceptualized as intelligent agents embedded in a multi-agent control loop, capable of monitoring plant conditions, issuing control commands, validating outcomes, and adapting strategies through reasoning.
+</p>
+
+<h2>Key Contributions</h2>
+<ul>
+  <li><strong>LLMs as Control Agents:</strong> The system leverages LLMs to act as real-time controllers, analyzing current sensor data and deciding control actions such as adjusting heater states in a thermoelectric system. These actions are then executed in simulation or on physical hardware.</li>
+
+  <li><strong>LLMs as Fault Handling Operators:</strong> Inspired by industrial operator roles, the ETFA paper component demonstrates how LLMs can act during fault conditions — identifying abnormal behavior, proposing mitigation strategies, and steering the plant toward a safe recovery state.</li>
+
+  <li><strong>Multi-Agent Framework:</strong> The architecture is structured around five intelligent agents:
+    <ul>
+      <li><strong>Monitoring Agent:</strong> Observes system conditions, detects anomalies, and determines when to trigger fault handling.</li>
+      <li><strong>Action Agent:</strong> Selects control commands based on goals, constraints, and system state.</li>
+      <li><strong>Digital Twin:</strong> A simulation environment to verify and predict the effects of proposed actions.</li>
+      <li><strong>Validation Agent:</strong> Evaluates simulated outcomes for constraint violations or unsafe behavior.</li>
+      <li><strong>Reprompting Agent:</strong> Refines decisions through iterative reasoning when invalid outcomes are detected.</li>
+    </ul>
+  </li>
+
+  <li><strong>Physical Experiments with Temperature Control:</strong>
+    <ul>
+      <li><strong>Relay Logic:</strong> Demonstrates simple temperature switching via on/off control.</li>
+      <li><strong>Collaborative Control:</strong> Multiple LLM agents coordinate to maintain a setpoint temperature using reasoning and communication.</li>
+    </ul>
+  </li>
+
+  <li><strong>Fault Recovery Case Studies:</strong> In more advanced scenarios, the LLM operator adapts to simulated faults (e.g., blocked flow paths, sensor drift) by selecting alternate actions or constraints to keep the plant operational.</li>
+
+  <li><strong>Challenges and Future Directions:</strong> The primary challenge remains inference latency and consistency. Ongoing work focuses on improving response times, incorporating retrieval-augmented generation (RAG), and fine-tuning strategies to reduce reprompting cycles.</li>
+</ul>
+
+<p>
+The overarching goal is to establish whether foundation models can take on functional roles in autonomous control and fault mitigation — not just describing solutions, but enacting them through integrated reasoning, feedback, and execution.
+</p>
+
+<p>
+For more insights and detailed methodology, see the full paper on arXiv <a href="https://arxiv.org/pdf/2411.05904.">here</a>.
+</p>

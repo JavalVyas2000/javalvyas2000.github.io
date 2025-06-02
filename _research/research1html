@@ -1,0 +1,89 @@
+---
+title: "LLM for control actions"
+collection: research
+image: /images/research/llm_control/agent_framework.png
+---
+
+
+<style>
+    .image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .responsive-image {
+      height: auto; /* Maintain aspect ratio */
+    }
+    .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px; /* Space between buttons */
+        align-items: center;
+    }
+
+    .icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none !important;
+    }
+
+    .icon-button i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    .icon-button:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<div class="button-container">
+    <div class="button-group">
+        <a href="https://github.com/AISL-at-Imperial-College-London/llm_agents"
+         class="icon-button github-button">
+            <i class="fas fa-file-alt"></i>
+            <span>GitHub</span>
+        </a>
+    </div>
+</div>
+
+<p>
+    In this work, I investigate the use of Large Language Models (LLMs) for fault handling in control systems. Leveraging the reasoning abilities of LLMs, the proposed framework aims to enhance the adaptability and decision-making process in dynamic control environments. The primary goal is to design a system that can detect, address, and resolve faults effectively, ensuring system stability and performance.
+</p>
+
+<h2>Research Contributions:</h2>
+<ul>
+    <li><strong>Fault Handling with LLM Reasoning:</strong>The core innovation of this research is the use of LLMs for fault detection and handling. By integrating the reasoning abilities of LLMs, the system can intelligently identify faults in real-time, make decisions based on system states, and respond with appropriate corrective actions.</li>
+    <li><strong>Feedback Loop for LLM Agents:</strong>The framework is built around a feedback loop involving four key agents:
+        <ul>
+            <li><strong>Monitoring Agent:</strong> This agent, which can function as a controller, oversees the normal system operations and is coupled with a fault detection algorithm. Upon detecting a fault, it communicates the current system state to the next agent.</li>
+            <li><strong>Action Agent:</strong> Once a fault is detected, the Action Agent is notified and tasked with understanding what actions are required based on the current system state. It then sends these actions to the digital twin of the system.</li>
+            <li><strong>Digital Twin:</strong> This virtual model of the system performs the proposed actions and outputs the next system state.</li>
+            <li><strong>Validation Agent:</strong> The future system state is passed to the Validation Agent, which checks for safety and constraint violations. If any issues are found, the system enters the Reprompting Phase.</li>
+            <li><strong>Reprompting Agent:</strong> In this phase, the Reprompting Agent generates new strategies to resolve errors and guide the system back to its desired state.</li>
+        </ul>
+    </li>
+    <li><strong>Practical Application in Heater Control:</strong>The proposed method was tested using a TCLab (Thermoelectric Control Lab) to control a heater in both physical and simulation environments. The experiments involved two primary tasks:
+        <ul>
+            <li><strong>Relay Switch Logic:</strong>A simple control mechanism for switching the heater on and off.</li>
+            <li><strong>Collaborative Control Task:</strong>A more complex task where multiple action agents collaborate to maintain the system's average temperature at a setpoint. This task requires coordination and decision-making from multiple agents to ensure effective temperature control.</li>
+        </ul>
+    </li>
+    <li><strong>Challenges and Future Work:</strong>One of the significant challenges encountered was inference time inconsistency. This caused the system to frequently enter the Reprompting Phase, as the LLM agents struggled to make timely decisions. Overcoming these inconsistencies will be a key area for future improvement. Despite this, the framework demonstrated its ability to handle fault detection and resolution effectively across both simulated and physical environments.</li>
+</ul>
+<p>
+    For more detailed information and insights on the methodology and results, please refer to the full paper available on arXiv <a href="https://arxiv.org/pdf/2411.05904."> here.
+</p>

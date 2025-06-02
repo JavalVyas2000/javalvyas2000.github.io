@@ -1,36 +1,69 @@
 ---
-title: "Integration of feasibility with Machine Learning surrogates"
+title: "Unit Commitment Problem"
 collection: research
-image: /images/formula_student/supply_chain.png
+image: /images/research/ucp/ucp.png
 ---
 
 <style>
     .image-container {
-      text-align: center;
-      margin-bottom: 20px;
+        text-align: center;
+        margin: 20px;
     }
-    .responsive-image {
-      height: auto; /* Maintain aspect ratio */
+    .image-container img {
+        max-width: 80%;
+        height: auto; /* Maintains the aspect ratio */
+        object-fit: contain; /* Ensures the full image fits within the container */
+        display: block; /* Centers the image */
+        margin: 0 auto; /* Adds auto-margin for centering */
     }
-    
+    .image-caption {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .video-container {
+        text-align: center;
+        margin: 20px;
+    }
+    .video-container video {
+        max-width: 100%;
+        height: auto; /* Maintains the video's aspect ratio */
+    }
+    .video-caption {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #555;
+        text-align: center;
+    }
 </style>
 
 <p>
-    In this research, I focused on developing a framework to optimize supply chain recovery from disruptions, specifically addressing the timescale mismatch between plant-level operations and the larger supply chain network. Plants typically operate on hourly or 15-minute intervals, while the broader supply chain network functions on a daily basis. This discrepancy leads to challenges in verifying the feasibility of orders produced by plants at the plant level, which is crucial for maintaining the integrity of the entire supply chain.
-</p>
+    .</p>
 
-<h2>Research Contributions:</h2>
-<ul>
-    <li><strong>Supply Chain Disruption Recovery:</strong>The main objective of this research was to develop a system that enables the supply chain to recover from disruptions optimally, despite the timescale mismatch. This problem arises because the orders produced at the plant level are not checked for feasibility before being integrated into the larger supply chain network.</li>
-    <li><stong>Integration of Machine Learning Surrogates:</stong>To address the feasibility analysis challenge, I integrated a linear model decision tree surrogate into the larger supply chain network. The surrogate was used to predict the feasibility of orders at the plant level without needing to directly model each plant for every node and time step, which would have led to an explosive increase in model complexity.</li>
-    <li><strong>Sampling Method for Surrogate Training:</strong>A novel sampling method was developed based on insights from the data, which helped generate training data for the surrogates. This method reduced the need for coding the supply chain model at each node for each time step, avoiding the explosion of computational complexity that would have otherwise occurred.</li>
-    <li><strong>Efficient Integration into MILP Framework:</strong>The surrogate model was designed to not significantly increase the problem size. It was seamlessly integrated into an existing Mixed-Integer Linear Programming (MILP) framework, preserving the efficiency and scalability of the model. The approach enabled the optimization of the recovery process without introducing prohibitive computational costs.</li>
-</ul>
-<h2>Impact and Contributions:</h2>
 <p>
-    This work introduces an efficient method for incorporating machine learning surrogates into supply chain optimization, addressing the challenge of timescale mismatches in a realistic manner. By using the surrogate model, the framework can predict the feasibility of plant-level orders while maintaining the integrity of the larger supply chain, allowing for an optimized recovery from disruptions. The approach is computationally efficient and integrates well within an existing MILP framework, ensuring scalability for larger, more complex supply chain systems.
+    In my work on the Unit Commitment (UC) problem, I tackled one of the most critical challenges in power systems operations: scheduling the optimal combination of power generation units to meet electricity demand while minimizing operational costs and ensuring reliability. The UC problem is inherently complex due to its combinatorial nature, requiring advanced mathematical modeling and computational techniques.
 </p>
 
 <p>
-    The research culminated in a paper published in ESCAPE-34, where the full details of the approach and its applications are discussed. You can find the paper <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780443288241502490"> for more details.
+    My contributions centered around the development of a hybrid optimization framework that integrates a decomposition method with the tight model from the EGRET software suite. This approach effectively addresses the large-scale complexity of the UC problem by breaking it into smaller, computationally manageable subproblems without compromising much on the solution quality.
+</p>
+
+
+<p>
+    Key aspects of my work included:
+    <ul>
+        <li><strong>Modeling and Algorithm Design:</strong>  Leveraged advanced mixed-integer programming techniques to enhance the performance of traditional UC models, ensuring accurate representations of generator constraints and operational limits.</li>
+        <li><strong>Scalability and Computational Speedup:</strong> Achieved significant reductions in computational time across four benchmark case studies, demonstrating the efficiency and robustness of the proposed approach for real-world applications.</li>
+        <li><strong>System-Wide Impact:</strong> Ensured reliable power system operation by integrating constraints related to energy reserves, ramp rates, and renewable energy variability.</li>
+    </ul>
+    
+</p>
+
+<p>
+    This research directly contributes to improving decision-making processes in the energy sector by enabling more efficient and cost-effective scheduling of power generation units. It highlights the importance of advanced optimization techniques in addressing modern challenges such as the integration of renewable energy sources and the increasing demand for computational efficiency.
+</p>
+
+<p>
+    My work on this problem culminated in a comprehensive research paper that is currently under review for publication in the ESCAPE-35 proceedings. It demonstrates the potential of innovative optimization techniques to drive improvements in critical energy system operations.
 </p>
