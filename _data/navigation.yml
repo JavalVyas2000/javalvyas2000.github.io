@@ -1,22 +1,12 @@
-# main links 
-main:    
+main:
+  - title: "Home"
+    url: /
   - title: "Projects"
     url: /projects/
-
-  - title: "Resume"
-    url: /resume/
-
   - title: "Research"
     url: /research/
-
-  - title: "Coursework"
-    url: /coursework/
-
-  - title: "Publications"
-    url: /publications/
-  
-  - title: "Softwares"
-    url: /open_source/ 
-  # - title: "Certifications"
-  #   url: /certifications/
+  - title: "Resume"
+    url: /files/Resume_Javal.pdf
+  - title: "Contact"
+    url: /#contact
 

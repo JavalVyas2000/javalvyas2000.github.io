@@ -1,53 +1,85 @@
 ---
-layout: archive
+layout: single
 title: "Projects"
 permalink: /projects/
 author_profile: true
+classes: wide
 ---
+<p>
+A curated selection of systems I have designed and implemented across structured decision-making,
+quantitative modeling, and applied machine learning.
+</p>
 
-{% include base_path %}
+<hr class="section-rule"/>
 
+<h2>Decision Systems & Structured Reasoning</h2>
 
-<div class="filter-buttons">
-  <button onclick="filterCards('all')">All <span class="count">{{ site.projects.size }}</span></button>
-  {% include tags.html %}
-  {% for tag in unique_tags %}
-  {% capture tag_count %}0{% endcapture %}
-  {% for item in tag_counts %}
-  {% assign parts = item | split: ":" %}
-  {% if parts[0] == tag %}
-  {% capture tag_count %}{{ parts[1] }}{% endcapture %}
-  {% endif %}
-  {% endfor %}
-  <button onclick="filterCards('{{ tag }}')">{{ tag }} <span class="count">{{ tag_count }}</span></button>
-  {% endfor %}
+<div class="cards">
+
+  <a class="card" href="/projects/multi-agent-decision-framework/">
+    <div class="card__title">Multi-Agent Decision Framework (PhD)</div>
+    <div class="card__body">
+      Structured multi-agent reasoning system for constrained planning and graph traversal,
+      with empirical convergence analysis and entropy reduction modeling.
+    </div>
+    <div class="card__tags">
+      <span>Structured Planning</span>
+      <span>Multi-Agent</span>
+      <span>Convergence</span>
+    </div>
+  </a>
+
 </div>
 
+<hr class="section-rule"/>
 
-<div class="card-container">
-  {% for project in site.projects %}
-  <div class="card" data-tags="{{ project.tags | join: '_' }}" onclick="location.href='{{ project.url | relative_url }}';" style="background-color: {{ project.background }};">
-      <div class="card-image">
-          <img src="{{ project.image }}" alt="{{ project.title }} Image">
-      </div>
-      <div class="card-content">
-          <h3 class="card-title">{{ project.title }}</h3>
-          <!-- Additional project details if needed -->
-      </div>
+<h2>Quantitative Modeling & Signal Research</h2>
+
+<div class="cards">
+
+  <a class="card" href="/projects/zonetrader/">
+    <div class="card__title">ZoneTrader — Signal Research Platform</div>
+    <div class="card__body">
+      Indicator-driven stock analysis evolving into a statistically validated
+      signal research system with rolling out-of-sample evaluation.
+    </div>
+    <div class="card__tags">
+      <span>Backtesting</span>
+      <span>Statistical Evaluation</span>
+      <span>Signals</span>
+    </div>
+  </a>
+
+  <div class="card">
+    <div class="card__title">Constrained Portfolio Optimization (In Progress)</div>
+    <div class="card__body">
+      Signal-to-portfolio framework incorporating risk penalties,
+      turnover constraints, and structured allocation rules.
+    </div>
+    <div class="card__tags">
+      <span>Convex Optimization</span>
+      <span>Risk Control</span>
+      <span>Portfolio</span>
+    </div>
   </div>
-  {% endfor %}
+
 </div>
-  
-  <script>
-    function filterCards(tag) {
-        var cards = document.querySelectorAll('.card');
-        cards.forEach(function(card) {
-            var tags = card.getAttribute('data-tags').split('_');
-            if (tag === 'all' || tags.includes(tag)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-</script>
+
+<hr class="section-rule"/>
+
+<h2>Applied Machine Learning & Engineering</h2>
+
+<ul>
+  <li><strong>Forecasting Systems</strong> — structured evaluation, baselines, and diagnostic metrics.</li>
+  <li><strong>Optimization-Based Scheduling</strong> — constraint-aware mathematical programming models.</li>
+</ul>
+
+<hr class="section-rule"/>
+
+<h2>Additional Projects</h2>
+
+<ul>
+{% for project in site.projects %}
+  <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+{% endfor %}
+</ul>
