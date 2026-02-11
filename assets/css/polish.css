@@ -57,3 +57,49 @@ a:hover { opacity: 0.92; }
 @media (min-width: 1200px) {
   .page { max-width: 1280px; }
 }
+
+/* --- homepage hero (Step 2) --- */
+.hero{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+@media (max-width: 900px){ .hero{ grid-template-columns:1fr; } }
+
+.hero__eyebrow{ text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; opacity:.85; margin:0 0 .5rem; }
+.hero__title{ font-size: clamp(2rem, 3vw, 3rem); margin:0 0 .65rem; }
+.hero__subtitle{ font-size:1.05rem; opacity:.92; margin:0 0 1rem; }
+.hero__cta{ display:flex; gap:.75rem; flex-wrap:wrap; margin:.75rem 0 1rem; }
+
+.chips{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.chip{ padding:.35rem .6rem; border-radius:999px; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.08); font-size:.85rem; }
+
+.metric-grid{ display:grid; gap:.75rem; }
+.metric{ padding:.9rem; border-radius:14px; background:rgba(255,255,255,0.7); border:1px solid rgba(0,0,0,0.08); }
+.metric__num{ font-weight:800; }
+.metric__label{ font-weight:700; margin-top:.15rem; }
+.metric__hint{ opacity:.85; font-size:.9rem; }
+
+.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media (max-width: 900px){ .cards{ grid-template-columns:1fr; } }
+.card__title{ font-weight:800; margin-bottom:.25rem; }
+.card__body{ opacity:.92; margin-bottom:.75rem; }
+.card__tags span{
+  display:inline-block; margin-right:.4rem; margin-bottom:.4rem;
+  padding:.25rem .5rem; border-radius:999px;
+  background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.08);
+  font-size:.8rem;
+}
+
+.section-rule{ border:0; height:1px; background:rgba(0,0,0,0.06); margin:2.25rem 0; }
+
+.cta-box{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:1rem; border-radius:16px;
+  background:rgba(0,0,0,0.03); border:1px solid rgba(0,0,0,0.08);
+}
+.cta-box__actions{ display:flex; gap:.6rem; flex-wrap:wrap; }
