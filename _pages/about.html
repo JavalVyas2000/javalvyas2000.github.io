@@ -1,188 +1,102 @@
 ---
+layout: single
+title: ""
 permalink: /
-title: "About Me"
-excerpt: "About me"
 author_profile: true
-redirect_from:
-- /about/
-- /about.html
+classes: wide
 ---
-<!-- Google tag (gtag.js) -->
-<script async
-  src="https://www.googletagmanager.com/gtag/js?id=G-JCYJ06BZRG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<div class="hero">
+  <div class="hero__left">
+    <p class="hero__eyebrow">Quant • ML • Optimization</p>
+    <h1 class="hero__title">Statistical learning + optimization for decision systems.</h1>
+    <p class="hero__subtitle">
+      I’m Javal Vyas. I build research-grade signal validation, constrained optimization,
+      and ML pipelines for real-world decisions in tech &amp; finance.
+    </p>
 
-  gtag('config', 'G-JCYJ06BZRG');
-</script>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="/files/Resume_Javal.pdf">Download Resume</a>
+      <a class="btn btn--light" href="/projects/">View Projects</a>
+    </div>
 
-<style>
-  body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-  }
-  
-  h1, h2, h3 {
-      color: #333;
-  }
+    <div class="chips">
+      <span class="chip">Backtesting &amp; evaluation</span>
+      <span class="chip">Portfolio constraints &amp; turnover</span>
+      <span class="chip">Time-series &amp; forecasting</span>
+    </div>
+  </div>
 
-  .education-table {
-      width: 100%;
-      border: none;
-      margin-bottom: 20px;
-  }
-  
-  .education-table td {
-      padding: 10px;
-      vertical-align: top;
-  }
-  
-  .education-table td:nth-child(1) {
-      width: 15%;
-      border: none;
-  }
-  
-  .education-table td:nth-child(2) {
-      width: 60%;
-      border: none;
-  }
-  
-  .education-table td:nth-child(3) {
-      width: 25%;
-      border: none;
-  }
-  
-  
-  /* Style for the Work Experience table */
-  .experience-table {
-      width: 100%;
-      border: none;
-      margin-bottom: 20px;
-  }
-  
-  .experience-table td {
-      padding: 10px;
-      vertical-align: top;
-  }
-  
-  .experience-table td:nth-child(1) {
-      width: 20%;
-      border: none;
-  }
-  
-  .experience-table td:nth-child(2) {
-      width: 40%;
-      border: none;
-  }
-  
-  .experience-table td:nth-child(3) {
-      width: 15%;
-      border: none;
-  }
+  <div class="hero__right">
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="metric__num">ZoneTrader</div>
+        <div class="metric__label">Signal Platform</div>
+        <div class="metric__hint">Indicators → validation → metrics</div>
+      </div>
+      <div class="metric">
+        <div class="metric__num">Signal Lab</div>
+        <div class="metric__label">Cross-Section Tests</div>
+        <div class="metric__hint">IC, t-stats, deciles</div>
+      </div>
+      <div class="metric">
+        <div class="metric__num">Optimizer</div>
+        <div class="metric__label">Portfolio Construction</div>
+        <div class="metric__hint">risk, constraints, turnover</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  .experience-table td:nth-child(4) {
-      width: 25%;
-      border: none;
-  }
+<hr class="section-rule"/>
 
-  .split-text div {
-            margin-bottom: 5px;
-        }
-  
-  .section {
-      margin-bottom: 30px;
-  }
+<h2>Featured Work</h2>
 
-  .image-container {
-        text-align: center;
-        margin: 20px;
-    }
-    .image-container img {
-        max-width: 100%;
-        height: auto;
-    }
-    .image-caption {
-        margin-top: 8px;
-        font-size: 16px;
-        color: #555;
-    }
+<div class="cards">
+  <a class="card" href="/projects/">
+    <div class="card__title">ZoneTrader (Quant Edition)</div>
+    <div class="card__body">
+      A stock analysis tool upgraded into a statistically tested signal research platform.
+    </div>
+    <div class="card__tags">
+      <span>Backtesting</span><span>Stats</span><span>Web</span>
+    </div>
+  </a>
 
-</style>
+  <a class="card" href="/projects/">
+    <div class="card__title">Signal Research (in progress)</div>
+    <div class="card__body">
+      Cross-sectional validation: deciles, IC, robustness checks across assets and time.
+    </div>
+    <div class="card__tags">
+      <span>Factors</span><span>IC</span><span>Research</span>
+    </div>
+  </a>
 
-<!-- <div class="image-container">
-  <img src="/images/cerlab_main.jpg"
-    alt="Lab Day!">
-</div> -->
+  <a class="card" href="/projects/">
+    <div class="card__title">Constrained Portfolio Optimization</div>
+    <div class="card__body">
+      Signal-to-portfolio with realistic constraints and turnover control.
+    </div>
+    <div class="card__tags">
+      <span>CVXPY</span><span>Risk</span><span>Constraints</span>
+    </div>
+  </a>
+</div>
 
-<section class="section">
-  <p>
-    My name is Javal, and I am an Optimization and Machine Learning Researcher. I work as a <b>Researcher at
-    the Automation Industrial System Lab</b> at Imperial College London
-    under <b>Mehmet Mercangoz</b>. Where, I am working on developing and applying multi-agent AI systems and decision-making frameworks to optimize complex industrial and real-world systems.
-  </p>
-  <p>
-    I completed my Master’s degree from Carnegie Mellon University with a focus on mathematical modeling and
-    optimization. Part of my research, my thesis focused on leverage machine learning methods for getting optimal schedules. This webpage houses details on some of my past work. I would be happy to collaborate on exciting projects, so feel free to reach out!
-  </p>
-  <p>
-  I am currently looking for Internship opportunities! 
-  </p>
-</section>
+<hr class="section-rule"/>
 
-<section class="section">
-  <h2>Education</h2>
-  <table class="education-table">
-    <tr>
-      <td>Dec 2027</td>
-      <td>
-        <div class="split-text">
-          <div>PhD Candidate in Chemical Engineering</div>
-          <div><i>Multi-agent AI systems</i></div>
-        </div>
-      </td>
-      <td>Imperial College London, London, UK</td>
-    </tr>
-    <tr>
-      <td>Dec 2023</td>
-      <td>
-        <div class="split-text">
-          <div>Master of Science in Artificial Intelligence Engineering-Chemical Engineering</div>
-          <div><i>Mathematical modeling and Optimization</i></div>
-        </div>
-      </td>
-      <td>Carnegie Mellon University, Pittsburgh, USA</td>
-    </tr>
-    <tr>
-      <td>May 2022</td>
-      <td>Bachelor of Technology in Chemical Engineering</td>
-      <td>Visvesvaraya National Institute of Technology, Nagpur, India</td>
-    </tr>
-  </table>
-</section>
+<h2>What I’m looking for</h2>
 
-<section class="section">
-  <h2>Work Experience</h2>
-  <table class="experience-table">
-    <tr>
-      <td>Sept 2024 - Present</td>
-      <td>Machine Learning and Optimization Researcher</td>
-      <td>Full-Time</td>
-      <td>Imperial College London</td>
-    </tr>
-    <tr>
-      <td>Jan 2024 - Aug 2024</td>
-      <td>Engineer 2</td>
-      <td>Full-Time</td>
-      <td>KeyLogic</td>
-    </tr>
-    <tr>
-      <td>Jun 2024 - Aug 2024</td>
-      <td>Research Scholar</td>
-      <td>Internship</td>
-      <td>KeyLogic</td>
-    </tr>
-  </table>
-</section>
+<p>
+  Full-time roles in <strong>Quant / FinTech / ML / Decision Systems</strong> where I can build models and systems
+  that drive measurable outcomes.
+</p>
+
+<div class="cta-box" id="contact">
+  <div><strong>Quick links:</strong> resume + projects.</div>
+  <div class="cta-box__actions">
+    <a class="btn btn--primary" href="/files/Resume_Javal.pdf">Resume</a>
+    <a class="btn btn--light" href="/projects/">Projects</a>
+    <a class="btn btn--light" href="mailto:javalvyas2000@gmail.com">Email</a>
+  </div>
+</div>
