@@ -9,17 +9,17 @@
 
 /* Typography + readability */
 .page__content p { line-height: 1.75; font-size: 1.02rem; }
-.page__content h1, .page__content h2, .page__content h3 {
-  letter-spacing: -0.02em;
-}
+.page__content h1, .page__content h2, .page__content h3 { letter-spacing: -0.02em; }
 .page__content h1 { margin-top: 0.25rem; }
-.page__content h2 { margin-top: 2.2rem; }
+.page__content h2 { margin-top: 2.0rem; }
 
-/* Give sections more breathing room */
+/* Give sections breathing room */
 .page__content > * + * { margin-top: 1rem; }
+
+/* Consistent rules (don’t override theme layout widths) */
 hr { border: 0; height: 1px; background: var(--polish-soft); }
 
-/* Buttons: make them feel modern */
+/* Buttons */
 .btn {
   border-radius: 999px !important;
   padding: 0.7rem 1.05rem !important;
@@ -30,7 +30,7 @@ hr { border: 0; height: 1px; background: var(--polish-soft); }
   box-shadow: var(--polish-shadow);
 }
 
-/* Cards: apply to common theme “archive items” + anything using .card */
+/* Cards: archive items + custom cards */
 .archive__item,
 .card {
   border: 1px solid var(--polish-ring);
@@ -45,95 +45,103 @@ hr { border: 0; height: 1px; background: var(--polish-soft); }
   box-shadow: var(--polish-shadow);
 }
 
-/* Project list / archive layout spacing */
+/* Archive spacing */
 .archive__item-title { margin-top: 0.2rem; }
 .archive__item-excerpt { opacity: 0.92; }
 
-/* Make links feel cleaner */
+/* Links */
 a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover { opacity: 0.92; }
 
-/* Slightly widen content on large screens (more modern) */
-@media (min-width: 1200px) {
-  .page { max-width: 1280px; }
+/* Section rule used by our pages */
+.section-rule{
+  border:0;
+  height:1px;
+  background: rgba(0,0,0,0.06);
+  margin: 1.75rem 0;
 }
 
-/* --- homepage hero (Step 2) --- */
-.hero{
-  display:grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.25rem;
+/* ===== Minimal Professional Homepage (no sidebar) ===== */
+
+.home { margin-top: 0.25rem; }
+
+.home__header {
   padding: 1.25rem;
-  border-radius: 18px;
-  background: rgba(0,0,0,0.03);
   border: 1px solid rgba(0,0,0,0.08);
-}
-@media (max-width: 900px){ .hero{ grid-template-columns:1fr; } }
-
-.hero__eyebrow{ text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; opacity:.85; margin:0 0 .5rem; }
-.hero__title{ font-size: clamp(2rem, 3vw, 3rem); margin:0 0 .65rem; }
-.hero__subtitle{ font-size:1.05rem; opacity:.92; margin:0 0 1rem; }
-.hero__cta{ display:flex; gap:.75rem; flex-wrap:wrap; margin:.75rem 0 1rem; }
-
-.chips{ display:flex; flex-wrap:wrap; gap:.5rem; }
-.chip{ padding:.35rem .6rem; border-radius:999px; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.08); font-size:.85rem; }
-
-.metric-grid{ display:grid; gap:.75rem; }
-.metric{ padding:.9rem; border-radius:14px; background:rgba(255,255,255,0.7); border:1px solid rgba(0,0,0,0.08); }
-.metric__num{ font-weight:800; }
-.metric__label{ font-weight:700; margin-top:.15rem; }
-.metric__hint{ opacity:.85; font-size:.9rem; }
-
-.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-@media (max-width: 900px){ .cards{ grid-template-columns:1fr; } }
-.card__title{ font-weight:800; margin-bottom:.25rem; }
-.card__body{ opacity:.92; margin-bottom:.75rem; }
-.card__tags span{
-  display:inline-block; margin-right:.4rem; margin-bottom:.4rem;
-  padding:.25rem .5rem; border-radius:999px;
-  background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.08);
-  font-size:.8rem;
+  background: rgba(0,0,0,0.02);
+  border-radius: 18px;
 }
 
-.section-rule{ border:0; height:1px; background:rgba(0,0,0,0.06); margin:2.25rem 0; }
-
-.cta-box{
-  display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  padding:1rem; border-radius:16px;
-  background:rgba(0,0,0,0.03); border:1px solid rgba(0,0,0,0.08);
-}
-.cta-box__actions{ display:flex; gap:.6rem; flex-wrap:wrap; }
-/* --- reduce whitespace on pages with sidebar --- */
-@media (min-width: 900px) {
-  .page {
-    max-width: 1100px; /* tighter than wide */
-  }
-  .sidebar {
-    width: 260px;
-  }
-  .page__content {
-    max-width: 760px;
-  }
+.home__title {
+  font-size: 2.1rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
 }
 
-/* --- tighten hero so it doesn't feel huge --- */
-.hero{
-  padding: 1.1rem;
+.home__tagline {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0.5rem 0;
+  max-width: 68ch;
+}
+
+.home__cta {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.home__pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
   gap: 1rem;
 }
-.hero__title{
-  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
-  line-height: 1.05;
-}
-.hero__subtitle{
-  font-size: 1rem;
-}
-.metric{
-  padding: 0.75rem;
+
+@media (max-width: 900px) {
+  .home__grid { grid-template-columns: 1fr; }
 }
 
-/* make buttons sit nicely */
-.hero__cta .btn{
-  margin-right: 0.25rem;
-  margin-bottom: 0.35rem;
+.home__card {
+  padding: 1.1rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+}
+
+.home__h2 { margin-top: 0; }
+
+.home__list { margin: 0.6rem 0 0 1.1rem; line-height: 1.7; }
+
+.home__role { margin-top: 0.9rem; }
+.home__roleTop { margin-bottom: 0.35rem; }
+
+.muted { opacity: 0.75; }
+
+.home__footerBox{
+  padding: 1.1rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(0,0,0,0.02);
+  border-radius: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
