@@ -114,10 +114,6 @@ a:hover { opacity: 0.92; }
   gap: 1rem;
 }
 
-@media (max-width: 900px) {
-  .home__grid { grid-template-columns: 1fr; }
-}
-
 .home__card {
   padding: 1.1rem;
   border: 1px solid rgba(0,0,0,0.08);

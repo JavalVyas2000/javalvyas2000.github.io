@@ -2,62 +2,75 @@
 layout: single
 title: ""
 permalink: /
-author_profile: true
+author_profile: false
 classes: wide
 ---
 
-<div class="hero">
-  <div class="hero__left">
-    <p class="hero__eyebrow">Machine Learning • Optimization • Structured Reasoning</p>
+<section class="home">
+  <header class="home__header">
+    <h1 class="home__title">Javal Vyas</h1>
 
-    <h1 class="hero__title">
-      Formal decision systems at the intersection of learning and optimization.
-    </h1>
-
-    <p class="hero__subtitle">
-      I’m Javal Vyas — a researcher and engineer working on structured decision-making,
-      multi-agent reasoning systems, and constrained optimization. I build systems that are
-      <strong>robust</strong>, <strong>constraint-aware</strong>, and <strong>rigorously evaluated</strong>.
+    <p class="home__tagline">
+      PhD Candidate at <strong>Imperial College London</strong> working on
+      <strong>decision systems</strong> at the intersection of <strong>machine learning</strong> and
+      <strong>optimization</strong>. I focus on <strong>structured reasoning</strong>,
+      <strong>constraint-aware modeling</strong>, and <strong>rigorous evaluation</strong>
+      for sequential and high-stakes settings.
     </p>
 
-    <div class="hero__cta">
+    <div class="home__cta">
       <a class="btn btn--primary" href="/files/Resume_Javal.pdf">Download Resume</a>
       <a class="btn btn--light" href="/projects/">Projects</a>
-      <a class="btn btn--light" href="/about/">About</a>
+      <a class="btn btn--light" href="/research/">Research</a>
       <a class="btn btn--light" href="mailto:javalvyas2000@gmail.com">Email</a>
     </div>
 
-    <div class="chips">
-      <span class="chip">Structured planning &amp; validation</span>
-      <span class="chip">Optimization under constraints</span>
-      <span class="chip">Time-series modeling &amp; evaluation</span>
+    <div class="home__pills">
+      <span class="pill">Multi-agent planning</span>
+      <span class="pill">Convergence &amp; reliability</span>
+      <span class="pill">Large-scale optimization</span>
+      <span class="pill">Surrogate modeling</span>
     </div>
+  </header>
+
+  <hr class="section-rule"/>
+
+  <div class="home__grid">
+    <section class="home__card">
+      <h2 class="home__h2">Education</h2>
+      <ul class="home__list">
+        <li><strong>PhD</strong>, Imperial College London <span class="muted">— 2024–Present</span></li>
+        <li><strong>MS in AI Engineering (Chemical Engineering)</strong>, Carnegie Mellon University <span class="muted">— 2022–2023</span></li>
+        <li><strong>B.Tech in Chemical Engineering</strong>, VNIT Nagpur <span class="muted">— 2018–2022</span></li>
+      </ul>
+    </section>
+
+    <section class="home__card">
+      <h2 class="home__h2">Experience</h2>
+
+      <div class="home__role">
+        <div class="home__roleTop">
+          <strong>Engineer II</strong>
+          <span class="muted">· KeyLogic Systems LLC</span>
+        </div>
+        <ul class="home__list">
+          <li>Contributed to open-source optimization platforms including <strong>IDAES</strong> and <strong>PARETO</strong>.</li>
+          <li>Improved large-scale supply chain optimization workflows via stronger data integration and model refactoring.</li>
+          <li>Developed and embedded <strong>ML surrogate models</strong> within optimization pipelines to accelerate computation.</li>
+        </ul>
+      </div>
+
+      <div class="home__role">
+        <div class="home__roleTop">
+          <strong>PhD Researcher</strong>
+          <span class="muted">· Imperial College London · 2024–Present</span>
+        </div>
+        <ul class="home__list">
+          <li>Designed multi-agent reasoning frameworks for structured planning and traversal under explicit constraints.</li>
+          <li>Analyzed convergence behavior and failure modes in iterative reasoning systems.</li>
+          <li>Built evaluation pipelines to measure structural validity and robustness across task families.</li>
+        </ul>
+      </div>
+    </section>
   </div>
-
-  <div class="hero__right">
-    <div class="metric-grid">
-      <div class="metric">
-        <div class="metric__num">Decision Systems</div>
-        <div class="metric__label">PhD Research</div>
-        <div class="metric__hint">multi-agent, convergence, reliability</div>
-      </div>
-      <div class="metric">
-        <div class="metric__num">Quant Modeling</div>
-        <div class="metric__label">Signals → Evaluation</div>
-        <div class="metric__hint">backtests, robustness, baselines</div>
-      </div>
-      <div class="metric">
-        <div class="metric__num">Optimization</div>
-        <div class="metric__label">Constraint-first design</div>
-        <div class="metric__hint">risk, trade-offs, feasibility</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="section-rule"/>
-
-<p>
-If you want the full background (education, experience, research themes), see
-<a href="/about/"><strong>About</strong></a>.
-</p>
+</section>
