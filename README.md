@@ -9,7 +9,6 @@ Update:
 npm install
 npm run dev
 ```
-
 ## Deploy (GitHub Pages)
 Push to `main`. GitHub Actions publishes to Pages automatically.
 
