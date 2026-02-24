@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://javalvyas2000.github.io/sitemap-index.xml

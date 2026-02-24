@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import { absoluteUrl } from "../utils/seo";
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogImage = "/og.png",
+  canonicalPath = "/"
+} = Astro.props as {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonicalPath?: string;
+};
+
+const finalOgTitle = ogTitle ?? title;
+const finalOgDesc = ogDescription ?? description;
+---
+<!doctype html>
+<html lang="en" class="bg-white text-black dark:bg-[#0b0d10] dark:text-white">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={absoluteUrl(canonicalPath)} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={finalOgTitle} />
+    <meta property="og:description" content={finalOgDesc} />
+    <meta property="og:url" content={absoluteUrl(canonicalPath)} />
+    <meta property="og:image" content={absoluteUrl(ogImage)} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={finalOgTitle} />
+    <meta name="twitter:description" content={finalOgDesc} />
+    <meta name="twitter:image" content={absoluteUrl(ogImage)} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <main class="mx-auto max-w-5xl px-4 sm:px-6">
+      <slot />
+    </main>
+    <footer class="mx-auto max-w-5xl px-4 sm:px-6 py-10 text-sm text-black/60 dark:text-white/60">
+      <div class="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+        <span>© {new Date().getFullYear()} • Built with Astro</span>
+        <a class="hover:underline underline-offset-4" href="#top">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>

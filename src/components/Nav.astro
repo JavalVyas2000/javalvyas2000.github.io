@@ -1,0 +1,30 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+const nav = [
+  { label: "Projects", href: "#projects" },
+  { label: "Research/Notes", href: "#writing" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" }
+];
+---
+<header class="sticky top-0 z-50 border-b border-black/10 dark:border-white/10 bg-white/70 dark:bg-black/40 backdrop-blur">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+    <a href="/" class="font-semibold tracking-tight hover:opacity-80 transition">JV</a>
+    <nav class="hidden sm:flex items-center gap-5 text-sm">
+      {nav.map((i) => (
+        <a class="hover:underline underline-offset-4 text-black/80 dark:text-white/80" href={i.href}>
+          {i.label}
+        </a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-2">
+      <ThemeToggle />
+      <a
+        class="rounded-2xl border border-black/10 dark:border-white/10 px-3 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/5 transition"
+        href="#projects"
+      >
+        View work
+      </a>
+    </div>
+  </div>
+</header>
