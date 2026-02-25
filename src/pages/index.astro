@@ -13,6 +13,7 @@ const initials = site.name
   .map((x) => x[0]?.toUpperCase())
   .join("");
 ---
+
 <BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
   <div class="pointer-events-none fixed inset-0 -z-10 relative bg-white dark:bg-[#0b0d10] bg-premium bg-vignette bg-grain">
     <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/20 dark:bg-white/15 glow floaty"></div>
@@ -65,6 +66,12 @@ const initials = site.name
           <p class="text-sm text-black/60 dark:text-white/60">{site.location}</p>
           <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">{site.name}</h1>
           <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">{site.title}</p>
+
+          {/* subtle quant-theory signal without saying “quant” */}
+          <p class="mt-2 text-sm text-black/60 dark:text-white/60">
+            Risk • Reliability • Uncertainty • Convergence (sequential decision-making in dynamic systems)
+          </p>
+
           <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">{site.tagline}</p>
 
           {site.badges?.length ? (
@@ -106,7 +113,11 @@ const initials = site.name
     </div>
   </div>
 
-  <Section id="projects" title="Selected Work" subtitle="Engineering-forward projects with reliability and evaluation discipline.">
+  <Section
+    id="projects"
+    title="Selected Work"
+    subtitle="Systems + experiments that make stochastic policies safer, measurable, and more reliable under constraints."
+  >
     <div class="grid gap-4 sm:grid-cols-2">
       {site.projects.map((p) => (
         <Card title={p.title} href={p.href ?? p.repo}>
@@ -131,8 +142,16 @@ const initials = site.name
 
           {(p.href || p.repo) && (
             <div class="mt-4 flex flex-wrap gap-3 text-sm">
-              {p.href && <a class="hover:underline underline-offset-4" href={p.href}>Live / Details</a>}
-              {p.repo && <a class="hover:underline underline-offset-4" href={p.repo}>Repo</a>}
+              {p.href && (
+                <a class="hover:underline underline-offset-4" href={p.href}>
+                  Live / Details
+                </a>
+              )}
+              {p.repo && (
+                <a class="hover:underline underline-offset-4" href={p.repo}>
+                  Repo
+                </a>
+              )}
             </div>
           )}
 
@@ -147,60 +166,67 @@ const initials = site.name
       ))}
     </div>
   </Section>
-  <Section
-  id="research"
-  title="Publications / Research"
-  subtitle="Selected work + what I’m currently building."
->
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
-      <p class="font-semibold">Selected publications</p>
 
-      {site.publications?.length ? (
+  <Section
+    id="research"
+    title="Research"
+    subtitle="Selected publications + current directions (risk, reliability, and convergence in generative decision systems)."
+  >
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
+        <p class="font-semibold">Selected publications</p>
+
+        {site.publications?.length ? (
+          <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
+            {site.publications.map((p) => (
+              <li>
+                <a class="font-semibold hover:underline underline-offset-4" href={p.href ?? site.scholarUrl}>
+                  {p.title}
+                </a>
+                <div class="text-black/60 dark:text-white/60">
+                  {[p.venue, p.year, p.note].filter(Boolean).join(" • ")}
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="mt-3 text-sm text-black/70 dark:text-white/70">
+            Full list on{" "}
+            <a class="font-semibold hover:underline underline-offset-4" href={site.scholarUrl}>
+              Google Scholar
+            </a>
+            . Current work: entropy / violation metrics and validator-guided refinement to study convergence under constraints.
+          </p>
+        )}
+      </div>
+
+      <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
+        <p class="font-semibold">Work in progress</p>
         <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
-          {site.publications.map((p) => (
+          {site.pipeline?.map((x) => (
             <li>
-              <a class="font-semibold hover:underline underline-offset-4" href={p.href ?? site.scholarUrl}>
-                {p.title}
-              </a>
-              <div class="text-black/60 dark:text-white/60">
-                {[p.venue, p.year, p.note].filter(Boolean).join(" • ")}
-              </div>
+              <div class="font-semibold">{x.title}</div>
+              <div class="text-black/60 dark:text-white/60">{x.blurb}</div>
             </li>
           ))}
         </ul>
-      ) : (
-        <p class="mt-3 text-sm text-black/70 dark:text-white/70">
-          Full list on{" "}
-          <a class="font-semibold hover:underline underline-offset-4" href={site.scholarUrl}>
-            Google Scholar
-          </a>.
-        </p>
-      )}
+      </div>
     </div>
 
-    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
-      <p class="font-semibold">Work in progress</p>
-      <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
-        {site.pipeline?.map((x) => (
-          <li>
-            <div class="font-semibold">{x.title}</div>
-            <div class="text-black/60 dark:text-white/60">{x.blurb}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
+    <p class="mt-4 text-sm text-black/60 dark:text-white/60">
+      Full publication list:{" "}
+      <a class="hover:underline underline-offset-4" href={site.scholarUrl}>
+        Google Scholar
+      </a>
+      .
+    </p>
+  </Section>
 
-  <p class="mt-4 text-sm text-black/60 dark:text-white/60">
-    Full publication list:{" "}
-    <a class="hover:underline underline-offset-4" href={site.scholarUrl}>
-      Google Scholar
-    </a>
-    .
-  </p>
-</Section>
-  <Section id="writing" title="Writing / Research" subtitle="Public writing + research signals. Short, pragmatic, and measurable.">
+  <Section
+    id="writing"
+    title="Writing"
+    subtitle="Public writing and research notes on risk, reliability, and decision-time validation."
+  >
     <div class="grid gap-4">
       {site.writing.map((w) => (
         <Card title={w.title} href={w.href}>
@@ -214,7 +240,7 @@ const initials = site.name
     </div>
   </Section>
 
-  <Section id="skills" title="Skills" subtitle="A compact stack tuned for shipping research-quality systems.">
+  <Section id="skills" title="Skills" subtitle="A compact stack for building reliable, testable decision systems.">
     <div class="grid gap-4 sm:grid-cols-2">
       {site.skills.map((g) => (
         <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
@@ -229,7 +255,11 @@ const initials = site.name
     </div>
   </Section>
 
-  <Section id="contact" title="Contact" subtitle="If you're building something technical in markets/data, I’m happy to chat.">
+  <Section
+    id="contact"
+    title="Contact"
+    subtitle="If you’re working on decision-making under uncertainty (control, ML, or quantitative systems), I’m happy to chat."
+  >
     <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
       <p class="text-black/70 dark:text-white/70">
         Best way to reach me:{" "}
