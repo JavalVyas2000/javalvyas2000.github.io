@@ -1,0 +1,38 @@
+---
+const { kind } = Astro.props as { kind: "github" | "linkedin" | "email" | "medium" | "scholar" };
+const cls =
+  "h-5 w-5 text-black/70 dark:text-white/70 group-hover:text-black dark:group-hover:text-white transition";
+---
+{kind === "github" && (
+  <svg class={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12 .5C5.73.5.75 5.62.75 12.02c0 5.12 3.29 9.46 7.86 11 .58.11.79-.26.79-.58v-2.1c-3.2.7-3.87-1.4-3.87-1.4-.53-1.37-1.3-1.73-1.3-1.73-1.06-.75.08-.73.08-.73 1.17.09 1.78 1.23 1.78 1.23 1.04 1.83 2.73 1.3 3.4 1 .1-.77.41-1.3.74-1.6-2.55-.3-5.24-1.31-5.24-5.83 0-1.29.45-2.35 1.2-3.18-.12-.3-.52-1.52.11-3.17 0 0 .98-.32 3.2 1.22.93-.26 1.93-.39 2.93-.4.99.01 2 .14 2.93.4 2.22-1.54 3.2-1.22 3.2-1.22.63 1.65.23 2.87.11 3.17.75.83 1.2 1.89 1.2 3.18 0 4.53-2.7 5.52-5.27 5.81.42.38.79 1.12.79 2.25v3.34c0 .32.2.7.8.58 4.56-1.54 7.85-5.88 7.85-11C23.25 5.62 18.27.5 12 .5Z"
+    />
+  </svg>
+)}
+
+{kind === "linkedin" && (
+  <svg class={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M4.98 3.5C3.88 3.5 3 4.4 3 5.5S3.88 7.5 4.98 7.5 6.97 6.6 6.97 5.5 6.08 3.5 4.98 3.5ZM3.5 21h3V9h-3v12ZM9.5 9H12.4v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2.05 3.6 4.72V21h-3v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.42-2.08 2.86V21h-3V9Z"/>
+  </svg>
+)}
+
+{kind === "email" && (
+  <svg class={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+  </svg>
+)}
+
+{kind === "medium" && (
+  <svg class={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M4 7.2c0-.3.1-.6.4-.8l2.6-1.7 4.8 8.6 4.8-8.6 2.6 1.7c.3.2.4.5.4.8V18c0 .6-.4 1-1 1h-1.6c-.6 0-1-.4-1-1V10l-4.2 7.6c-.2.4-.8.4-1 0L7.6 10v8c0 .6-.4 1-1 1H5c-.6 0-1-.4-1-1V7.2Z"/>
+  </svg>
+)}
+
+{kind === "scholar" && (
+  <svg class={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L4.5 13 12 9l7.5 4-7.5 4Z"/>
+  </svg>
+)}
