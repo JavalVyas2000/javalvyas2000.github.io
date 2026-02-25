@@ -16,11 +16,11 @@ const initials = site.name
 ---
 
 <BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
-  <div class="pointer-events-none fixed inset-0 -z-10">
-    <div class="absolute inset-0 bg-grid opacity-[0.35] dark:opacity-[0.25]"></div>
-    <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/30 dark:bg-white/20 glow floaty"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 relative bg-premium bg-vignette bg-grain">
+    <!-- optional: keep your existing glow blobs, they still work -->
+    <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/20 dark:bg-white/15 glow floaty"></div>
     <div
-      class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/20 dark:bg-white/15 glow floaty"
+      class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/15 dark:bg-white/12 glow floaty"
       style="animation-delay: 1.2s"
     ></div>
   </div>
