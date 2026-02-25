@@ -12,6 +12,31 @@ const initials = site.name
   .slice(0, 2)
   .map((x) => x[0]?.toUpperCase())
   .join("");
+
+// Keep only the “research identity” pills in the hero.
+// Tweak the excludes list to your taste.
+const heroBadgeExcludes = [
+  "GraphRAG", // optional: remove if you want it visible
+  "Optimization", // optional: remove if you want it visible
+  "MILP",
+  "MINLP",
+  "Scheduling",
+  "Open Source",
+  "OSS",
+  "Tool use",
+  "Tool-use",
+  "Linux",
+  "Docker",
+  "CI/CD"
+];
+
+const heroBadges =
+  (site.badges ?? [])
+    .filter((b) => !heroBadgeExcludes.some((x) => b.toLowerCase().includes(x.toLowerCase())))
+    .slice(0, 5); // keep it tight
+
+// Optional: If the filter removes too much, fall back to the first 5.
+const heroBadgesFinal = heroBadges.length ? heroBadges : (site.badges ?? []).slice(0, 5);
 ---
 
 <BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
@@ -41,24 +66,7 @@ const initials = site.name
               </div>
             )}
 
-            <div class="flex flex-col gap-2 text-sm">
-              {site.socials.map((s) => (
-                <a
-                  class="group inline-flex items-center gap-2 hover:underline underline-offset-4 text-black/70 dark:text-white/70"
-                  href={s.href}
-                >
-                  <SocialIcon kind={s.icon} />
-                  <span>{s.label}</span>
-                </a>
-              ))}
-              <a
-                class="group inline-flex items-center gap-2 hover:underline underline-offset-4 text-black/70 dark:text-white/70"
-                href={`mailto:${site.email}`}
-              >
-                <SocialIcon kind="email" />
-                <span>Email</span>
-              </a>
-            </div>
+            {/* Removed socials + email from the hero, per your request */}
           </div>
         </div>
 
@@ -67,16 +75,15 @@ const initials = site.name
           <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">{site.name}</h1>
           <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">{site.title}</p>
 
-          {/* subtle quant-theory signal without saying “quant” */}
           <p class="mt-2 text-sm text-black/60 dark:text-white/60">
             Risk • Reliability • Uncertainty • Convergence (sequential decision-making in dynamic systems)
           </p>
 
           <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">{site.tagline}</p>
 
-          {site.badges?.length ? (
+          {heroBadgesFinal.length ? (
             <div class="mt-5 flex flex-wrap gap-2">
-              {site.badges.map((b) => (
+              {heroBadgesFinal.map((b) => (
                 <span class="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs font-medium text-black dark:text-white bg-white/55 dark:bg-black/15 backdrop-blur hover:bg-black/5 dark:hover:bg-white/5 transition">
                   {b}
                 </span>
@@ -143,12 +150,18 @@ const initials = site.name
           {(p.href || p.repo) && (
             <div class="mt-4 flex flex-wrap gap-3 text-sm">
               {p.href && (
-                <a class="hover:underline underline-offset-4" href={p.href}>
+                <a
+                  class="inline-flex items-center rounded-xl border border-black/10 dark:border-white/10 px-3 py-1 hover:bg-black/5 dark:hover:bg-white/5 transition"
+                  href={p.href}
+                >
                   Live / Details
                 </a>
               )}
               {p.repo && (
-                <a class="hover:underline underline-offset-4" href={p.repo}>
+                <a
+                  class="inline-flex items-center rounded-xl border border-black/10 dark:border-white/10 px-3 py-1 hover:bg-black/5 dark:hover:bg-white/5 transition"
+                  href={p.repo}
+                >
                   Repo
                 </a>
               )}
@@ -267,10 +280,12 @@ const initials = site.name
           {site.email}
         </a>
       </p>
+
       <div class="mt-4 flex flex-wrap gap-3 text-sm">
         {site.socials.map((s) => (
-          <a class="hover:underline underline-offset-4" href={s.href}>
-            {s.label}
+          <a class="inline-flex items-center gap-2 hover:underline underline-offset-4" href={s.href}>
+            <SocialIcon kind={s.icon} />
+            <span>{s.label}</span>
           </a>
         ))}
       </div>
