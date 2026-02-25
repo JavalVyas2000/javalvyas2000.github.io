@@ -14,28 +14,28 @@ const initials = site.name
   .join("");
 ---
 <BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
-  <!-- Background layer -->
   <div class="pointer-events-none fixed inset-0 -z-10">
     <div class="absolute inset-0 bg-grid opacity-[0.35] dark:opacity-[0.25]"></div>
     <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/30 dark:bg-white/20 glow floaty"></div>
-    <div class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/20 dark:bg-white/15 glow floaty" style="animation-delay: 1.2s"></div>
+    <div
+      class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/20 dark:bg-white/15 glow floaty"
+      style="animation-delay: 1.2s"
+    ></div>
   </div>
 
   <div id="top" class="py-12 sm:py-16">
-    <!-- Hero -->
     <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-black/30 backdrop-blur p-8 sm:p-12">
       <div class="flex flex-col sm:flex-row sm:items-center gap-7">
-        <!-- Avatar -->
         <div class="shrink-0">
           {site.avatar ? (
             <img
               src={site.avatar}
               alt={`${site.name} profile photo`}
-              class="h-20 w-20 sm:h-24 sm:w-24 rounded-3xl object-cover border border-black/10 dark:border-white/10 shadow-sm"
+              class="h-28 w-28 sm:h-32 sm:w-32 rounded-full object-cover border border-black/10 dark:border-white/10 shadow-sm"
               loading="eager"
             />
           ) : (
-            <div class="h-20 w-20 sm:h-24 sm:w-24 rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur flex items-center justify-center text-lg font-semibold">
+            <div class="h-28 w-28 sm:h-32 sm:w-32 rounded-full border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur flex items-center justify-center text-xl font-semibold shadow-sm">
               {initials}
             </div>
           )}
@@ -46,6 +46,16 @@ const initials = site.name
           <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">{site.name}</h1>
           <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">{site.title}</p>
           <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">{site.tagline}</p>
+
+          {site.badges?.length ? (
+            <div class="mt-5 flex flex-wrap gap-2">
+              {site.badges.map((b) => (
+                <span class="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs bg-white/55 dark:bg-black/15 backdrop-blur hover:bg-black/5 dark:hover:bg-white/5 transition">
+                  {b}
+                </span>
+              ))}
+            </div>
+          ) : null}
 
           <div class="mt-7 flex flex-wrap gap-3">
             {site.ctas.map((c) => (
@@ -76,7 +86,6 @@ const initials = site.name
       </div>
     </div>
 
-    <!-- Highlights -->
     <div class="mt-8 grid gap-4 sm:grid-cols-3">
       {site.highlights.map((h) => (
         <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
