@@ -16,6 +16,19 @@ export type Project = {
   metrics?: { label: string; value: string }[];
 };
 
+export type Publication = {
+  title: string;
+  venue?: string;
+  year?: string;
+  href?: string; // PDF/arXiv/Scholar/repo
+  note?: string; // “under review”, “preprint”, etc.
+};
+
+export type PipelineItem = {
+  title: string;
+  blurb: string;
+};
+
 export type Writing = {
   title: string;
   venue?: string;
@@ -38,6 +51,9 @@ export type SiteData = {
   projects: Project[];
   writing: Writing[];
   skills: { group: string; items: string[] }[];
+  publications?: Publication[];
+  pipeline?: PipelineItem[];
+  scholarUrl?: string;
 };
 
 export const site: SiteData = {
@@ -146,6 +162,27 @@ export const site: SiteData = {
     }
   ],
 
+  scholarUrl: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
+
+  publications: [
+    // Add 2–5. If you don’t have direct links yet, link to Scholar or the repo.
+    // { title: "...", venue: "...", year: "2025", href: "..." , note: "..." }
+  ],
+
+  pipeline: [
+    {
+      title: "When to use LLMs (and how to choose them)",
+      blurb: "Reliability-guided framework for selecting LLMs when capabilities vary and failure costs differ."
+    },
+    {
+      title: "Risk controllability of LLMs",
+      blurb: "How to define/control risk in agentic LLM systems (evaluation → interventions → safer actions)."
+    },
+    {
+      title: "Look forward, act now",
+      blurb: "Decision-time methods to combat latency by planning ahead and acting with partial future context."
+    }
+  ],
   writing: [
     {
       title: "Medium: Reliable AI for decision-making",

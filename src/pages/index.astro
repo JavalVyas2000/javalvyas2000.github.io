@@ -147,7 +147,59 @@ const initials = site.name
       ))}
     </div>
   </Section>
+  <Section
+  id="research"
+  title="Publications / Research"
+  subtitle="Selected work + what I’m currently building."
+>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
+      <p class="font-semibold">Selected publications</p>
 
+      {site.publications?.length ? (
+        <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
+          {site.publications.map((p) => (
+            <li>
+              <a class="font-semibold hover:underline underline-offset-4" href={p.href ?? site.scholarUrl}>
+                {p.title}
+              </a>
+              <div class="text-black/60 dark:text-white/60">
+                {[p.venue, p.year, p.note].filter(Boolean).join(" • ")}
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-3 text-sm text-black/70 dark:text-white/70">
+          Full list on{" "}
+          <a class="font-semibold hover:underline underline-offset-4" href={site.scholarUrl}>
+            Google Scholar
+          </a>.
+        </p>
+      )}
+    </div>
+
+    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
+      <p class="font-semibold">Work in progress</p>
+      <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
+        {site.pipeline?.map((x) => (
+          <li>
+            <div class="font-semibold">{x.title}</div>
+            <div class="text-black/60 dark:text-white/60">{x.blurb}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <p class="mt-4 text-sm text-black/60 dark:text-white/60">
+    Full publication list:{" "}
+    <a class="hover:underline underline-offset-4" href={site.scholarUrl}>
+      Google Scholar
+    </a>
+    .
+  </p>
+</Section>
   <Section id="writing" title="Writing / Research" subtitle="Public writing + research signals. Short, pragmatic, and measurable.">
     <div class="grid gap-4">
       {site.writing.map((w) => (
