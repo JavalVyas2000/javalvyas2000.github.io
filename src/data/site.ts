@@ -42,7 +42,7 @@ export const site: SiteData = {
   email: "your.email@example.com",
 
   // Put your suit photo here:
-  avatar: "/profile.jpg",
+  avatar: "/profile.jpeg",
 
   // These make the page feel less “plain” instantly:
   badges: [
