@@ -1,77 +1,109 @@
 ---
+// FILE: src/pages/index.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import { site } from "../data/site";
----
-<BaseLayout
-  title={`${site.name} — ${site.title}`}
-  description={site.tagline}
-  canonicalPath="/"
->
-  <div id="top" class="py-12 sm:py-16">
-    <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-gradient-to-b from-black/[0.03] to-transparent dark:from-white/[0.06] p-8 sm:p-12">
-      <div class="max-w-2xl">
-        <p class="text-sm text-black/60 dark:text-white/60">{site.location}</p>
-        <h1 class="mt-3 text-3xl sm:text-5xl font-semibold tracking-tight">
-          {site.name}
-        </h1>
-        <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">
-          {site.title}
-        </p>
-        <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">
-          {site.tagline}
-        </p>
 
-        <div class="mt-7 flex flex-wrap gap-3">
-          {site.ctas.map((c) => (
-            <a
-              class={`rounded-2xl px-4 py-2 text-sm transition border ${
-                c.kind === "primary"
-                  ? "bg-black text-white border-black hover:opacity-90 dark:bg-white dark:text-black dark:border-white"
-                  : "border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5"
-              }`}
-              href={c.href}
-            >
-              {c.label}
-            </a>
-          ))}
+const initials = site.name
+  .split(" ")
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((x) => x[0]?.toUpperCase())
+  .join("");
+---
+<BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
+  <!-- Background layer -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute inset-0 bg-grid opacity-[0.35] dark:opacity-[0.25]"></div>
+    <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/30 dark:bg-white/20 glow floaty"></div>
+    <div class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/20 dark:bg-white/15 glow floaty" style="animation-delay: 1.2s"></div>
+  </div>
+
+  <div id="top" class="py-12 sm:py-16">
+    <!-- Hero -->
+    <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-black/30 backdrop-blur p-8 sm:p-12">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-7">
+        <!-- Avatar -->
+        <div class="shrink-0">
+          {site.avatar ? (
+            <img
+              src={site.avatar}
+              alt={`${site.name} profile photo`}
+              class="h-20 w-20 sm:h-24 sm:w-24 rounded-3xl object-cover border border-black/10 dark:border-white/10 shadow-sm"
+              loading="eager"
+            />
+          ) : (
+            <div class="h-20 w-20 sm:h-24 sm:w-24 rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur flex items-center justify-center text-lg font-semibold">
+              {initials}
+            </div>
+          )}
         </div>
 
-        <div class="mt-8 flex flex-wrap gap-2">
-          {site.socials.map((s) => (
-            <a class="text-sm hover:underline underline-offset-4 text-black/70 dark:text-white/70" href={s.href}>
-              {s.label}
+        <div class="max-w-2xl">
+          <p class="text-sm text-black/60 dark:text-white/60">{site.location}</p>
+          <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">{site.name}</h1>
+          <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">{site.title}</p>
+          <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">{site.tagline}</p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            {site.ctas.map((c) => (
+              <a
+                class={`rounded-2xl px-4 py-2 text-sm transition border ${
+                  c.kind === "primary"
+                    ? "bg-black text-white border-black hover:opacity-90 dark:bg-white dark:text-black dark:border-white"
+                    : "border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5"
+                }`}
+                href={c.href}
+              >
+                {c.label}
+              </a>
+            ))}
+          </div>
+
+          <div class="mt-7 flex flex-wrap gap-2">
+            {site.socials.map((s) => (
+              <a class="text-sm hover:underline underline-offset-4 text-black/70 dark:text-white/70" href={s.href}>
+                {s.label}
+              </a>
+            ))}
+            <a class="text-sm hover:underline underline-offset-4 text-black/70 dark:text-white/70" href={`mailto:${site.email}`}>
+              Email
             </a>
-          ))}
-          <a class="text-sm hover:underline underline-offset-4 text-black/70 dark:text-white/70" href={`mailto:${site.email}`}>
-            Email
-          </a>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Highlights -->
     <div class="mt-8 grid gap-4 sm:grid-cols-3">
       {site.highlights.map((h) => (
-        <div class="rounded-3xl border border-black/10 dark:border-white/10 p-5 bg-white/50 dark:bg-black/20 backdrop-blur">
+        <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
           <p class="text-sm text-black/60 dark:text-white/60">{h.label}</p>
           <p class="mt-2 font-semibold">{h.value}</p>
-          {h.hint && <p class="mt-1 text-sm text-black/60 dark:text-white/60">{h.hint}</p>}
+          {h.hint && <p class="mt-2 text-sm text-black/60 dark:text-white/60">{h.hint}</p>}
         </div>
       ))}
     </div>
   </div>
 
-  <Section
-    id="projects"
-    title="Selected Work"
-    subtitle="A compact set of projects that show how I think: research → evaluation → implementation."
-  >
+  <Section id="projects" title="Selected Work" subtitle="Projects that show research discipline, evaluation, and engineering hygiene.">
     <div class="grid gap-4 sm:grid-cols-2">
       {site.projects.map((p) => (
         <Card title={p.title} href={p.href ?? p.repo}>
           <p class="leading-relaxed">{p.blurb}</p>
+
+          {p.metrics?.length ? (
+            <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              {p.metrics.map((m) => (
+                <div class="rounded-2xl border border-black/10 dark:border-white/10 px-3 py-2 bg-white/50 dark:bg-black/20">
+                  <p class="text-black/55 dark:text-white/55">{m.label}</p>
+                  <p class="font-semibold">{m.value}</p>
+                </div>
+              ))}
+            </div>
+          ) : null}
 
           <div class="mt-4 flex flex-wrap gap-2">
             {p.tags.map((t) => (
@@ -106,11 +138,7 @@ import { site } from "../data/site";
     </div>
   </Section>
 
-  <Section
-    id="writing"
-    title="Research / Notes"
-    subtitle="Short, pragmatic write-ups: how to validate, how to avoid leakage, how to ship."
-  >
+  <Section id="writing" title="Research / Notes" subtitle="Short write-ups: what I tested, how I validated it, and what I’d ship.">
     <div class="grid gap-4">
       {site.writing.map((w) => (
         <Card title={w.title} href={w.href}>
@@ -124,14 +152,10 @@ import { site } from "../data/site";
     </div>
   </Section>
 
-  <Section
-    id="skills"
-    title="Skills"
-    subtitle="The stack I reach for when building research-grade and production-grade work."
-  >
+  <Section id="skills" title="Skills" subtitle="A compact stack. I optimize for reproducibility, evaluation, and maintainability.">
     <div class="grid gap-4 sm:grid-cols-3">
       {site.skills.map((g) => (
-        <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/50 dark:bg-black/20 backdrop-blur">
+        <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
           <p class="font-semibold">{g.group}</p>
           <div class="mt-4 flex flex-wrap gap-2">
             {g.items.map((i) => (
@@ -143,12 +167,8 @@ import { site } from "../data/site";
     </div>
   </Section>
 
-  <Section
-    id="contact"
-    title="Contact"
-    subtitle="If you’re building something technical in markets/data, I’m happy to chat."
-  >
-    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/50 dark:bg-black/20 backdrop-blur">
+  <Section id="contact" title="Contact" subtitle="If you’re building something technical in markets/data, I’m happy to chat.">
+    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
       <p class="text-black/70 dark:text-white/70">
         Best way to reach me:{" "}
         <a class="font-semibold hover:underline underline-offset-4" href={`mailto:${site.email}`}>
@@ -163,10 +183,6 @@ import { site } from "../data/site";
           </a>
         ))}
       </div>
-
-      <p class="mt-6 text-sm text-black/60 dark:text-white/60">
-        Tip: update your content in <code class="px-1 py-0.5 rounded bg-black/5 dark:bg-white/10">src/data/site.ts</code>.
-      </p>
     </div>
   </Section>
 </BaseLayout>
