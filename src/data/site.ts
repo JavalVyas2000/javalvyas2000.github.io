@@ -58,37 +58,39 @@ export type SiteData = {
 
 export const site: SiteData = {
   name: "Javal Vyas",
-  title: "ML / Optimization Engineer building toward Quant Research",
+  title: "PhD Researcher • Reliable LLM Agents for Industrial AI",
   tagline:
-    "I build reliable, research-driven AI systems—agentic decision workflows, optimization pipelines, and evaluation methods. I'm especially interested in risk-aware deployment and how reliability techniques translate into quantitative decision-making.",
+    "I build validator-guided, reliability-first agentic systems for control/operations—where outputs must be correct, safe, and actionable. My work connects LLM evaluation, tool-use workflows (GraphRAG), and optimization for decision-making.",
   location: "London, UK",
   email: "javalvyas2000@gmail.com",
   avatar: "/profile.jpeg",
 
   badges: [
-    "Agentic systems + control",
-    "GraphRAG & tool-use workflows",
     "Reliability + evaluation",
-    "Optimization (MILP/MINLP)",
-    "Open-source shipping"
+    "Agentic workflows + tool use",
+    "GraphRAG / structured retrieval",
+    "Optimization (MILP/MINLP, scheduling)",
+    "Control / fault handling"
   ],
 
   socials: [
     { label: "GitHub", href: "https://github.com/JavalVyas2000", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/javal-vyas-63677057/", icon: "linkedin" },
     { label: "Medium", href: "https://medium.com/@javalvyas2000", icon: "medium" },
-    { label: "Scholar (23)", href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en", icon: "scholar" }
+    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en", icon: "scholar" }
   ],
 
   ctas: [
-    { label: "Resume (Tech)", href: "/resume.pdf", kind: "primary" },
-    { label: "Contact", href: "#contact", kind: "ghost" }
+    { label: "Resume", href: "/resume.pdf", kind: "primary" },
+    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en", kind: "ghost" },
+    { label: "GitHub", href: "https://github.com/JavalVyas2000", kind: "ghost" },
+    { label: "Email", href: "mailto:javalvyas2000@gmail.com", kind: "ghost" }
   ],
 
   highlights: [
-    { label: "Core", value: "Reliable AI + Optimization", hint: "Evaluation discipline, robustness, constraints" },
-    { label: "Work", value: "Agentic fault handling", hint: "From information → actions, with monitoring in mind" },
-    { label: "Track", value: "Quant trajectory", hint: "Risk-aware modeling + decision-making" }
+    { label: "Focus", value: "Reliable agentic decision-making", hint: "Validator-guided loops, measurable failures, safer actions" },
+    { label: "Methods", value: "GraphRAG + evaluation metrics", hint: "Structured context injection and policy health checks" },
+    { label: "Also", value: "Optimization + scheduling", hint: "MILP/MINLP workflows and reproducible OSS tooling" }
   ],
 
   projects: [
@@ -105,7 +107,7 @@ export const site: SiteData = {
       highlights: [
         "Context routing for decision-time retrieval",
         "Action-oriented agent design (not just Q&A)",
-        "Research-grade framing with practical engineering"
+        "Research framing with practical constraints"
       ]
     },
     {
@@ -121,7 +123,7 @@ export const site: SiteData = {
     },
     {
       title: "rtn_scheduling (Open-source package)",
-      blurb: "An open-source scheduling package focused on reproducible process scheduling workflows (first author).",
+      blurb: "Open-source scheduling package for reproducible process scheduling workflows (first author).",
       tags: ["Scheduling", "Optimization", "Open Source"],
       repo: "https://github.com/JavalVyas2000/rtn_scheduling",
       metrics: [
@@ -132,25 +134,25 @@ export const site: SiteData = {
     },
     {
       title: "Project Pareto (DOE-funded)",
-      blurb: "Optimization of scheduling problems with ML surrogate integration to improve efficiency and data use.",
+      blurb: "Optimization + ML surrogate integration to improve efficiency and data use in scheduling problems.",
       tags: ["Optimization", "Surrogates", "Scheduling"],
       repo: "https://github.com/project-pareto/project-pareto",
       metrics: [
         { label: "Angle", value: "Surrogate modeling" },
         { label: "Scope", value: "Large OSS" }
       ],
-      highlights: ["Neural surrogate integration for optimization", "Engineering contributions on a large open-source project"]
+      highlights: ["Surrogate integration for optimization", "Engineering contributions on a large open-source project"]
     },
     {
       title: "ZoneTrader (Quant bridge)",
-      blurb: "Signals and evaluation discipline framed as an engineering-first bridge into quant research.",
+      blurb: "Engineering-first bridge into quant: signals + backtesting hygiene + iteration discipline.",
       tags: ["Quant", "Backtesting", "Research Hygiene"],
       repo: "https://github.com/JavalVyas2000/zonetrader",
       metrics: [
         { label: "Theme", value: "Signals + eval" },
         { label: "Goal", value: "Quant bridge" }
       ],
-      highlights: ["Focus on evaluation hygiene and avoiding false discoveries", "Clear experiment structure for iteration"]
+      highlights: ["Evaluation hygiene to avoid false discoveries", "Clear experiment structure for iteration"]
     },
     {
       title: "LLM Fault Metrics for Policy Shaping (Private)",
@@ -165,34 +167,35 @@ export const site: SiteData = {
   scholarUrl: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
 
   publications: [
-    // Add 2–5. If you don’t have direct links yet, link to Scholar or the repo.
-    // { title: "...", venue: "...", year: "2025", href: "..." , note: "..." }
+    // Add 2–5 “selected pubs” here when you want (with PDF/arXiv links).
+    // { title: "…", venue: "…", year: "2026", href: "…", note: "preprint" }
   ],
 
   pipeline: [
     {
       title: "When to use LLMs (and how to choose them)",
-      blurb: "Reliability-guided framework for selecting LLMs when capabilities vary and failure costs differ."
+      blurb: "Reliability-guided framework for selecting LLMs when capability varies and failure costs differ."
     },
     {
       title: "Risk controllability of LLMs",
-      blurb: "How to define/control risk in agentic LLM systems (evaluation → interventions → safer actions)."
+      blurb: "Define and control risk in agentic LLM systems (evaluation → interventions → safer actions)."
     },
     {
       title: "Look forward, act now",
-      blurb: "Decision-time methods to combat latency by planning ahead and acting with partial future context."
+      blurb: "Decision-time methods to combat latency by planning ahead with partial future context."
     }
   ],
+
   writing: [
     {
       title: "Medium: Reliable AI for decision-making",
       venue: "Medium",
       year: "2026",
-      href: "https://medium.com/@your-handle",
+      href: "https://medium.com/@javalvyas2000",
       blurb: "Writing on reliability, evaluation, and risk-aware deployment for AI systems."
     },
     {
-      title: "Paper under review: GraphRAG for controlled operations",
+      title: "GraphRAG for controlled operations (paper under review)",
       venue: "Under review",
       year: "2026",
       href: "https://github.com/AISL-at-Imperial-College-London/ctrl-alt-recover",
@@ -204,6 +207,6 @@ export const site: SiteData = {
     { group: "Core", items: ["Python", "Git", "Linux", "Docker", "CI/CD"] },
     { group: "AI/ML", items: ["LLMs", "Agentic workflows", "Retrieval/GraphRAG", "Evaluation", "Tool use"] },
     { group: "Optimization", items: ["Scheduling", "MILP/MINLP", "Surrogates", "Experiment design"] },
-    { group: "Quant direction", items: ["Risk-aware modeling", "Backtesting hygiene", "Time-series mindset"] }
+    { group: "Systems", items: ["Control thinking", "Fault handling", "Validation loops", "Monitoring mindset"] }
   ]
 };
