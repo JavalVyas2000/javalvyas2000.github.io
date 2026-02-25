@@ -14,7 +14,7 @@ const initials = site.name
   .join("");
 ---
 <BaseLayout title={`${site.name} — ${site.title}`} description={site.tagline} canonicalPath="/">
-  <div class="pointer-events-none fixed inset-0 -z-10 relative bg-premium bg-vignette bg-grain">
+  <div class="pointer-events-none fixed inset-0 -z-10 relative bg-white dark:bg-[#0b0d10] bg-premium bg-vignette bg-grain">
     <div class="absolute -top-20 -left-24 h-72 w-72 rounded-full bg-black/20 dark:bg-white/15 glow floaty"></div>
     <div
       class="absolute top-52 -right-24 h-80 w-80 rounded-full bg-black/15 dark:bg-white/12 glow floaty"
@@ -23,7 +23,7 @@ const initials = site.name
   </div>
 
   <div id="top" class="py-12 sm:py-16">
-    <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-black/30 backdrop-blur p-8 sm:p-12">
+    <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur p-8 sm:p-12">
       <div class="grid gap-8 sm:grid-cols-[160px_1fr] sm:items-start">
         <div class="sm:pt-1">
           <div class="flex flex-col items-start gap-4">

@@ -55,6 +55,6 @@
     repeating-linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.06) 1px, transparent 1px, transparent 3px);
 }
 .dark .bg-grain::after {
-  opacity: 0.10;
-  mix-blend-mode: screen;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
 }
