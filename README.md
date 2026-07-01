@@ -1,4 +1,4 @@
-# Javal Vyas — Portfolio (Astro + Tailwind)
+# Javal Vyas - Portfolio (Astro + Tailwind)
 
 ## Edit content
 Update:
@@ -9,11 +9,12 @@ Update:
 npm install
 npm run dev
 ```
+
 ## Deploy (GitHub Pages)
 Push to `main`. GitHub Actions publishes to Pages automatically.
 
-If Pages doesn't show:
-- Repo Settings → Pages → Source: **GitHub Actions**
+If Pages does not show:
+- Repo Settings -> Pages -> Source: **GitHub Actions**
 
 ## Resume
 Replace:

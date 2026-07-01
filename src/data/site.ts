@@ -1,5 +1,10 @@
 export type SocialKind = "github" | "linkedin" | "medium" | "scholar";
 
+export type Link = {
+  label: string;
+  href: string;
+};
+
 export type Social = {
   label: string;
   href: string;
@@ -20,8 +25,9 @@ export type Publication = {
   title: string;
   venue?: string;
   year?: string;
-  href?: string; // PDF/arXiv/Scholar/repo
-  note?: string; // “under review”, “submitted”, “preprint”, etc.
+  href?: string;
+  note?: string;
+  links?: Link[];
 };
 
 export type PipelineItem = {
@@ -56,206 +62,233 @@ export type SiteData = {
   scholarUrl?: string;
 };
 
+const githubUrl = "https://github.com/JavalVyas2000";
+const scholarUrl = "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en";
+
 export const site: SiteData = {
   name: "Javal Vyas",
-  title: "PhD Researcher • Risk & Reliability in Generative Decision Systems",
+  title: "PhD Researcher - ML, Optimization, and Knowledge-Grounded LLM Systems",
   tagline:
-    "I study generative models as stochastic decision policies in dynamic systems—and build mechanisms to make them measurable, controllable, and reliable under constraints. My work focuses on risk-aware validation, uncertainty/entropy diagnostics, and convergence behavior in sequential decision-making, with applications to industrial control and operations.",
+    "I build machine-learning, optimization, and agentic LLM systems for process control, scheduling, digital twins, and fault-tolerant decision-making. My research focuses on turning plant knowledge, validation, and simulation into reliable actions under operational constraints.",
 
   location: "London, UK",
   email: "javalvyas2000@gmail.com",
   avatar: "/profile.jpeg",
 
   badges: [
-    "Stochastic policies in dynamic systems",
-    "Risk-aware reliability + validation",
-    "Uncertainty / entropy diagnostics",
-    "Convergence under constraints",
-    "Optimization (MILP/MINLP, scheduling)"
+    "Knowledge-grounded LLM agents",
+    "Fault-tolerant control",
+    "Digital twins and process graphs",
+    "Optimization and scheduling",
+    "Reliability under constraints"
   ],
 
   socials: [
-    { label: "GitHub", href: "https://github.com/JavalVyas2000", icon: "github" },
+    { label: "GitHub", href: githubUrl, icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/javal-vyas-63677057/", icon: "linkedin" },
     { label: "Medium", href: "https://medium.com/@javalvyas2000", icon: "medium" },
-    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en", icon: "scholar" }
+    { label: "Google Scholar", href: scholarUrl, icon: "scholar" }
   ],
 
   ctas: [
     { label: "Resume", href: "/resume.pdf", kind: "primary" },
-    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en", kind: "ghost" },
-    { label: "GitHub", href: "https://github.com/JavalVyas2000", kind: "ghost" },
+    { label: "Google Scholar", href: scholarUrl, kind: "ghost" },
+    { label: "GitHub", href: githubUrl, kind: "ghost" },
     { label: "Email", href: "mailto:javalvyas2000@gmail.com", kind: "ghost" }
   ],
 
   highlights: [
     {
-      label: "Core question",
-      value: "When can we trust a stochastic policy?",
-      hint: "Risk + reliability for sequential decision-making under constraints"
+      label: "Research focus",
+      value: "LLM agents for control and recovery",
+      hint: "Knowledge graphs, validators, simulation, and plant-specific constraints"
     },
     {
-      label: "Mechanism",
-      value: "Validation loops + measurable failure metrics",
-      hint: "Constraint violation → targeted reprompting / policy shaping"
+      label: "Engineering thread",
+      value: "Optimization + ML for process systems",
+      hint: "Scheduling, surrogate models, unit commitment, and digital twins"
     },
     {
-      label: "Applied setting",
-      value: "Dynamic systems (control + operations)",
-      hint: "Latency constraints, safety envelopes, and action correctness"
+      label: "Public profiles",
+      value: "Scholar publications + open-source code",
+      hint: "Updated research links and GitHub project work"
     }
   ],
 
   projects: [
     {
-      title: "ctrl-alt-recover",
+      title: "Fault-Tolerant Control with LLM Agents",
       blurb:
-        "GraphRAG-powered agentic fault handling for controlled operations. Structured context injection + validator-guided action selection (paper under review).",
-      tags: ["GraphRAG", "Agentic Systems", "Risk & Reliability"],
+        "Agentic framework that turns fault detection outputs into constraint-aware recovery plans, with simulation and deterministic validation before action.",
+      tags: ["LLM Agents", "Fault-Tolerant Control", "Validation"],
+      href: "https://arxiv.org/abs/2606.28011",
       repo: "https://github.com/AISL-at-Imperial-College-London/ctrl-alt-recover",
       metrics: [
-        { label: "Theme", value: "Risk-aware recovery" },
-        { label: "Method", value: "Graph + tools + validation" }
+        { label: "Method", value: "Graph RAG + DPPT" },
+        { label: "Setting", value: "Process control" }
       ],
       highlights: [
-        "Relation-aware retrieval for decision-time grounding",
-        "Action-oriented agents (not just Q&A)",
-        "Designed around constraints, latency, and failure costs"
+        "Multi-agent monitoring, planning, action synthesis, simulation, and reprompting",
+        "Validated recovery paths for batch and continuous process benchmarks"
       ]
     },
     {
-      title: "Fault Handling with Agentic LLMs (Controlled Ops)",
+      title: "Cause-Effect Specification with KGs and LLMs",
       blurb:
-        "Study on transforming operational information into constraint-consistent actions using agentic LLM workflows.",
-      tags: ["Agents", "Control", "Reliability"],
-      repo: "https://github.com/AISL-at-Imperial-College-London/fault-handling-agentic-llms-for-controlled-operations",
+        "Semantic-AI workflow for generating operator-ready safety narratives and machine-verifiable C&E rules from process knowledge graphs.",
+      tags: ["Knowledge Graphs", "LLMs", "Safety Logic"],
+      href: "https://arxiv.org/abs/2606.31614",
       metrics: [
-        { label: "Goal", value: "Action correctness" },
-        { label: "Lens", value: "Constraints + safety" }
+        { label: "Output", value: "C&E logic" },
+        { label: "Lens", value: "Semantic constraints" }
       ],
       highlights: [
-        "Information → action pipelines with validation",
-        "Failure-mode taxonomy for iteration",
-        "Operator-facing framing for controlled operations"
+        "Grounds LLM outputs in an ontology and controlled vocabulary",
+        "Connects faults, symptoms, causes, and mitigation actions"
       ]
     },
     {
-      title: "rtn_scheduling (Open-source package)",
+      title: "From P&ID Drawings to Process Graphs",
       blurb:
-        "Open-source scheduling package for reproducible process scheduling workflows (first author).",
-      tags: ["Scheduling", "Optimization", "Open Source"],
+        "Multimodal language-model workflow for extracting equipment tags and reconstructing process topology from P&ID drawings.",
+      tags: ["Multimodal LLMs", "P&ID Digitization", "Process Graphs"],
+      href: "https://psecommunity.org/LAPSE:2026.0420",
+      metrics: [
+        { label: "Venue", value: "SCT 2026" },
+        { label: "DOI", value: "10.69997/sct.198584" }
+      ],
+      highlights: [
+        "Separates visual extraction from topology reasoning",
+        "Targets scalable, semantically reliable P&ID digitization"
+      ]
+    },
+    {
+      title: "rtn_scheduling",
+      blurb:
+        "Python package for solving resource-task-network scheduling problems with Pyomo, including experiment and visualization utilities.",
+      tags: ["Python", "Pyomo", "Scheduling"],
       repo: "https://github.com/JavalVyas2000/rtn_scheduling",
       metrics: [
         { label: "Type", value: "OSS package" },
-        { label: "Domain", value: "Scheduling" }
+        { label: "Domain", value: "Process scheduling" }
       ],
-      highlights: ["Clean interfaces for experiments and reuse", "Reproducible scheduling workflows"]
+      highlights: ["Resource-task-network inputs", "Gantt, resource-level, and network visualizations"]
     },
     {
-      title: "Project Pareto (DOE-funded)",
+      title: "Unit Commitment Optimization",
       blurb:
-        "Optimization + ML surrogate integration to improve efficiency and feasibility handling in scheduling problems.",
-      tags: ["Optimization", "Surrogates", "Scheduling"],
-      repo: "https://github.com/project-pareto/project-pareto",
+        "Optimization models and decomposition algorithms for meeting electricity demand at minimum cost under combinatorial commitment constraints.",
+      tags: ["Energy Systems", "Optimization", "Scheduling"],
+      href: "https://psecommunity.org/LAPSE:2025.0282",
       metrics: [
-        { label: "Angle", value: "Surrogate modeling" },
-        { label: "Scope", value: "Large OSS" }
+        { label: "Venue", value: "SCT 2025" },
+        { label: "DOI", value: "10.69997/sct.113099" }
       ],
       highlights: [
-        "Surrogate integration for optimization",
-        "Engineering contributions on a large open-source project"
+        "Decomposition method paired with EGRET unit commitment models",
+        "Benchmarked across four power-system cases"
       ]
     },
     {
-      title: "ZoneTrader (Quant bridge)",
+      title: "Crystallization Image Analysis",
       blurb:
-        "Engineering-first bridge into quant: signals + backtesting hygiene + disciplined evaluation to avoid false discoveries.",
-      tags: ["Backtesting", "Evaluation", "Research Hygiene"],
-      repo: "https://github.com/JavalVyas2000/zonetrader",
-      metrics: [
-        { label: "Theme", value: "Signals + evaluation" },
-        { label: "Goal", value: "Reliable iteration" }
-      ],
+        "OpenCV-based image analysis workflow for classifying primary crystals and agglomerates in crystallization monitoring.",
+      tags: ["Computer Vision", "OpenCV", "Process Monitoring"],
+      repo: "https://github.com/JavalVyas2000/Classification-of-Needle-like-crystals-using-Image-Analysis",
       highlights: [
-        "Evaluation hygiene to reduce spurious results",
-        "Clear experiment structure for iteration and ablations"
-      ]
-    },
-    {
-      title: "LLM Fault Metrics for Policy Shaping (Private)",
-      blurb:
-        "Trajectory-level health metrics (validity/consistency/invalid-transition suppression) that map failures to actionable interventions. Available on request.",
-      tags: ["Uncertainty", "Reliability", "Sequential Decision-Making"],
-      href: "#contact",
-      highlights: [
-        "Metrics that map to intervention (not just accuracy)",
-        "Designed to reason about policy health and structural errors"
+        "Contour features based on convexity, concavity, and circularity",
+        "Notebook workflow for particle classification experiments"
       ]
     }
   ],
 
-  scholarUrl: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
+  scholarUrl,
 
   publications: [
     {
-      title: "Autonomous Industrial Control Using an Agentic Framework with Large Language Models",
-      venue: "IFAC-PapersOnLine (DYCOPS)",
+      title: "Automating Cause-Effect Specification with Knowledge Graphs and Large Language Models",
+      venue: "arXiv",
+      year: "2026",
+      href: "https://arxiv.org/abs/2606.31614",
+      note: "preprint",
+      links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.31614" }]
+    },
+    {
+      title: "A Tutorial on Autonomous Fault-Tolerant Control Using Knowledge-Grounded LLM Agents",
+      venue: "arXiv",
+      year: "2026",
+      href: "https://arxiv.org/abs/2606.31635",
+      note: "preprint",
+      links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.31635" }]
+    },
+    {
+      title: "From Detection to Action: Using LLM Agents for Fault-Tolerant Control",
+      venue: "arXiv",
+      year: "2026",
+      href: "https://arxiv.org/abs/2606.28011",
+      note: "preprint",
+      links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.28011" }]
+    },
+    {
+      title: "From P&ID Drawings to Process Graphs: A Multimodal Language Model Approach",
+      venue: "Systems and Control Transactions",
+      year: "2026",
+      href: "https://psecommunity.org/LAPSE:2026.0420",
+      note: "journal article",
+      links: [
+        { label: "LAPSE", href: "https://psecommunity.org/LAPSE:2026.0420" },
+        { label: "DOI", href: "https://doi.org/10.69997/sct.198584" }
+      ]
+    },
+    {
+      title: "Optimization models and algorithms for the Unit Commitment problem",
+      venue: "Systems and Control Transactions",
       year: "2025",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
+      href: "https://psecommunity.org/LAPSE:2025.0282",
+      note: "journal article",
+      links: [
+        { label: "LAPSE", href: "https://psecommunity.org/LAPSE:2025.0282" },
+        { label: "DOI", href: "https://doi.org/10.69997/sct.113099" }
+      ]
+    },
+    {
+      title: "Autonomous Industrial Control Using an Agentic Framework with Large Language Models",
+      venue: "IFAC-PapersOnLine",
+      year: "2025",
+      href: scholarUrl,
       note: "conference"
     },
     {
       title: "Leveraging LLM Agents and Digital Twins for Fault Handling in Process Plants",
       venue: "IEEE ETFA",
       year: "2025",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
+      href: scholarUrl,
       note: "conference"
     },
     {
       title: "Integration of Plant Scheduling Feasibility with Supply Chain Networks Under Disruptions Using Machine Learning Surrogates",
       venue: "ESCAPE",
       year: "2024",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
+      href: scholarUrl,
       note: "conference"
-    },
-    {
-      title: "Cut-Based Symbolic Feedback for Suppressing Structural Errors in LLM Planning",
-      venue: "ICML",
-      year: "2026",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
-      note: "submitted / under review"
-    },
-    {
-      title: "From Detection to Action: Using LLM Agents for Fault-Tolerant Control",
-      venue: "Journal of Process Control",
-      year: "2026",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
-      note: "under review"
-    },
-    {
-      title: "Small Language Models for Control via GRPO Fine-Tuning",
-      venue: "preprint",
-      year: "2026",
-      href: "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en",
-      note: "submitted"
     }
   ],
 
   pipeline: [
     {
-      title: "Reliability envelopes for generative policies",
+      title: "Knowledge-grounded recovery agents",
       blurb:
-        "Define measurable reliability/violation metrics and map them to decision-time interventions (constraints, validation, structured context)."
+        "LLM agents that move from detection to safe action through plant context, graph retrieval, validators, and simulation."
     },
     {
-      title: "Risk controllability with statistical guarantees",
+      title: "Semantic specifications for process safety",
       blurb:
-        "Fault detection (e.g., HMMs) → action proposal (LLMs) → data-driven verification (to avoid model mismatch) → conformal predictors for calibrated guarantees."
+        "Knowledge-graph and LLM workflows for generating cause-effect logic, safety narratives, and machine-checkable rules."
     },
     {
-      title: "Capability selection without luck",
+      title: "Process graphs from engineering artifacts",
       blurb:
-        "Determine when/which model to use a priori via task structure, failure cost, and empirical capability frontiers (\"jagged frontier\")."
+        "Multimodal extraction of equipment, topology, and operating semantics from P&IDs to support digital twins."
     }
   ],
 
@@ -268,22 +301,31 @@ export const site: SiteData = {
       blurb: "Writing on risk, reliability, and decision-time validation for AI systems."
     },
     {
-      title: "GraphRAG for controlled operations (paper under review)",
-      venue: "Under review",
+      title: "Full publication profile",
+      venue: "Google Scholar",
       year: "2026",
-      href: "https://github.com/AISL-at-Imperial-College-London/ctrl-alt-recover",
-      blurb: "GraphRAG + agentic fault handling for safer, constraint-consistent action selection."
+      href: scholarUrl,
+      blurb: "A maintained list of papers, preprints, and citation metadata."
     }
   ],
 
   skills: [
     { group: "Core", items: ["Python", "Git", "Linux", "Docker", "CI/CD"] },
     {
-      group: "Probabilistic / Decision Systems",
-      items: ["Stochastic policies", "Uncertainty diagnostics", "Risk-aware evaluation", "Conformal prediction (in progress)", "HMMs (in progress)"]
+      group: "LLMs / Agents",
+      items: ["Agentic workflows", "Retrieval / Graph RAG", "Knowledge graphs", "Validation loops", "Tool use"]
     },
-    { group: "LLMs / Agents", items: ["Agentic workflows", "Retrieval/GraphRAG", "Validation loops", "Reprompting", "Tool use"] },
-    { group: "Optimization", items: ["Scheduling", "MILP/MINLP", "Surrogates", "Experiment design"] },
-    { group: "Systems", items: ["Control thinking", "Fault handling", "Safety envelopes", "Latency-aware design"] }
+    {
+      group: "Optimization",
+      items: ["Scheduling", "MILP / MINLP", "Decomposition", "Surrogates", "Experiment design"]
+    },
+    {
+      group: "Process Systems",
+      items: ["Process control", "Fault handling", "Digital twins", "Safety envelopes", "P&ID digitization"]
+    },
+    {
+      group: "ML / Vision",
+      items: ["Machine learning", "Uncertainty diagnostics", "OpenCV", "Image analysis", "Model evaluation"]
+    }
   ]
 };
