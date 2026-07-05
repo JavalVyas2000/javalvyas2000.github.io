@@ -1,9 +1,9 @@
 ---
 const { title, href } = Astro.props as { title: string; href?: string };
 ---
-<div class="rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur p-6 shadow-sm hover:shadow-md transition">
+<div class="panel panel-hover p-5">
   <div class="flex items-start justify-between gap-4">
-    <h3 class="text-lg font-semibold tracking-tight">
+    <h3 class="text-base font-semibold">
       {href ? (
         <a class="hover:underline underline-offset-4" href={href}>
           {title}
@@ -14,7 +14,7 @@ const { title, href } = Astro.props as { title: string; href?: string };
     </h3>
     <slot name="corner" />
   </div>
-  <div class="mt-3 text-black/70 dark:text-white/70">
+  <div class="mt-3 text-sm leading-relaxed text-black/70 dark:text-white/70">
     <slot />
   </div>
 </div>

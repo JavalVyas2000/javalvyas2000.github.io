@@ -23,7 +23,7 @@ const finalOgTitle = ogTitle ?? title;
 const finalOgDesc = ogDescription ?? description;
 ---
 <!doctype html>
-<html lang="en" class="bg-white text-black dark:bg-[#0b0d10] dark:text-white">
+<html lang="en" class="bg-[#f7f8fa] text-[#101418] dark:bg-[#090b0c] dark:text-[#edf0ed]">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -44,15 +44,15 @@ const finalOgDesc = ogDescription ?? description;
 
     <title>{title}</title>
   </head>
-  <body>
+  <body class="antialiased">
     <Nav />
-    <main class="mx-auto max-w-5xl px-4 sm:px-6">
+    <main class="mx-auto max-w-6xl px-4 sm:px-6">
       <slot />
     </main>
-    <footer class="mx-auto max-w-5xl px-4 sm:px-6 py-10 text-sm text-black/60 dark:text-white/60">
-      <div class="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+    <footer class="mx-auto max-w-6xl px-4 py-10 font-mono text-xs text-black/55 dark:text-white/55 sm:px-6">
+      <div class="flex flex-col gap-2 border-t border-black/10 pt-5 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
         <span>&copy; {new Date().getFullYear()} - Built with Astro</span>
-        <a class="hover:underline underline-offset-4" href="#top">Back to top</a>
+        <a class="hover:text-black dark:hover:text-white" href="#top">BACK_TO_TOP</a>
       </div>
     </footer>
   </body>

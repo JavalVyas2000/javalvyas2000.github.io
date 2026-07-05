@@ -2,59 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
-:root.dark { color-scheme: dark; }
+:root {
+  color-scheme: light;
+  --paper: #f7f8fa;
+  --ink: #101418;
+  --muted: rgba(16, 20, 24, 0.62);
+  --line: rgba(16, 20, 24, 0.13);
+  --panel: rgba(255, 255, 255, 0.9);
+  --green: #11824b;
+  --red: #b54444;
+  --amber: #9b6b16;
+}
 
-::selection { background: rgba(0, 0, 0, 0.12); }
-.dark ::selection { background: rgba(255, 255, 255, 0.18); }
+:root.dark {
+  color-scheme: dark;
+  --paper: #090b0c;
+  --ink: #edf0ed;
+  --muted: rgba(237, 240, 237, 0.66);
+  --line: rgba(237, 240, 237, 0.14);
+  --panel: rgba(13, 16, 16, 0.9);
+  --green: #40d889;
+  --red: #ff6b6b;
+  --amber: #f1b85b;
+}
 
-.glow { filter: blur(30px); opacity: 0.22; }
-.dark .glow { opacity: 0.18; }
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
 
-@keyframes floaty {
-  0% { transform: translate3d(0,0,0); }
-  50% { transform: translate3d(0,-10px,0); }
-  100% { transform: translate3d(0,0,0); }
+body {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-feature-settings:
+    "tnum" 1,
+    "ss01" 1;
 }
-.floaty { animation: floaty 6s ease-in-out infinite; }
 
-/* Premium background: gradients + vignette + subtle grain */
-.bg-premium {
-  background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(0, 0, 0, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 85% 30%, rgba(0, 0, 0, 0.06), transparent 55%),
-    radial-gradient(700px 500px at 50% 90%, rgba(0, 0, 0, 0.05), transparent 60%),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.02), transparent 35%);
+::selection {
+  background: rgba(15, 143, 79, 0.2);
 }
-.dark .bg-premium {
-  background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(255, 255, 255, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 85% 30%, rgba(255, 255, 255, 0.06), transparent 55%),
-    radial-gradient(700px 500px at 50% 90%, rgba(255, 255, 255, 0.05), transparent 60%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), transparent 35%);
-}
-.bg-vignette::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(1200px 800px at 50% 30%, transparent 45%, rgba(0,0,0,0.08) 100%);
-  pointer-events: none;
-}
-.dark .bg-vignette::before {
-  background: radial-gradient(1200px 800px at 50% 30%, transparent 45%, rgba(0,0,0,0.50) 100%);
-}
-.bg-grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: multiply;
+
+.quant-grid {
+  background-color: var(--paper);
   background-image:
-    repeating-linear-gradient(0deg, rgba(0,0,0,0.10), rgba(0,0,0,0.10) 1px, transparent 1px, transparent 2px),
-    repeating-linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.06) 1px, transparent 1px, transparent 3px);
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(17, 130, 75, 0.07), transparent 44%),
+    linear-gradient(315deg, rgba(181, 68, 68, 0.055), transparent 48%);
+  background-size:
+    32px 32px,
+    32px 32px,
+    100% 100%,
+    100% 100%;
 }
-.dark .bg-grain::after {
-  opacity: 0.08;
-  mix-blend-mode: overlay;
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 14px 40px rgba(16, 20, 24, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.dark .panel {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.panel-hover {
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.panel-hover:hover {
+  border-color: rgba(15, 143, 79, 0.45);
+  transform: translateY(-1px);
+}
+
+.mono-label {
+  color: var(--muted);
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
 }

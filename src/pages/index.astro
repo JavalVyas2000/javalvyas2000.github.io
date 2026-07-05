@@ -12,125 +12,182 @@ const initials = site.name
   .slice(0, 2)
   .map((x) => x[0]?.toUpperCase())
   .join("");
+
+const terminalRows = [
+  { key: "objective", value: "Reliable decisions under constraints" },
+  { key: "methods", value: "Optimization | ML | agents | simulation" },
+  { key: "risk_layer", value: "Validators, stress tests, failure modes" },
+  { key: "domain", value: "Control, energy, scheduling, digital twins" }
+];
+
+const stackRows = [
+  ["LANG", "Python, TypeScript"],
+  ["OPT", "Pyomo, MILP/MINLP, decomposition"],
+  ["ML", "Evaluation, uncertainty, surrogates"],
+  ["SYS", "Git, Docker, CI/CD, Linux"]
+];
+
+const dashboardRows = [
+  ["SIGNAL", "structured states"],
+  ["RISK", "hard validation"],
+  ["TEST", "simulation loops"],
+  ["OUTPUT", "papers + code"]
+];
+
+const riskBars = [
+  { label: "model", width: 76, color: "var(--green)" },
+  { label: "constraint", width: 88, color: "var(--amber)" },
+  { label: "execution", width: 64, color: "var(--red)" }
+];
 ---
 
 <BaseLayout title={`${site.name} - ${site.title}`} description={site.tagline} canonicalPath="/">
-  <div class="pointer-events-none fixed inset-0 -z-10 relative bg-white dark:bg-[#0b0d10] bg-premium bg-vignette bg-grain"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10 quant-grid"></div>
 
-  <div id="top" class="py-12 sm:py-16">
-    <div class="rounded-[2rem] border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur p-8 sm:p-12">
-      <div class="grid gap-8 sm:grid-cols-[160px_1fr] sm:items-start">
-        <div class="sm:pt-1">
-          <div class="flex flex-col items-start gap-4">
-            {
-              site.avatar ? (
-                <img
-                  src={site.avatar}
-                  alt={`${site.name} profile photo`}
-                  class="h-32 w-32 rounded-full object-cover border border-black/10 dark:border-white/10 shadow-sm"
-                  loading="eager"
-                />
-              ) : (
-                <div class="h-32 w-32 rounded-full border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/20 backdrop-blur flex items-center justify-center text-xl font-semibold shadow-sm">
-                  {initials}
-                </div>
-              )
-            }
+  <section id="top" class="py-10 sm:py-14">
+    <div class="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="panel p-5 sm:p-7">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
+          {
+            site.avatar ? (
+              <img
+                src={site.avatar}
+                alt={`${site.name} profile photo`}
+                class="h-24 w-24 rounded-lg border border-black/10 object-cover dark:border-white/10"
+                loading="eager"
+              />
+            ) : (
+              <div class="flex h-24 w-24 items-center justify-center rounded-lg border border-black/10 bg-white/70 text-xl font-semibold dark:border-white/10 dark:bg-white/5">
+                {initials}
+              </div>
+            )
+          }
 
-            <div class="flex flex-col gap-2 text-sm">
+          <div class="min-w-0">
+            <p class="mono-label">{site.location} / quantitative research</p>
+            <h1 class="mt-2 text-4xl font-semibold sm:text-6xl">{site.name}</h1>
+            <p class="mt-3 max-w-2xl text-lg text-black/80 dark:text-white/80">{site.title}</p>
+          </div>
+        </div>
+
+        <p class="mt-6 max-w-3xl text-base leading-7 text-black/70 dark:text-white/70">{site.tagline}</p>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          {site.badges?.map((badge) => <Badge>{badge}</Badge>)}
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          {
+            site.ctas.map((c) => (
+              <a
+                class={`rounded-md border px-3.5 py-2 text-sm font-semibold transition ${
+                  c.kind === "primary"
+                    ? "border-black bg-black text-white hover:bg-black/85 dark:border-white dark:bg-white dark:text-black dark:hover:bg-white/85"
+                    : "border-black/10 bg-white/50 text-black/75 hover:border-emerald-700/40 hover:text-black dark:border-white/10 dark:bg-white/5 dark:text-white/75 dark:hover:border-emerald-300/40 dark:hover:text-white"
+                }`}
+                href={c.href}
+              >
+                {c.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="panel overflow-hidden">
+        <div class="flex items-center justify-between border-b border-black/10 px-5 py-3 dark:border-white/10">
+          <p class="font-mono text-sm font-semibold">RESEARCH_TERMINAL</p>
+          <div class="flex items-center gap-2 font-mono text-xs text-emerald-700 dark:text-emerald-300">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-300"></span>
+            ACTIVE
+          </div>
+        </div>
+
+        <div class="divide-y divide-black/10 dark:divide-white/10">
+          {
+            terminalRows.map((row) => (
+              <div class="grid grid-cols-[8.5rem_1fr] gap-3 px-5 py-3 text-sm">
+                <span class="font-mono text-black/50 dark:text-white/50">{row.key}</span>
+                <span class="font-medium">{row.value}</span>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="border-t border-black/10 bg-black/[0.03] p-5 dark:border-white/10 dark:bg-white/[0.03]">
+          <p class="mono-label">research equation</p>
+          <p class="mt-3 font-mono text-sm leading-6 text-black/75 dark:text-white/75">
+            maximize(action_quality) subject_to constraints, uncertainty, latency, and failure_cost
+          </p>
+        </div>
+
+        <div class="grid border-t border-black/10 text-xs dark:border-white/10 sm:grid-cols-2">
+          <div class="border-b border-black/10 p-5 dark:border-white/10 sm:border-b-0 sm:border-r">
+            <p class="mono-label">dashboard</p>
+            <div class="mt-3 grid gap-2">
               {
-                site.socials.map((s) => (
-                  <a
-                    class="group inline-flex items-center gap-2 hover:underline underline-offset-4 text-black/70 dark:text-white/70"
-                    href={s.href}
-                  >
-                    <SocialIcon kind={s.icon} />
-                    <span>{s.label}</span>
-                  </a>
+                dashboardRows.map(([k, v]) => (
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="font-mono text-black/50 dark:text-white/50">{k}</span>
+                    <span class="font-semibold">{v}</span>
+                  </div>
                 ))
               }
-              <a
-                class="group inline-flex items-center gap-2 hover:underline underline-offset-4 text-black/70 dark:text-white/70"
-                href={`mailto:${site.email}`}
-              >
-                <SocialIcon kind="email" />
-                <span>Email</span>
-              </a>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <p class="mono-label">exposure map</p>
+            <div class="mt-3 space-y-3">
+              {
+                riskBars.map((bar) => (
+                  <div>
+                    <div class="mb-1 flex items-center justify-between font-mono text-[0.68rem] text-black/50 dark:text-white/50">
+                      <span>{bar.label}</span>
+                      <span>{bar.width}%</span>
+                    </div>
+                    <div class="h-1.5 rounded-sm bg-black/10 dark:bg-white/10">
+                      <div class="h-1.5 rounded-sm" style={`width: ${bar.width}%; background: ${bar.color}`}></div>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
-
-        <div class="max-w-3xl">
-          <p class="text-sm text-black/60 dark:text-white/60">{site.location}</p>
-          <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">{site.name}</h1>
-          <p class="mt-3 text-lg sm:text-xl text-black/80 dark:text-white/80">{site.title}</p>
-
-          <p class="mt-2 text-sm text-black/60 dark:text-white/60">
-            Machine learning | Optimization | Process control | Knowledge-grounded LLM systems
-          </p>
-
-          <p class="mt-5 text-black/70 dark:text-white/70 leading-relaxed">{site.tagline}</p>
-
-          <div class="mt-5 flex flex-wrap gap-2">
-            {
-              site.badges?.map((badge) => (
-                <span class="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs font-medium text-black dark:text-white bg-white/55 dark:bg-black/15 backdrop-blur">
-                  {badge}
-                </span>
-              ))
-            }
-          </div>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            {
-              site.ctas.map((c) => (
-                <a
-                  class={`rounded-2xl px-4 py-2 text-sm transition border ${
-                    c.kind === "primary"
-                      ? "bg-black text-white border-black hover:opacity-90 dark:bg-white dark:text-black dark:border-white"
-                      : "border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5"
-                  }`}
-                  href={c.href}
-                >
-                  {c.label}
-                </a>
-              ))
-            }
-          </div>
-        </div>
-      </div>
+      </aside>
     </div>
 
-    <div class="mt-8 grid gap-4 sm:grid-cols-3">
+    <div class="mt-4 grid gap-3 sm:grid-cols-3">
       {
         site.highlights.map((h) => (
-          <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
-            <p class="text-sm text-black/60 dark:text-white/60">{h.label}</p>
-            <p class="mt-2 font-semibold">{h.value}</p>
-            {h.hint && <p class="mt-2 text-sm text-black/60 dark:text-white/60">{h.hint}</p>}
+          <div class="panel panel-hover p-5">
+            <p class="mono-label">{h.label}</p>
+            <p class="mt-2 text-lg font-semibold">{h.value}</p>
+            {h.hint && <p class="mt-2 text-sm leading-6 text-black/60 dark:text-white/60">{h.hint}</p>}
           </div>
         ))
       }
     </div>
-  </div>
+  </section>
 
   <Section
     id="projects"
-    title="Selected Work"
-    subtitle="Research systems and open-source projects across control, optimization, scheduling, and process intelligence."
+    title="Strategy Ledger"
+    subtitle="Research systems and open-source projects framed as signal extraction, risk control, and execution infrastructure."
   >
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {
         site.projects.map((p) => (
           <Card title={p.title} href={p.href ?? p.repo}>
-            <p class="leading-relaxed">{p.blurb}</p>
+            <p>{p.blurb}</p>
 
             {p.metrics?.length ? (
-              <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div class="mt-4 divide-y divide-black/10 border-y border-black/10 text-xs dark:divide-white/10 dark:border-white/10">
                 {p.metrics.map((m) => (
-                  <div class="rounded-2xl border border-black/10 dark:border-white/10 px-3 py-2 bg-white/50 dark:bg-black/20">
-                    <p class="text-black/55 dark:text-white/55">{m.label}</p>
-                    <p class="font-semibold">{m.value}</p>
+                  <div class="grid grid-cols-[5.5rem_1fr] gap-2 py-2">
+                    <span class="font-mono text-black/50 dark:text-white/50">{m.label}</span>
+                    <span class="metric-value font-semibold text-black/80 dark:text-white/80">{m.value}</span>
                   </div>
                 ))}
               </div>
@@ -143,10 +200,10 @@ const initials = site.name
             </div>
 
             {(p.href || p.repo) && (
-              <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
                 {p.href && (
                   <a
-                    class="inline-flex items-center rounded-xl border border-black/10 dark:border-white/10 px-3 py-1 hover:bg-black/5 dark:hover:bg-white/5 transition"
+                    class="rounded-md border border-black/10 px-2.5 py-1.5 hover:border-emerald-700/40 dark:border-white/10 dark:hover:border-emerald-300/40"
                     href={p.href}
                   >
                     Details
@@ -154,7 +211,7 @@ const initials = site.name
                 )}
                 {p.repo && (
                   <a
-                    class="inline-flex items-center rounded-xl border border-black/10 dark:border-white/10 px-3 py-1 hover:bg-black/5 dark:hover:bg-white/5 transition"
+                    class="rounded-md border border-black/10 px-2.5 py-1.5 hover:border-emerald-700/40 dark:border-white/10 dark:hover:border-emerald-300/40"
                     href={p.repo}
                   >
                     Repo
@@ -164,7 +221,7 @@ const initials = site.name
             )}
 
             {p.highlights?.length ? (
-              <ul class="mt-4 list-disc pl-5 text-sm text-black/65 dark:text-white/65">
+              <ul class="mt-4 space-y-2 border-t border-black/10 pt-4 text-xs leading-5 text-black/60 dark:border-white/10 dark:text-white/60">
                 {p.highlights.map((x) => (
                   <li>{x}</li>
                 ))}
@@ -178,29 +235,34 @@ const initials = site.name
 
   <Section
     id="research"
-    title="Research"
-    subtitle="Selected publications and current directions in reliable AI for process systems."
+    title="Research Tape"
+    subtitle="Publications and preprints that support the quantitative decision-systems thesis."
   >
-    <div class="grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
-      <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
-        <p class="font-semibold">Selected publications</p>
+    <div class="grid gap-4 lg:grid-cols-[1.4fr_0.6fr]">
+      <div class="panel p-5">
+        <div class="grid grid-cols-[4.5rem_1fr] border-b border-black/10 pb-3 text-xs font-semibold uppercase text-black/45 dark:border-white/10 dark:text-white/45 sm:grid-cols-[5rem_1fr_8rem]">
+          <span>Year</span>
+          <span>Paper</span>
+          <span class="hidden sm:block">Type</span>
+        </div>
 
-        {
-          site.publications?.length ? (
-            <ul class="mt-4 space-y-4 text-sm text-black/70 dark:text-white/70">
-              {site.publications.map((p) => (
-                <li>
+        <ul class="divide-y divide-black/10 dark:divide-white/10">
+          {
+            site.publications?.map((p) => (
+              <li class="grid grid-cols-[4.5rem_1fr] gap-3 py-4 text-sm sm:grid-cols-[5rem_1fr_8rem]">
+                <span class="metric-value text-black/50 dark:text-white/50">{p.year}</span>
+                <div>
                   <a class="font-semibold hover:underline underline-offset-4" href={p.href ?? site.scholarUrl}>
                     {p.title}
                   </a>
-                  <div class="mt-1 text-black/60 dark:text-white/60">
-                    {[p.venue, p.year, p.note].filter(Boolean).join(" - ")}
+                  <div class="mt-1 text-xs text-black/60 dark:text-white/60">
+                    {[p.venue, p.note].filter(Boolean).join(" / ")}
                   </div>
                   {p.links?.length ? (
                     <div class="mt-2 flex flex-wrap gap-2">
                       {p.links.map((link) => (
                         <a
-                          class="inline-flex items-center rounded-xl border border-black/10 dark:border-white/10 px-2.5 py-1 text-xs hover:bg-black/5 dark:hover:bg-white/5 transition"
+                          class="rounded-md border border-black/10 px-2 py-1 text-xs font-semibold hover:border-emerald-700/40 dark:border-white/10 dark:hover:border-emerald-300/40"
                           href={link.href}
                         >
                           {link.label}
@@ -208,57 +270,49 @@ const initials = site.name
                       ))}
                     </div>
                   ) : null}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p class="mt-3 text-sm text-black/70 dark:text-white/70">
-              Full list on{" "}
-              <a class="font-semibold hover:underline underline-offset-4" href={site.scholarUrl}>
-                Google Scholar
-              </a>
-              .
-            </p>
-          )
-        }
-      </div>
-
-      <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
-        <p class="font-semibold">Current directions</p>
-        <ul class="mt-4 space-y-3 text-sm text-black/70 dark:text-white/70">
-          {
-            site.pipeline?.map((x) => (
-              <li>
-                <div class="font-semibold">{x.title}</div>
-                <div class="text-black/60 dark:text-white/60">{x.blurb}</div>
+                </div>
+                <span class="hidden text-xs text-black/50 dark:text-white/50 sm:block">{p.note}</span>
               </li>
             ))
           }
         </ul>
       </div>
-    </div>
 
-    <p class="mt-4 text-sm text-black/60 dark:text-white/60">
-      Full publication list:{" "}
-      <a class="hover:underline underline-offset-4" href={site.scholarUrl}>
-        Google Scholar
-      </a>
-      .
-    </p>
+      <div class="panel p-5">
+        <p class="mono-label">current positions</p>
+        <ul class="mt-4 space-y-4 text-sm">
+          {
+            site.pipeline?.map((x) => (
+              <li class="border-l-2 border-emerald-700/50 pl-3 dark:border-emerald-300/50">
+                <div class="font-semibold">{x.title}</div>
+                <div class="mt-1 leading-6 text-black/60 dark:text-white/60">{x.blurb}</div>
+              </li>
+            ))
+          }
+        </ul>
+
+        <a
+          class="mt-5 inline-flex rounded-md border border-black/10 px-3 py-2 text-sm font-semibold hover:border-emerald-700/40 dark:border-white/10 dark:hover:border-emerald-300/40"
+          href={site.scholarUrl}
+        >
+          Google Scholar
+        </a>
+      </div>
+    </div>
   </Section>
 
   <Section
     id="writing"
-    title="Writing"
-    subtitle="Public writing and research notes on risk, reliability, and decision-time validation."
+    title="Notes"
+    subtitle="Public writing and maintained profiles for research context."
   >
-    <div class="grid gap-4">
+    <div class="grid gap-4 md:grid-cols-2">
       {
         site.writing.map((w) => (
           <Card title={w.title} href={w.href}>
-            <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm text-black/60 dark:text-white/60">
+            <div class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-black/50 dark:text-white/50">
               {w.venue && <span>{w.venue}</span>}
-              {w.year && <span>- {w.year}</span>}
+              {w.year && <span>{w.year}</span>}
             </div>
             {w.blurb && <p class="mt-3">{w.blurb}</p>}
           </Card>
@@ -267,11 +321,11 @@ const initials = site.name
     </div>
   </Section>
 
-  <Section id="skills" title="Skills" subtitle="A compact stack for building reliable, testable decision systems.">
-    <div class="grid gap-4 sm:grid-cols-2">
+  <Section id="skills" title="Stack" subtitle="A compact toolchain for quantitative modelling and reliable decision systems.">
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
       {
         site.skills.map((g) => (
-          <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm hover:shadow-md transition">
+          <div class="panel panel-hover p-5">
             <p class="font-semibold">{g.group}</p>
             <div class="mt-4 flex flex-wrap gap-2">
               {g.items.map((i) => (
@@ -282,20 +336,41 @@ const initials = site.name
         ))
       }
     </div>
+
+    <div class="panel mt-4 overflow-hidden">
+      <div class="grid divide-y divide-black/10 text-sm dark:divide-white/10 sm:grid-cols-4 sm:divide-x sm:divide-y-0">
+        {
+          stackRows.map(([k, v]) => (
+            <div class="p-4">
+              <p class="font-mono text-xs text-black/50 dark:text-white/50">{k}</p>
+              <p class="mt-2 font-semibold">{v}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
   </Section>
 
   <Section
     id="contact"
     title="Contact"
-    subtitle="If you are working on decision-making under uncertainty in control, ML, or process systems, I am happy to chat."
+    subtitle="For quantitative ML, optimization, controls, and decision-system conversations."
   >
-    <div class="rounded-3xl border border-black/10 dark:border-white/10 p-6 bg-white/60 dark:bg-black/25 backdrop-blur shadow-sm">
-      <p class="text-black/70 dark:text-white/70">
-        Best way to reach me:{" "}
-        <a class="font-semibold hover:underline underline-offset-4" href={`mailto:${site.email}`}>
+    <div class="panel grid gap-4 p-5 sm:grid-cols-[1fr_auto] sm:items-center">
+      <div>
+        <p class="mono-label">contact route</p>
+        <a class="mt-2 inline-block text-lg font-semibold hover:underline underline-offset-4" href={`mailto:${site.email}`}>
           {site.email}
         </a>
-      </p>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm">
+        {site.socials.map((s) => (
+          <a class="group inline-flex items-center gap-2 hover:underline underline-offset-4" href={s.href}>
+            <SocialIcon kind={s.icon} />
+            <span>{s.label}</span>
+          </a>
+        ))}
+      </div>
     </div>
   </Section>
 </BaseLayout>
