@@ -67,19 +67,19 @@ const scholarUrl = "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en
 
 export const site: SiteData = {
   name: "Javal Vyas",
-  title: "Quantitative ML Researcher - Optimization, Risk, and Decision Systems",
+  title: "ML / Optimization Researcher - Reliable Decision Systems",
   tagline:
-    "I build quantitative models for constrained decision-making: optimization, ML, simulation-backed validation, and knowledge-grounded agents. My work is about extracting reliable signals from complex systems, stress-testing actions, and controlling risk before deployment.",
+    "I build research-grade software for constrained decision-making: optimization models, ML systems, knowledge-grounded agents, and validation loops. My work sits between tech and quantitative research: turning complex system data into reliable, testable decisions.",
 
   location: "London, UK",
   email: "javalvyas2000@gmail.com",
   avatar: "/profile.jpeg",
 
   badges: [
-    "Quantitative ML",
+    "ML systems",
     "Constrained optimization",
-    "Risk-aware validation",
-    "Simulation + stress testing",
+    "Knowledge-grounded agents",
+    "Validation loops",
     "Python research engineering"
   ],
 
@@ -99,19 +99,19 @@ export const site: SiteData = {
 
   highlights: [
     {
-      label: "Signal",
-      value: "Structure from noisy systems",
-      hint: "Process graphs, fault states, scheduling constraints, and action validity"
+      label: "Build",
+      value: "Research systems that run",
+      hint: "Python packages, reproducible experiments, and deployable evaluation workflows"
     },
     {
-      label: "Risk",
-      value: "Validate before action",
-      hint: "Simulation loops, deterministic checks, constraint envelopes, and failure analysis"
+      label: "Model",
+      value: "Optimization + ML under constraints",
+      hint: "Scheduling, unit commitment, surrogate models, and process-system decisions"
     },
     {
-      label: "Execution",
-      value: "Research code to reproducible systems",
-      hint: "Python, Pyomo, GitHub projects, papers, and deployable evaluation workflows"
+      label: "Validate",
+      value: "Reliable actions before deployment",
+      hint: "Simulation checks, deterministic validators, and failure-mode analysis"
     }
   ],
 
@@ -120,12 +120,12 @@ export const site: SiteData = {
       title: "Fault-Tolerant Control with LLM Agents",
       blurb:
         "Agentic decision framework that turns fault signals into constraint-aware recovery plans, then checks candidate actions through simulation and deterministic validators.",
-      tags: ["Decision Agents", "Risk Controls", "Validation"],
+      tags: ["LLM Agents", "Validation", "Control"],
       href: "https://arxiv.org/abs/2606.28011",
       repo: "https://github.com/AISL-at-Imperial-College-London/ctrl-alt-recover",
       metrics: [
-        { label: "Signal", value: "Fault state" },
-        { label: "Control", value: "Validate action" }
+        { label: "Type", value: "Research system" },
+        { label: "Focus", value: "Safe action" }
       ],
       highlights: [
         "Multi-agent monitoring, planning, action synthesis, simulation, and reprompting",
@@ -133,29 +133,14 @@ export const site: SiteData = {
       ]
     },
     {
-      title: "Cause-Effect Specification with KGs and LLMs",
-      blurb:
-        "Semantic-AI workflow for generating operator-ready safety narratives and machine-verifiable C&E rules from process knowledge graphs.",
-      tags: ["Knowledge Graphs", "LLMs", "Rule Extraction"],
-      href: "https://arxiv.org/abs/2606.31614",
-      metrics: [
-        { label: "Output", value: "C&E logic" },
-        { label: "Control", value: "Semantic checks" }
-      ],
-      highlights: [
-        "Grounds LLM outputs in ontology and controlled vocabulary",
-        "Connects faults, symptoms, causes, and mitigation actions"
-      ]
-    },
-    {
-      title: "From P&ID Drawings to Process Graphs",
+      title: "P&ID to Process Graphs",
       blurb:
         "Multimodal language-model workflow for extracting equipment tags and reconstructing process topology from P&ID drawings.",
-      tags: ["Multimodal Models", "Graph Extraction", "Structured Data"],
+      tags: ["Multimodal ML", "Graphs", "Structured Data"],
       href: "https://psecommunity.org/LAPSE:2026.0420",
       metrics: [
         { label: "Venue", value: "SCT 2026" },
-        { label: "DOI", value: "10.69997/sct.198584" }
+        { label: "Focus", value: "Graph extraction" }
       ],
       highlights: [
         "Separates visual extraction from topology reasoning",
@@ -170,7 +155,7 @@ export const site: SiteData = {
       repo: "https://github.com/JavalVyas2000/rtn_scheduling",
       metrics: [
         { label: "Type", value: "OSS package" },
-        { label: "Domain", value: "Process scheduling" }
+        { label: "Domain", value: "Scheduling" }
       ],
       highlights: ["Resource-task-network inputs", "Gantt, resource-level, and network visualizations"]
     },
@@ -188,17 +173,6 @@ export const site: SiteData = {
         "Decomposition method paired with EGRET unit commitment models",
         "Benchmarked across four power-system cases"
       ]
-    },
-    {
-      title: "Crystallization Image Analysis",
-      blurb:
-        "OpenCV-based image analysis workflow for classifying primary crystals and agglomerates in crystallization monitoring.",
-      tags: ["Computer Vision", "Feature Extraction", "Monitoring"],
-      repo: "https://github.com/JavalVyas2000/Classification-of-Needle-like-crystals-using-Image-Analysis",
-      highlights: [
-        "Contour features based on convexity, concavity, and circularity",
-        "Notebook workflow for particle classification experiments"
-      ]
     }
   ],
 
@@ -212,14 +186,6 @@ export const site: SiteData = {
       href: "https://arxiv.org/abs/2606.31614",
       note: "preprint",
       links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.31614" }]
-    },
-    {
-      title: "A Tutorial on Autonomous Fault-Tolerant Control Using Knowledge-Grounded LLM Agents",
-      venue: "arXiv",
-      year: "2026",
-      href: "https://arxiv.org/abs/2606.31635",
-      note: "preprint",
-      links: [{ label: "arXiv", href: "https://arxiv.org/abs/2606.31635" }]
     },
     {
       title: "From Detection to Action: Using LLM Agents for Fault-Tolerant Control",
@@ -252,20 +218,6 @@ export const site: SiteData = {
       ]
     },
     {
-      title: "Autonomous Industrial Control Using an Agentic Framework with Large Language Models",
-      venue: "IFAC-PapersOnLine",
-      year: "2025",
-      href: scholarUrl,
-      note: "conference"
-    },
-    {
-      title: "Leveraging LLM Agents and Digital Twins for Fault Handling in Process Plants",
-      venue: "IEEE ETFA",
-      year: "2025",
-      href: scholarUrl,
-      note: "conference"
-    },
-    {
       title: "Integration of Plant Scheduling Feasibility with Supply Chain Networks Under Disruptions Using Machine Learning Surrogates",
       venue: "ESCAPE",
       year: "2024",
@@ -276,19 +228,19 @@ export const site: SiteData = {
 
   pipeline: [
     {
-      title: "Knowledge-grounded recovery agents",
+      title: "Reliable agentic control",
       blurb:
-        "Decision agents that move from signal detection to safe action through context retrieval, validators, and simulation."
+        "Decision agents that move from fault detection to safe action through context retrieval, validators, and simulation."
     },
     {
-      title: "Risk controls for model outputs",
+      title: "Optimization-aware ML",
       blurb:
-        "Rule generation and deterministic checks that turn free-form model proposals into machine-checkable decisions."
+        "Surrogate models and structured features that improve feasibility, scheduling, and operational decision support."
     },
     {
-      title: "Structured features from engineering artifacts",
+      title: "Structured process intelligence",
       blurb:
-        "Multimodal extraction of equipment, topology, and operating semantics from P&IDs to build usable system state."
+        "Multimodal extraction of equipment, topology, and operating semantics from engineering artifacts."
     }
   ],
 
@@ -298,25 +250,25 @@ export const site: SiteData = {
       venue: "Medium",
       year: "2026",
       href: "https://medium.com/@javalvyas2000",
-      blurb: "Writing on reliability, risk controls, and decision-time validation for AI systems."
+      blurb: "Writing on reliability, validation, and decision-time controls for AI systems."
     },
     {
       title: "Full publication profile",
       venue: "Google Scholar",
       year: "2026",
       href: scholarUrl,
-      blurb: "A maintained list of papers, preprints, and citation metadata."
+      blurb: "Complete publication list, including papers not shown in this curated site view."
     }
   ],
 
   skills: [
     { group: "Research Engineering", items: ["Python", "Git", "Linux", "Docker", "CI/CD"] },
     {
-      group: "Quantitative Methods",
+      group: "Optimization",
       items: ["Optimization", "Scheduling", "MILP / MINLP", "Decomposition", "Experiment design"]
     },
     {
-      group: "ML / Risk Systems",
+      group: "ML Systems",
       items: ["Machine learning", "Uncertainty diagnostics", "Validation loops", "Surrogates", "Model evaluation"]
     },
     {

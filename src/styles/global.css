@@ -12,6 +12,7 @@
   --green: #11824b;
   --red: #b54444;
   --amber: #9b6b16;
+  --blue: #2864b8;
 }
 
 :root.dark {
@@ -24,6 +25,7 @@
   --green: #40d889;
   --red: #ff6b6b;
   --amber: #f1b85b;
+  --blue: #6ea8ff;
 }
 
 html {
