@@ -13,6 +13,8 @@ export type Social = {
 
 export type Project = {
   title: string;
+  category: string;
+  contribution?: string;
   blurb: string;
   tags: string[];
   href?: string;
@@ -47,6 +49,15 @@ export type SiteData = {
   name: string;
   title: string;
   tagline: string;
+  affiliation: string;
+  interests: string;
+  experience: {
+    role: string;
+    organization: string;
+    detail: string;
+    period?: string;
+    description: string;
+  }[];
   location?: string;
   email: string;
   avatar?: string;
@@ -67,9 +78,27 @@ const scholarUrl = "https://scholar.google.com/citations?user=5_G5HMQAAAAJ&hl=en
 
 export const site: SiteData = {
   name: "Javal Vyas",
-  title: "AI & Optimization Researcher",
+  title: "Optimization & Machine Learning",
   tagline:
-    "I develop machine learning and optimization methods for complex decision problems. My work brings together LLM agents, mathematical modelling, and research software, with simulation and validation at the centre.",
+    "I develop optimization algorithms, machine learning methods, and Python research software for decision-making under constraints. My work spans energy-system modelling, scheduling, and agentic control.",
+  affiliation: "PhD student · Imperial College London",
+  interests:
+    "Interested in quantitative research and development, with additional interests in AI/ML research and research engineering.",
+  experience: [
+    {
+      role: "PhD student",
+      organization: "Imperial College London",
+      detail: "Chemical Engineering · Autonomous Industrial Systems Laboratory",
+      period: "Sep 2024 – Dec 2027 (expected)",
+      description: "Research in optimization, machine learning, and autonomous industrial systems.",
+    },
+    {
+      role: "Engineer II",
+      organization: "KeyLogic",
+      detail: "Pittsburgh, USA",
+      description: "Worked on the IDAES and PARETO projects.",
+    },
+  ],
 
   location: "London, UK",
   email: "javalvyas2000@gmail.com",
@@ -121,7 +150,22 @@ export const site: SiteData = {
 
   projects: [
     {
+      title: "Unit Commitment Optimization",
+      category: "Mathematical modelling · Energy",
+      blurb:
+        "Optimization models and decomposition algorithms for meeting electricity demand at minimum cost under combinatorial commitment constraints.",
+      tags: ["Energy Systems", "Optimization", "Scheduling"],
+      href: "https://psecommunity.org/LAPSE:2025.0282",
+      highlights: [
+        "Decomposition method paired with EGRET unit commitment models",
+        "Benchmarked across four power-system cases",
+      ],
+    },
+    {
       title: "Fault-Tolerant Control with LLM Agents",
+      category: "AI systems · Control",
+      contribution:
+        "Built most of the system, including the agent architecture, simulation, validators, and experiments. Collaborators developed the knowledge graph and SPARQL queries.",
       blurb:
         "Agentic decision framework that turns fault signals into constraint-aware recovery plans, then checks candidate actions through simulation and deterministic validators.",
       tags: ["LLM Agents", "Validation", "Control"],
@@ -133,11 +177,12 @@ export const site: SiteData = {
       ],
       highlights: [
         "Multi-agent monitoring, planning, action synthesis, simulation, and reprompting",
-        "Benchmarks action reliability under process constraints before execution",
+        "Evaluates action reliability under process constraints before execution",
       ],
     },
     {
       title: "P&ID to Process Graphs",
+      category: "Multimodal AI · Graphs",
       blurb:
         "Multimodal language-model workflow for extracting equipment tags and reconstructing process topology from P&ID drawings.",
       tags: ["Multimodal ML", "Graphs", "Structured Data"],
@@ -153,6 +198,7 @@ export const site: SiteData = {
     },
     {
       title: "rtn_scheduling",
+      category: "Open-source software · Optimization",
       blurb:
         "Python package for solving resource-task-network scheduling problems with Pyomo, including experiment and visualization utilities.",
       tags: ["Python", "Pyomo", "Optimization"],
@@ -164,21 +210,6 @@ export const site: SiteData = {
       highlights: [
         "Resource-task-network inputs",
         "Gantt, resource-level, and network visualizations",
-      ],
-    },
-    {
-      title: "Unit Commitment Optimization",
-      blurb:
-        "Optimization models and decomposition algorithms for meeting electricity demand at minimum cost under combinatorial commitment constraints.",
-      tags: ["Energy Systems", "Optimization", "Scheduling"],
-      href: "https://psecommunity.org/LAPSE:2025.0282",
-      metrics: [
-        { label: "Objective", value: "Min cost" },
-        { label: "Control", value: "Combinatorial" },
-      ],
-      highlights: [
-        "Decomposition method paired with EGRET unit commitment models",
-        "Benchmarked across four power-system cases",
       ],
     },
   ],
