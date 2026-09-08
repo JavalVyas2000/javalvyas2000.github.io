@@ -8,8 +8,8 @@ const {
   description,
   ogTitle,
   ogDescription,
-  ogImage = "/og.png",
-  canonicalPath = "/"
+  ogImage = "/profile.jpeg",
+  canonicalPath = "/",
 } = Astro.props as {
   title: string;
   description: string;
@@ -22,8 +22,9 @@ const {
 const finalOgTitle = ogTitle ?? title;
 const finalOgDesc = ogDescription ?? description;
 ---
+
 <!doctype html>
-<html lang="en" class="bg-[#f7f8fa] text-[#101418] dark:bg-[#090b0c] dark:text-[#edf0ed]">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -37,7 +38,7 @@ const finalOgDesc = ogDescription ?? description;
     <meta property="og:url" content={absoluteUrl(canonicalPath)} />
     <meta property="og:image" content={absoluteUrl(ogImage)} />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={finalOgTitle} />
     <meta name="twitter:description" content={finalOgDesc} />
     <meta name="twitter:image" content={absoluteUrl(ogImage)} />
@@ -45,15 +46,15 @@ const finalOgDesc = ogDescription ?? description;
     <title>{title}</title>
   </head>
   <body class="antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
     <Nav />
-    <main class="mx-auto max-w-6xl px-4 sm:px-6">
+    <main id="main" class="shell" tabindex="-1">
       <slot />
     </main>
-    <footer class="mx-auto max-w-6xl px-4 py-10 font-mono text-xs text-black/55 dark:text-white/55 sm:px-6">
-      <div class="flex flex-col gap-2 border-t border-black/10 pt-5 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
-        <span>&copy; {new Date().getFullYear()} - Built with Astro</span>
-        <a class="hover:text-black dark:hover:text-white" href="#top">BACK_TO_TOP</a>
-      </div>
+    <footer class="shell site-footer">
+      <span>&copy; {new Date().getFullYear()} Javal Vyas</span>
+      <span>AI · Optimization · Research engineering</span>
+      <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
   </body>
 </html>

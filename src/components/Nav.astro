@@ -1,30 +1,18 @@
----
+﻿---
 const nav = [
-  { label: "Work", href: "#projects" },
-  { label: "Research", href: "#research" },
-  { label: "Notes", href: "#writing" },
-  { label: "Stack", href: "#skills" },
-  { label: "Contact", href: "#contact" }
+  { label: "Work", href: "/#projects" },
+  { label: "Research", href: "/#research" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 ---
 
-<header class="sticky top-0 z-50 border-b border-black/10 bg-[#f7f8fa]/90 backdrop-blur dark:border-white/10 dark:bg-[#090b0c]/90">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-    <a href="/" class="font-mono text-sm font-bold transition hover:text-emerald-700 dark:hover:text-emerald-300">
-      JV
-    </a>
-
-    <nav class="hidden items-center gap-5 text-xs font-semibold uppercase sm:flex">
-      {nav.map((i) => (
-        <a class="text-black/65 hover:text-black dark:text-white/65 dark:hover:text-white" href={i.href}>
-          {i.label}
-        </a>
-      ))}
+<header class="site-header">
+  <div class="shell nav-inner">
+    <a href="/" class="wordmark" aria-label="Javal Vyas home">jv<span>.</span></a>
+    <nav aria-label="Main navigation">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
-
-    <div class="hidden items-center gap-2 font-mono text-xs text-emerald-700 dark:text-emerald-300 sm:flex">
-      <span class="h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-300"></span>
-      BUILDING_SYSTEMS
-    </div>
+    <a class="nav-resume" href="/resume.pdf">Résumé <span aria-hidden="true">↗</span></a>
   </div>
 </header>
