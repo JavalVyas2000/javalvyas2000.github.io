@@ -1,18 +1,41 @@
 ﻿---
+import { site } from "../data/site";
 const nav = [
-  { label: "Work", href: "/#projects" },
-  { label: "Research", href: "/#research" },
-  { label: "About", href: "/#about" },
+  { label: "Selected work", href: "/#projects" },
+  { label: "Publications", href: "/#research" },
+  { label: "Background", href: "/#experience" },
+  { label: "Expertise", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ];
 ---
 
 <header class="site-header">
-  <div class="shell nav-inner">
-    <a href="/" class="wordmark" aria-label="Javal Vyas home">jv<span>.</span></a>
-    <nav aria-label="Main navigation">
-      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
-    </nav>
-    <a class="nav-resume" href="/resume.pdf">Résumé <span aria-hidden="true">↗</span></a>
+  <a href="/" class="wordmark" aria-label="Javal Vyas home"
+    >JV<span> / </span><span class="wordmark-caption">RESEARCH</span></a
+  >
+  <div class="rail-profile">
+    {site.avatar && <img src={site.avatar} alt="Javal Vyas" width="1500" height="1800" />}
+    <p>Javal Vyas</p><span>PhD student<br />Imperial College London</span>
+  </div>
+  <nav aria-label="Main navigation">
+    {
+      nav.map((item, index) => (
+        <a href={item.href}>
+          <span class="nav-number">0{index + 1}</span>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="rail-bottom">
+    <a class="resume-link" href="/resume.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
+    <p>London, UK<br />Optimization & machine learning</p>
+    <div class="rail-socials">
+      {
+        site.socials
+          .filter((s) => s.icon === "github" || s.icon === "linkedin")
+          .map((s) => <a href={s.href}>{s.label} ↗</a>)
+      }
+    </div>
   </div>
 </header>
