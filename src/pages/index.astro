@@ -175,6 +175,15 @@ import { site } from "../data/site";
         Engineer II at KeyLogic in Pittsburgh on IDAES and PARETO.
       </p>
       <p>{site.interests}</p>
+      {
+        site.currentResearch.map((research) => (
+          <aside class="research-note" aria-label="Current research">
+            <p class="eyebrow">{research.status}</p>
+            <h3>{research.title}</h3>
+            <p>{research.description}</p>
+          </aside>
+        ))
+      }
       <a class="text-link" href="/resume.pdf"
         >Explore my background <span aria-hidden="true">↗</span></a
       >
@@ -217,6 +226,15 @@ import { site } from "../data/site";
               <h4>{entry.role}</h4>
               {entry.period && <p>{entry.detail}</p>}
               <p>{entry.description}</p>
+              {entry.links && (
+                <div class="experience-links">
+                  {entry.links.map((link) => (
+                    <a href={link.href}>
+                      {link.label} <span aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </article>
         ))

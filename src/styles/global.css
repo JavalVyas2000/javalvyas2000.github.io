@@ -187,6 +187,33 @@ em {
 .experience-list {
   border-top: 1px solid var(--line);
 }
+.experience-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.experience-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.research-note {
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+  margin-top: 28px;
+}
+.research-note h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-block: 9px;
+}
+.research-note > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
 .experience-entry {
   display: grid;
   grid-template-columns: 1fr 1.5fr;

@@ -57,7 +57,9 @@ export type SiteData = {
     detail: string;
     period?: string;
     description: string;
+    links?: Link[];
   }[];
+  currentResearch: { title: string; status: string; description: string }[];
   location?: string;
   email: string;
   avatar?: string;
@@ -96,7 +98,40 @@ export const site: SiteData = {
       role: "Engineer II",
       organization: "KeyLogic",
       detail: "Pittsburgh, USA",
-      description: "Worked on the IDAES and PARETO projects.",
+      period: "Jan 2024 – Aug 2024",
+      description:
+        "Contributed process-model and surrogate-optimization examples to IDAES, including supercritical CO₂ and natural-gas combined-cycle workflows. In PARETO, contributed desalination surrogate integration and training, water-quality examples, network visualization, and input-data validation.",
+      links: [
+        {
+          label: "IDAES surrogate examples",
+          href: "https://github.com/IDAES/examples/commit/104e3cbced230d9f0a3a2d851b78a4374e738e5d",
+        },
+        {
+          label: "PARETO surrogate integration",
+          href: "https://github.com/project-pareto/project-pareto/commit/dd050481f985bd0fee704e04f127ecd27e249638",
+        },
+        {
+          label: "Network visualization",
+          href: "https://github.com/project-pareto/project-pareto/commit/c4c82fcbd78ad04fcf4429253051940742f299a3",
+        },
+      ],
+    },
+    {
+      role: "Research collaboration",
+      organization: "Imperial College London × Refiant, Inc.",
+      detail: "Industrial AI · Action admissibility",
+      period: "Ongoing",
+      description:
+        "Co-authored ADMITBench, a reference framework for evaluating industrial LLM advisories. Ongoing collaboration explores long-context models and frameworks that use prior knowledge to assess action admissibility.",
+      links: [{ label: "ADMITBench white paper", href: "https://arxiv.org/abs/2608.03866" }],
+    },
+  ],
+  currentResearch: [
+    {
+      title: "Bayesian fault propagation and decision-making",
+      status: "Manuscript in preparation",
+      description:
+        "Investigating fault estimation, Bayesian prediction of fault propagation, and how these predictions can inform subsequent actions. Currently under internal review with my advisor.",
     },
   ],
 
@@ -155,10 +190,41 @@ export const site: SiteData = {
       blurb:
         "Optimization models and decomposition algorithms for meeting electricity demand at minimum cost under combinatorial commitment constraints.",
       tags: ["Energy Systems", "Optimization", "Scheduling"],
-      href: "https://psecommunity.org/LAPSE:2025.0282",
+      href: "https://arxiv.org/abs/2607.19570",
       highlights: [
-        "Decomposition method paired with EGRET unit commitment models",
-        "Benchmarked across four power-system cases",
+        "Shrinking-horizon decomposition with relaxed future binary decisions, compared with monolithic EGRET formulations",
+        "Evaluated on four power-system cases with 20 instances per case",
+        "SP3120, Tight formulation: up to 4× speedup and 0.18% median objective deviation, reported as separate benchmark statistics",
+        "Results vary by case and formulation; CASE6468RTE has larger deviations and time-limited reference solves",
+      ],
+    },
+    {
+      title: "PARETO: Surrogates for Water Optimization",
+      category: "Open-source software · Mathematical optimization",
+      blurb:
+        "Contributions to an open-source framework for strategic produced-water management, integrating desalination surrogate models into optimization workflows.",
+      contribution:
+        "Contributed membrane-distillation and mechanical-vapor-compression surrogate integration, a training notebook, network visualization, and data-validation improvements.",
+      tags: ["Python", "Pyomo", "Surrogate Models"],
+      href: "https://www.osti.gov/servlets/purl/2434317",
+      repo: "https://github.com/project-pareto/project-pareto/commit/dd050481f985bd0fee704e04f127ecd27e249638",
+      highlights: [
+        "Linked machine-learning surrogates to treatment planning and cost optimization",
+        "Co-authored the 2024 PARETO capabilities paper",
+      ],
+    },
+    {
+      title: "ADMITBench",
+      category: "Industrial collaboration · AI evaluation",
+      blurb:
+        "A reference framework for assessing whether industrial LLM advisories satisfy explicit evidence, authority, procedure, and consequence checks.",
+      contribution:
+        "Co-authored through the collaboration between Imperial College London and Refiant, Inc.",
+      tags: ["LLM Evaluation", "Constraints", "Admissibility"],
+      href: "https://arxiv.org/abs/2608.03866",
+      highlights: [
+        "Separates action eligibility from utility ranking using mandatory checks",
+        "Technical white paper and reference implementation for research evaluation",
       ],
     },
     {
@@ -219,6 +285,14 @@ export const site: SiteData = {
   publications: [
     {
       title:
+        "ADMITBench: A Safety-Governed Reference Framework for Evaluating the Admissibility of Industrial LLM Advisories",
+      venue: "arXiv",
+      year: "2026",
+      href: "https://arxiv.org/abs/2608.03866",
+      note: "technical white paper",
+    },
+    {
+      title:
         "Automating Cause-Effect Specification with Knowledge Graphs and Large Language Models",
       venue: "arXiv",
       year: "2026",
@@ -250,11 +324,20 @@ export const site: SiteData = {
       venue: "Systems and Control Transactions",
       year: "2025",
       href: "https://psecommunity.org/LAPSE:2025.0282",
-      note: "journal article",
+      note: "conference proceedings",
       links: [
         { label: "LAPSE", href: "https://psecommunity.org/LAPSE:2025.0282" },
         { label: "DOI", href: "https://doi.org/10.69997/sct.113099" },
       ],
+    },
+    {
+      title:
+        "An Update on Project PARETO - New Capabilities in DOE's Produced Water Optimization Framework",
+      venue: "FOCAPD · Systems and Control Transactions",
+      year: "2024",
+      href: "https://www.osti.gov/servlets/purl/2434317",
+      note: "conference proceedings",
+      links: [{ label: "DOI", href: "https://doi.org/10.69997/sct.176005" }],
     },
     {
       title:
